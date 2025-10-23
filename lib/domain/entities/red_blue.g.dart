@@ -7,12 +7,12 @@ part of 'red_blue.dart';
 // **************************************************************************
 
 _RedBlue _$RedBlueFromJson(Map<String, dynamic> json) => _RedBlue(
-  backDefault: json['backDefault'] as String,
-  backGray: json['backGray'] as String,
-  backTransparent: json['backTransparent'] as String,
-  frontDefault: json['frontDefault'] as String,
-  frontGray: json['frontGray'] as String,
-  frontTransparent: json['frontTransparent'] as String,
+  backDefault: json['backDefault'] as String?,
+  backGray: json['backGray'] as String?,
+  backTransparent: json['backTransparent'] as String?,
+  frontDefault: json['frontDefault'] as String?,
+  frontGray: json['frontGray'] as String?,
+  frontTransparent: json['frontTransparent'] as String?,
 );
 
 Map<String, dynamic> _$RedBlueToJson(_RedBlue instance) => <String, dynamic>{

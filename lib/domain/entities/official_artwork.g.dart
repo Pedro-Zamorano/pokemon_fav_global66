@@ -8,8 +8,8 @@ part of 'official_artwork.dart';
 
 _OfficialArtwork _$OfficialArtworkFromJson(Map<String, dynamic> json) =>
     _OfficialArtwork(
-      frontDefault: json['frontDefault'] as String,
-      frontShiny: json['frontShiny'] as String,
+      frontDefault: json['frontDefault'] as String?,
+      frontShiny: json['frontShiny'] as String?,
     );
 
 Map<String, dynamic> _$OfficialArtworkToJson(_OfficialArtwork instance) =>

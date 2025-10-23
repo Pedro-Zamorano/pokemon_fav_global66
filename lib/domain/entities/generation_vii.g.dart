@@ -8,10 +8,12 @@ part of 'generation_vii.dart';
 
 _GenerationVii _$GenerationViiFromJson(Map<String, dynamic> json) =>
     _GenerationVii(
-      icons: DreamWorld.fromJson(json['icons'] as Map<String, dynamic>),
-      ultraSunUltraMoon: Home.fromJson(
-        json['ultraSunUltraMoon'] as Map<String, dynamic>,
-      ),
+      icons: json['icons'] == null
+          ? null
+          : DreamWorld.fromJson(json['icons'] as Map<String, dynamic>),
+      ultraSunUltraMoon: json['ultraSunUltraMoon'] == null
+          ? null
+          : Home.fromJson(json['ultraSunUltraMoon'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$GenerationViiToJson(_GenerationVii instance) =>

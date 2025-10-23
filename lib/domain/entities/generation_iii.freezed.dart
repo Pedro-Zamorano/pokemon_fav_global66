@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GenerationIii {
 
- OfficialArtwork get emerald; Gold get fireredLeafgreen; Gold get rubySapphire;
+ OfficialArtwork? get emerald; Gold? get fireredLeafgreen; Gold? get rubySapphire;
 /// Create a copy of GenerationIii
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $GenerationIiiCopyWith<$Res>  {
   factory $GenerationIiiCopyWith(GenerationIii value, $Res Function(GenerationIii) _then) = _$GenerationIiiCopyWithImpl;
 @useResult
 $Res call({
- OfficialArtwork emerald, Gold fireredLeafgreen, Gold rubySapphire
+ OfficialArtwork? emerald, Gold? fireredLeafgreen, Gold? rubySapphire
 });
 
 
-$OfficialArtworkCopyWith<$Res> get emerald;$GoldCopyWith<$Res> get fireredLeafgreen;$GoldCopyWith<$Res> get rubySapphire;
+$OfficialArtworkCopyWith<$Res>? get emerald;$GoldCopyWith<$Res>? get fireredLeafgreen;$GoldCopyWith<$Res>? get rubySapphire;
 
 }
 /// @nodoc
@@ -65,39 +65,48 @@ class _$GenerationIiiCopyWithImpl<$Res>
 
 /// Create a copy of GenerationIii
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? emerald = null,Object? fireredLeafgreen = null,Object? rubySapphire = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? emerald = freezed,Object? fireredLeafgreen = freezed,Object? rubySapphire = freezed,}) {
   return _then(_self.copyWith(
-emerald: null == emerald ? _self.emerald : emerald // ignore: cast_nullable_to_non_nullable
-as OfficialArtwork,fireredLeafgreen: null == fireredLeafgreen ? _self.fireredLeafgreen : fireredLeafgreen // ignore: cast_nullable_to_non_nullable
-as Gold,rubySapphire: null == rubySapphire ? _self.rubySapphire : rubySapphire // ignore: cast_nullable_to_non_nullable
-as Gold,
+emerald: freezed == emerald ? _self.emerald : emerald // ignore: cast_nullable_to_non_nullable
+as OfficialArtwork?,fireredLeafgreen: freezed == fireredLeafgreen ? _self.fireredLeafgreen : fireredLeafgreen // ignore: cast_nullable_to_non_nullable
+as Gold?,rubySapphire: freezed == rubySapphire ? _self.rubySapphire : rubySapphire // ignore: cast_nullable_to_non_nullable
+as Gold?,
   ));
 }
 /// Create a copy of GenerationIii
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$OfficialArtworkCopyWith<$Res> get emerald {
-  
-  return $OfficialArtworkCopyWith<$Res>(_self.emerald, (value) {
+$OfficialArtworkCopyWith<$Res>? get emerald {
+    if (_self.emerald == null) {
+    return null;
+  }
+
+  return $OfficialArtworkCopyWith<$Res>(_self.emerald!, (value) {
     return _then(_self.copyWith(emerald: value));
   });
 }/// Create a copy of GenerationIii
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$GoldCopyWith<$Res> get fireredLeafgreen {
-  
-  return $GoldCopyWith<$Res>(_self.fireredLeafgreen, (value) {
+$GoldCopyWith<$Res>? get fireredLeafgreen {
+    if (_self.fireredLeafgreen == null) {
+    return null;
+  }
+
+  return $GoldCopyWith<$Res>(_self.fireredLeafgreen!, (value) {
     return _then(_self.copyWith(fireredLeafgreen: value));
   });
 }/// Create a copy of GenerationIii
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$GoldCopyWith<$Res> get rubySapphire {
-  
-  return $GoldCopyWith<$Res>(_self.rubySapphire, (value) {
+$GoldCopyWith<$Res>? get rubySapphire {
+    if (_self.rubySapphire == null) {
+    return null;
+  }
+
+  return $GoldCopyWith<$Res>(_self.rubySapphire!, (value) {
     return _then(_self.copyWith(rubySapphire: value));
   });
 }
@@ -179,7 +188,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( OfficialArtwork emerald,  Gold fireredLeafgreen,  Gold rubySapphire)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( OfficialArtwork? emerald,  Gold? fireredLeafgreen,  Gold? rubySapphire)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GenerationIii() when $default != null:
 return $default(_that.emerald,_that.fireredLeafgreen,_that.rubySapphire);case _:
@@ -200,7 +209,7 @@ return $default(_that.emerald,_that.fireredLeafgreen,_that.rubySapphire);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( OfficialArtwork emerald,  Gold fireredLeafgreen,  Gold rubySapphire)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( OfficialArtwork? emerald,  Gold? fireredLeafgreen,  Gold? rubySapphire)  $default,) {final _that = this;
 switch (_that) {
 case _GenerationIii():
 return $default(_that.emerald,_that.fireredLeafgreen,_that.rubySapphire);}
@@ -217,7 +226,7 @@ return $default(_that.emerald,_that.fireredLeafgreen,_that.rubySapphire);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( OfficialArtwork emerald,  Gold fireredLeafgreen,  Gold rubySapphire)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( OfficialArtwork? emerald,  Gold? fireredLeafgreen,  Gold? rubySapphire)?  $default,) {final _that = this;
 switch (_that) {
 case _GenerationIii() when $default != null:
 return $default(_that.emerald,_that.fireredLeafgreen,_that.rubySapphire);case _:
@@ -235,9 +244,9 @@ class _GenerationIii implements GenerationIii {
    _GenerationIii({required this.emerald, required this.fireredLeafgreen, required this.rubySapphire});
   factory _GenerationIii.fromJson(Map<String, dynamic> json) => _$GenerationIiiFromJson(json);
 
-@override final  OfficialArtwork emerald;
-@override final  Gold fireredLeafgreen;
-@override final  Gold rubySapphire;
+@override final  OfficialArtwork? emerald;
+@override final  Gold? fireredLeafgreen;
+@override final  Gold? rubySapphire;
 
 /// Create a copy of GenerationIii
 /// with the given fields replaced by the non-null parameter values.
@@ -272,11 +281,11 @@ abstract mixin class _$GenerationIiiCopyWith<$Res> implements $GenerationIiiCopy
   factory _$GenerationIiiCopyWith(_GenerationIii value, $Res Function(_GenerationIii) _then) = __$GenerationIiiCopyWithImpl;
 @override @useResult
 $Res call({
- OfficialArtwork emerald, Gold fireredLeafgreen, Gold rubySapphire
+ OfficialArtwork? emerald, Gold? fireredLeafgreen, Gold? rubySapphire
 });
 
 
-@override $OfficialArtworkCopyWith<$Res> get emerald;@override $GoldCopyWith<$Res> get fireredLeafgreen;@override $GoldCopyWith<$Res> get rubySapphire;
+@override $OfficialArtworkCopyWith<$Res>? get emerald;@override $GoldCopyWith<$Res>? get fireredLeafgreen;@override $GoldCopyWith<$Res>? get rubySapphire;
 
 }
 /// @nodoc
@@ -289,12 +298,12 @@ class __$GenerationIiiCopyWithImpl<$Res>
 
 /// Create a copy of GenerationIii
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? emerald = null,Object? fireredLeafgreen = null,Object? rubySapphire = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? emerald = freezed,Object? fireredLeafgreen = freezed,Object? rubySapphire = freezed,}) {
   return _then(_GenerationIii(
-emerald: null == emerald ? _self.emerald : emerald // ignore: cast_nullable_to_non_nullable
-as OfficialArtwork,fireredLeafgreen: null == fireredLeafgreen ? _self.fireredLeafgreen : fireredLeafgreen // ignore: cast_nullable_to_non_nullable
-as Gold,rubySapphire: null == rubySapphire ? _self.rubySapphire : rubySapphire // ignore: cast_nullable_to_non_nullable
-as Gold,
+emerald: freezed == emerald ? _self.emerald : emerald // ignore: cast_nullable_to_non_nullable
+as OfficialArtwork?,fireredLeafgreen: freezed == fireredLeafgreen ? _self.fireredLeafgreen : fireredLeafgreen // ignore: cast_nullable_to_non_nullable
+as Gold?,rubySapphire: freezed == rubySapphire ? _self.rubySapphire : rubySapphire // ignore: cast_nullable_to_non_nullable
+as Gold?,
   ));
 }
 
@@ -302,27 +311,36 @@ as Gold,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$OfficialArtworkCopyWith<$Res> get emerald {
-  
-  return $OfficialArtworkCopyWith<$Res>(_self.emerald, (value) {
+$OfficialArtworkCopyWith<$Res>? get emerald {
+    if (_self.emerald == null) {
+    return null;
+  }
+
+  return $OfficialArtworkCopyWith<$Res>(_self.emerald!, (value) {
     return _then(_self.copyWith(emerald: value));
   });
 }/// Create a copy of GenerationIii
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$GoldCopyWith<$Res> get fireredLeafgreen {
-  
-  return $GoldCopyWith<$Res>(_self.fireredLeafgreen, (value) {
+$GoldCopyWith<$Res>? get fireredLeafgreen {
+    if (_self.fireredLeafgreen == null) {
+    return null;
+  }
+
+  return $GoldCopyWith<$Res>(_self.fireredLeafgreen!, (value) {
     return _then(_self.copyWith(fireredLeafgreen: value));
   });
 }/// Create a copy of GenerationIii
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$GoldCopyWith<$Res> get rubySapphire {
-  
-  return $GoldCopyWith<$Res>(_self.rubySapphire, (value) {
+$GoldCopyWith<$Res>? get rubySapphire {
+    if (_self.rubySapphire == null) {
+    return null;
+  }
+
+  return $GoldCopyWith<$Res>(_self.rubySapphire!, (value) {
     return _then(_self.copyWith(rubySapphire: value));
   });
 }

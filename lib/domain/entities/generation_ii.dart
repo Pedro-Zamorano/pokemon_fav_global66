@@ -8,9 +8,9 @@ part 'generation_ii.g.dart';
 sealed class GenerationIi with _$GenerationIi {
 
   factory GenerationIi({
-    required Crystal crystal,
-    required Gold gold,
-    required Gold silver,
+    required Crystal? crystal,
+    required Gold? gold,
+    required Gold? silver,
   }) = _GenerationIi;
 
   factory GenerationIi.fromJson(Map<String, dynamic> json) => _$GenerationIiFromJson(json);

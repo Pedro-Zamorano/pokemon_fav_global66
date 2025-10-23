@@ -7,8 +7,10 @@ part of 'type.dart';
 // **************************************************************************
 
 _Type _$TypeFromJson(Map<String, dynamic> json) => _Type(
-  slot: (json['slot'] as num).toInt(),
-  type: Species.fromJson(json['type'] as Map<String, dynamic>),
+  slot: (json['slot'] as num?)?.toInt(),
+  type: json['type'] == null
+      ? null
+      : Species.fromJson(json['type'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$TypeToJson(_Type instance) => <String, dynamic>{

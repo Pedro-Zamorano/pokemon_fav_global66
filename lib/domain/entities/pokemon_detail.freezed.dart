@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$PokemonDetail {
 
- List<Ability> get abilities; int get baseExperience; Cries get cries; List<Species> get forms; List<GameIndex> get gameIndices; int get height; List<dynamic> get heldItems; int get id; bool get isDefault; String get locationAreaEncounters; List<Move> get moves; String get name; int get order; List<PastAbility> get pastAbilities; List<dynamic> get pastTypes; Species get species; Sprites get sprites; List<Stat> get stats; List<Type> get types; int get weight;
+ List<Ability>? get abilities; int? get baseExperience; Cries? get cries; List<Species>? get forms; List<GameIndex>? get gameIndices; int? get height; List<dynamic>? get heldItems; int? get id; bool? get isDefault; String? get locationAreaEncounters; List<Move>? get moves; String? get name; int? get order; List<PastAbility>? get pastAbilities; List<dynamic>? get pastTypes; Species? get species; Sprites? get sprites; List<Stat>? get stats; List<Type>? get types; int get weight;
 /// Create a copy of PokemonDetail
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $PokemonDetailCopyWith<$Res>  {
   factory $PokemonDetailCopyWith(PokemonDetail value, $Res Function(PokemonDetail) _then) = _$PokemonDetailCopyWithImpl;
 @useResult
 $Res call({
- List<Ability> abilities, int baseExperience, Cries cries, List<Species> forms, List<GameIndex> gameIndices, int height, List<dynamic> heldItems, int id, bool isDefault, String locationAreaEncounters, List<Move> moves, String name, int order, List<PastAbility> pastAbilities, List<dynamic> pastTypes, Species species, Sprites sprites, List<Stat> stats, List<Type> types, int weight
+ List<Ability>? abilities, int? baseExperience, Cries? cries, List<Species>? forms, List<GameIndex>? gameIndices, int? height, List<dynamic>? heldItems, int? id, bool? isDefault, String? locationAreaEncounters, List<Move>? moves, String? name, int? order, List<PastAbility>? pastAbilities, List<dynamic>? pastTypes, Species? species, Sprites? sprites, List<Stat>? stats, List<Type>? types, int weight
 });
 
 
-$CriesCopyWith<$Res> get cries;$SpeciesCopyWith<$Res> get species;$SpritesCopyWith<$Res> get sprites;
+$CriesCopyWith<$Res>? get cries;$SpeciesCopyWith<$Res>? get species;$SpritesCopyWith<$Res>? get sprites;
 
 }
 /// @nodoc
@@ -65,28 +65,28 @@ class _$PokemonDetailCopyWithImpl<$Res>
 
 /// Create a copy of PokemonDetail
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? abilities = null,Object? baseExperience = null,Object? cries = null,Object? forms = null,Object? gameIndices = null,Object? height = null,Object? heldItems = null,Object? id = null,Object? isDefault = null,Object? locationAreaEncounters = null,Object? moves = null,Object? name = null,Object? order = null,Object? pastAbilities = null,Object? pastTypes = null,Object? species = null,Object? sprites = null,Object? stats = null,Object? types = null,Object? weight = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? abilities = freezed,Object? baseExperience = freezed,Object? cries = freezed,Object? forms = freezed,Object? gameIndices = freezed,Object? height = freezed,Object? heldItems = freezed,Object? id = freezed,Object? isDefault = freezed,Object? locationAreaEncounters = freezed,Object? moves = freezed,Object? name = freezed,Object? order = freezed,Object? pastAbilities = freezed,Object? pastTypes = freezed,Object? species = freezed,Object? sprites = freezed,Object? stats = freezed,Object? types = freezed,Object? weight = null,}) {
   return _then(_self.copyWith(
-abilities: null == abilities ? _self.abilities : abilities // ignore: cast_nullable_to_non_nullable
-as List<Ability>,baseExperience: null == baseExperience ? _self.baseExperience : baseExperience // ignore: cast_nullable_to_non_nullable
-as int,cries: null == cries ? _self.cries : cries // ignore: cast_nullable_to_non_nullable
-as Cries,forms: null == forms ? _self.forms : forms // ignore: cast_nullable_to_non_nullable
-as List<Species>,gameIndices: null == gameIndices ? _self.gameIndices : gameIndices // ignore: cast_nullable_to_non_nullable
-as List<GameIndex>,height: null == height ? _self.height : height // ignore: cast_nullable_to_non_nullable
-as int,heldItems: null == heldItems ? _self.heldItems : heldItems // ignore: cast_nullable_to_non_nullable
-as List<dynamic>,id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as int,isDefault: null == isDefault ? _self.isDefault : isDefault // ignore: cast_nullable_to_non_nullable
-as bool,locationAreaEncounters: null == locationAreaEncounters ? _self.locationAreaEncounters : locationAreaEncounters // ignore: cast_nullable_to_non_nullable
-as String,moves: null == moves ? _self.moves : moves // ignore: cast_nullable_to_non_nullable
-as List<Move>,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,order: null == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
-as int,pastAbilities: null == pastAbilities ? _self.pastAbilities : pastAbilities // ignore: cast_nullable_to_non_nullable
-as List<PastAbility>,pastTypes: null == pastTypes ? _self.pastTypes : pastTypes // ignore: cast_nullable_to_non_nullable
-as List<dynamic>,species: null == species ? _self.species : species // ignore: cast_nullable_to_non_nullable
-as Species,sprites: null == sprites ? _self.sprites : sprites // ignore: cast_nullable_to_non_nullable
-as Sprites,stats: null == stats ? _self.stats : stats // ignore: cast_nullable_to_non_nullable
-as List<Stat>,types: null == types ? _self.types : types // ignore: cast_nullable_to_non_nullable
-as List<Type>,weight: null == weight ? _self.weight : weight // ignore: cast_nullable_to_non_nullable
+abilities: freezed == abilities ? _self.abilities : abilities // ignore: cast_nullable_to_non_nullable
+as List<Ability>?,baseExperience: freezed == baseExperience ? _self.baseExperience : baseExperience // ignore: cast_nullable_to_non_nullable
+as int?,cries: freezed == cries ? _self.cries : cries // ignore: cast_nullable_to_non_nullable
+as Cries?,forms: freezed == forms ? _self.forms : forms // ignore: cast_nullable_to_non_nullable
+as List<Species>?,gameIndices: freezed == gameIndices ? _self.gameIndices : gameIndices // ignore: cast_nullable_to_non_nullable
+as List<GameIndex>?,height: freezed == height ? _self.height : height // ignore: cast_nullable_to_non_nullable
+as int?,heldItems: freezed == heldItems ? _self.heldItems : heldItems // ignore: cast_nullable_to_non_nullable
+as List<dynamic>?,id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,isDefault: freezed == isDefault ? _self.isDefault : isDefault // ignore: cast_nullable_to_non_nullable
+as bool?,locationAreaEncounters: freezed == locationAreaEncounters ? _self.locationAreaEncounters : locationAreaEncounters // ignore: cast_nullable_to_non_nullable
+as String?,moves: freezed == moves ? _self.moves : moves // ignore: cast_nullable_to_non_nullable
+as List<Move>?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,order: freezed == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
+as int?,pastAbilities: freezed == pastAbilities ? _self.pastAbilities : pastAbilities // ignore: cast_nullable_to_non_nullable
+as List<PastAbility>?,pastTypes: freezed == pastTypes ? _self.pastTypes : pastTypes // ignore: cast_nullable_to_non_nullable
+as List<dynamic>?,species: freezed == species ? _self.species : species // ignore: cast_nullable_to_non_nullable
+as Species?,sprites: freezed == sprites ? _self.sprites : sprites // ignore: cast_nullable_to_non_nullable
+as Sprites?,stats: freezed == stats ? _self.stats : stats // ignore: cast_nullable_to_non_nullable
+as List<Stat>?,types: freezed == types ? _self.types : types // ignore: cast_nullable_to_non_nullable
+as List<Type>?,weight: null == weight ? _self.weight : weight // ignore: cast_nullable_to_non_nullable
 as int,
   ));
 }
@@ -94,27 +94,36 @@ as int,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$CriesCopyWith<$Res> get cries {
-  
-  return $CriesCopyWith<$Res>(_self.cries, (value) {
+$CriesCopyWith<$Res>? get cries {
+    if (_self.cries == null) {
+    return null;
+  }
+
+  return $CriesCopyWith<$Res>(_self.cries!, (value) {
     return _then(_self.copyWith(cries: value));
   });
 }/// Create a copy of PokemonDetail
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get species {
-  
-  return $SpeciesCopyWith<$Res>(_self.species, (value) {
+$SpeciesCopyWith<$Res>? get species {
+    if (_self.species == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.species!, (value) {
     return _then(_self.copyWith(species: value));
   });
 }/// Create a copy of PokemonDetail
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpritesCopyWith<$Res> get sprites {
-  
-  return $SpritesCopyWith<$Res>(_self.sprites, (value) {
+$SpritesCopyWith<$Res>? get sprites {
+    if (_self.sprites == null) {
+    return null;
+  }
+
+  return $SpritesCopyWith<$Res>(_self.sprites!, (value) {
     return _then(_self.copyWith(sprites: value));
   });
 }
@@ -196,7 +205,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<Ability> abilities,  int baseExperience,  Cries cries,  List<Species> forms,  List<GameIndex> gameIndices,  int height,  List<dynamic> heldItems,  int id,  bool isDefault,  String locationAreaEncounters,  List<Move> moves,  String name,  int order,  List<PastAbility> pastAbilities,  List<dynamic> pastTypes,  Species species,  Sprites sprites,  List<Stat> stats,  List<Type> types,  int weight)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<Ability>? abilities,  int? baseExperience,  Cries? cries,  List<Species>? forms,  List<GameIndex>? gameIndices,  int? height,  List<dynamic>? heldItems,  int? id,  bool? isDefault,  String? locationAreaEncounters,  List<Move>? moves,  String? name,  int? order,  List<PastAbility>? pastAbilities,  List<dynamic>? pastTypes,  Species? species,  Sprites? sprites,  List<Stat>? stats,  List<Type>? types,  int weight)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _PokemonDetail() when $default != null:
 return $default(_that.abilities,_that.baseExperience,_that.cries,_that.forms,_that.gameIndices,_that.height,_that.heldItems,_that.id,_that.isDefault,_that.locationAreaEncounters,_that.moves,_that.name,_that.order,_that.pastAbilities,_that.pastTypes,_that.species,_that.sprites,_that.stats,_that.types,_that.weight);case _:
@@ -217,7 +226,7 @@ return $default(_that.abilities,_that.baseExperience,_that.cries,_that.forms,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<Ability> abilities,  int baseExperience,  Cries cries,  List<Species> forms,  List<GameIndex> gameIndices,  int height,  List<dynamic> heldItems,  int id,  bool isDefault,  String locationAreaEncounters,  List<Move> moves,  String name,  int order,  List<PastAbility> pastAbilities,  List<dynamic> pastTypes,  Species species,  Sprites sprites,  List<Stat> stats,  List<Type> types,  int weight)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<Ability>? abilities,  int? baseExperience,  Cries? cries,  List<Species>? forms,  List<GameIndex>? gameIndices,  int? height,  List<dynamic>? heldItems,  int? id,  bool? isDefault,  String? locationAreaEncounters,  List<Move>? moves,  String? name,  int? order,  List<PastAbility>? pastAbilities,  List<dynamic>? pastTypes,  Species? species,  Sprites? sprites,  List<Stat>? stats,  List<Type>? types,  int weight)  $default,) {final _that = this;
 switch (_that) {
 case _PokemonDetail():
 return $default(_that.abilities,_that.baseExperience,_that.cries,_that.forms,_that.gameIndices,_that.height,_that.heldItems,_that.id,_that.isDefault,_that.locationAreaEncounters,_that.moves,_that.name,_that.order,_that.pastAbilities,_that.pastTypes,_that.species,_that.sprites,_that.stats,_that.types,_that.weight);}
@@ -234,7 +243,7 @@ return $default(_that.abilities,_that.baseExperience,_that.cries,_that.forms,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<Ability> abilities,  int baseExperience,  Cries cries,  List<Species> forms,  List<GameIndex> gameIndices,  int height,  List<dynamic> heldItems,  int id,  bool isDefault,  String locationAreaEncounters,  List<Move> moves,  String name,  int order,  List<PastAbility> pastAbilities,  List<dynamic> pastTypes,  Species species,  Sprites sprites,  List<Stat> stats,  List<Type> types,  int weight)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<Ability>? abilities,  int? baseExperience,  Cries? cries,  List<Species>? forms,  List<GameIndex>? gameIndices,  int? height,  List<dynamic>? heldItems,  int? id,  bool? isDefault,  String? locationAreaEncounters,  List<Move>? moves,  String? name,  int? order,  List<PastAbility>? pastAbilities,  List<dynamic>? pastTypes,  Species? species,  Sprites? sprites,  List<Stat>? stats,  List<Type>? types,  int weight)?  $default,) {final _that = this;
 switch (_that) {
 case _PokemonDetail() when $default != null:
 return $default(_that.abilities,_that.baseExperience,_that.cries,_that.forms,_that.gameIndices,_that.height,_that.heldItems,_that.id,_that.isDefault,_that.locationAreaEncounters,_that.moves,_that.name,_that.order,_that.pastAbilities,_that.pastTypes,_that.species,_that.sprites,_that.stats,_that.types,_that.weight);case _:
@@ -249,80 +258,98 @@ return $default(_that.abilities,_that.baseExperience,_that.cries,_that.forms,_th
 @JsonSerializable()
 
 class _PokemonDetail implements PokemonDetail {
-   _PokemonDetail({required final  List<Ability> abilities, required this.baseExperience, required this.cries, required final  List<Species> forms, required final  List<GameIndex> gameIndices, required this.height, required final  List<dynamic> heldItems, required this.id, required this.isDefault, required this.locationAreaEncounters, required final  List<Move> moves, required this.name, required this.order, required final  List<PastAbility> pastAbilities, required final  List<dynamic> pastTypes, required this.species, required this.sprites, required final  List<Stat> stats, required final  List<Type> types, required this.weight}): _abilities = abilities,_forms = forms,_gameIndices = gameIndices,_heldItems = heldItems,_moves = moves,_pastAbilities = pastAbilities,_pastTypes = pastTypes,_stats = stats,_types = types;
+   _PokemonDetail({required final  List<Ability>? abilities, required this.baseExperience, required this.cries, required final  List<Species>? forms, required final  List<GameIndex>? gameIndices, required this.height, required final  List<dynamic>? heldItems, required this.id, required this.isDefault, required this.locationAreaEncounters, required final  List<Move>? moves, required this.name, required this.order, required final  List<PastAbility>? pastAbilities, required final  List<dynamic>? pastTypes, required this.species, required this.sprites, required final  List<Stat>? stats, required final  List<Type>? types, required this.weight}): _abilities = abilities,_forms = forms,_gameIndices = gameIndices,_heldItems = heldItems,_moves = moves,_pastAbilities = pastAbilities,_pastTypes = pastTypes,_stats = stats,_types = types;
   factory _PokemonDetail.fromJson(Map<String, dynamic> json) => _$PokemonDetailFromJson(json);
 
- final  List<Ability> _abilities;
-@override List<Ability> get abilities {
+ final  List<Ability>? _abilities;
+@override List<Ability>? get abilities {
+  final value = _abilities;
+  if (value == null) return null;
   if (_abilities is EqualUnmodifiableListView) return _abilities;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_abilities);
+  return EqualUnmodifiableListView(value);
 }
 
-@override final  int baseExperience;
-@override final  Cries cries;
- final  List<Species> _forms;
-@override List<Species> get forms {
+@override final  int? baseExperience;
+@override final  Cries? cries;
+ final  List<Species>? _forms;
+@override List<Species>? get forms {
+  final value = _forms;
+  if (value == null) return null;
   if (_forms is EqualUnmodifiableListView) return _forms;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_forms);
+  return EqualUnmodifiableListView(value);
 }
 
- final  List<GameIndex> _gameIndices;
-@override List<GameIndex> get gameIndices {
+ final  List<GameIndex>? _gameIndices;
+@override List<GameIndex>? get gameIndices {
+  final value = _gameIndices;
+  if (value == null) return null;
   if (_gameIndices is EqualUnmodifiableListView) return _gameIndices;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_gameIndices);
+  return EqualUnmodifiableListView(value);
 }
 
-@override final  int height;
- final  List<dynamic> _heldItems;
-@override List<dynamic> get heldItems {
+@override final  int? height;
+ final  List<dynamic>? _heldItems;
+@override List<dynamic>? get heldItems {
+  final value = _heldItems;
+  if (value == null) return null;
   if (_heldItems is EqualUnmodifiableListView) return _heldItems;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_heldItems);
+  return EqualUnmodifiableListView(value);
 }
 
-@override final  int id;
-@override final  bool isDefault;
-@override final  String locationAreaEncounters;
- final  List<Move> _moves;
-@override List<Move> get moves {
+@override final  int? id;
+@override final  bool? isDefault;
+@override final  String? locationAreaEncounters;
+ final  List<Move>? _moves;
+@override List<Move>? get moves {
+  final value = _moves;
+  if (value == null) return null;
   if (_moves is EqualUnmodifiableListView) return _moves;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_moves);
+  return EqualUnmodifiableListView(value);
 }
 
-@override final  String name;
-@override final  int order;
- final  List<PastAbility> _pastAbilities;
-@override List<PastAbility> get pastAbilities {
+@override final  String? name;
+@override final  int? order;
+ final  List<PastAbility>? _pastAbilities;
+@override List<PastAbility>? get pastAbilities {
+  final value = _pastAbilities;
+  if (value == null) return null;
   if (_pastAbilities is EqualUnmodifiableListView) return _pastAbilities;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_pastAbilities);
+  return EqualUnmodifiableListView(value);
 }
 
- final  List<dynamic> _pastTypes;
-@override List<dynamic> get pastTypes {
+ final  List<dynamic>? _pastTypes;
+@override List<dynamic>? get pastTypes {
+  final value = _pastTypes;
+  if (value == null) return null;
   if (_pastTypes is EqualUnmodifiableListView) return _pastTypes;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_pastTypes);
+  return EqualUnmodifiableListView(value);
 }
 
-@override final  Species species;
-@override final  Sprites sprites;
- final  List<Stat> _stats;
-@override List<Stat> get stats {
+@override final  Species? species;
+@override final  Sprites? sprites;
+ final  List<Stat>? _stats;
+@override List<Stat>? get stats {
+  final value = _stats;
+  if (value == null) return null;
   if (_stats is EqualUnmodifiableListView) return _stats;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_stats);
+  return EqualUnmodifiableListView(value);
 }
 
- final  List<Type> _types;
-@override List<Type> get types {
+ final  List<Type>? _types;
+@override List<Type>? get types {
+  final value = _types;
+  if (value == null) return null;
   if (_types is EqualUnmodifiableListView) return _types;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_types);
+  return EqualUnmodifiableListView(value);
 }
 
 @override final  int weight;
@@ -360,11 +387,11 @@ abstract mixin class _$PokemonDetailCopyWith<$Res> implements $PokemonDetailCopy
   factory _$PokemonDetailCopyWith(_PokemonDetail value, $Res Function(_PokemonDetail) _then) = __$PokemonDetailCopyWithImpl;
 @override @useResult
 $Res call({
- List<Ability> abilities, int baseExperience, Cries cries, List<Species> forms, List<GameIndex> gameIndices, int height, List<dynamic> heldItems, int id, bool isDefault, String locationAreaEncounters, List<Move> moves, String name, int order, List<PastAbility> pastAbilities, List<dynamic> pastTypes, Species species, Sprites sprites, List<Stat> stats, List<Type> types, int weight
+ List<Ability>? abilities, int? baseExperience, Cries? cries, List<Species>? forms, List<GameIndex>? gameIndices, int? height, List<dynamic>? heldItems, int? id, bool? isDefault, String? locationAreaEncounters, List<Move>? moves, String? name, int? order, List<PastAbility>? pastAbilities, List<dynamic>? pastTypes, Species? species, Sprites? sprites, List<Stat>? stats, List<Type>? types, int weight
 });
 
 
-@override $CriesCopyWith<$Res> get cries;@override $SpeciesCopyWith<$Res> get species;@override $SpritesCopyWith<$Res> get sprites;
+@override $CriesCopyWith<$Res>? get cries;@override $SpeciesCopyWith<$Res>? get species;@override $SpritesCopyWith<$Res>? get sprites;
 
 }
 /// @nodoc
@@ -377,28 +404,28 @@ class __$PokemonDetailCopyWithImpl<$Res>
 
 /// Create a copy of PokemonDetail
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? abilities = null,Object? baseExperience = null,Object? cries = null,Object? forms = null,Object? gameIndices = null,Object? height = null,Object? heldItems = null,Object? id = null,Object? isDefault = null,Object? locationAreaEncounters = null,Object? moves = null,Object? name = null,Object? order = null,Object? pastAbilities = null,Object? pastTypes = null,Object? species = null,Object? sprites = null,Object? stats = null,Object? types = null,Object? weight = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? abilities = freezed,Object? baseExperience = freezed,Object? cries = freezed,Object? forms = freezed,Object? gameIndices = freezed,Object? height = freezed,Object? heldItems = freezed,Object? id = freezed,Object? isDefault = freezed,Object? locationAreaEncounters = freezed,Object? moves = freezed,Object? name = freezed,Object? order = freezed,Object? pastAbilities = freezed,Object? pastTypes = freezed,Object? species = freezed,Object? sprites = freezed,Object? stats = freezed,Object? types = freezed,Object? weight = null,}) {
   return _then(_PokemonDetail(
-abilities: null == abilities ? _self._abilities : abilities // ignore: cast_nullable_to_non_nullable
-as List<Ability>,baseExperience: null == baseExperience ? _self.baseExperience : baseExperience // ignore: cast_nullable_to_non_nullable
-as int,cries: null == cries ? _self.cries : cries // ignore: cast_nullable_to_non_nullable
-as Cries,forms: null == forms ? _self._forms : forms // ignore: cast_nullable_to_non_nullable
-as List<Species>,gameIndices: null == gameIndices ? _self._gameIndices : gameIndices // ignore: cast_nullable_to_non_nullable
-as List<GameIndex>,height: null == height ? _self.height : height // ignore: cast_nullable_to_non_nullable
-as int,heldItems: null == heldItems ? _self._heldItems : heldItems // ignore: cast_nullable_to_non_nullable
-as List<dynamic>,id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as int,isDefault: null == isDefault ? _self.isDefault : isDefault // ignore: cast_nullable_to_non_nullable
-as bool,locationAreaEncounters: null == locationAreaEncounters ? _self.locationAreaEncounters : locationAreaEncounters // ignore: cast_nullable_to_non_nullable
-as String,moves: null == moves ? _self._moves : moves // ignore: cast_nullable_to_non_nullable
-as List<Move>,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,order: null == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
-as int,pastAbilities: null == pastAbilities ? _self._pastAbilities : pastAbilities // ignore: cast_nullable_to_non_nullable
-as List<PastAbility>,pastTypes: null == pastTypes ? _self._pastTypes : pastTypes // ignore: cast_nullable_to_non_nullable
-as List<dynamic>,species: null == species ? _self.species : species // ignore: cast_nullable_to_non_nullable
-as Species,sprites: null == sprites ? _self.sprites : sprites // ignore: cast_nullable_to_non_nullable
-as Sprites,stats: null == stats ? _self._stats : stats // ignore: cast_nullable_to_non_nullable
-as List<Stat>,types: null == types ? _self._types : types // ignore: cast_nullable_to_non_nullable
-as List<Type>,weight: null == weight ? _self.weight : weight // ignore: cast_nullable_to_non_nullable
+abilities: freezed == abilities ? _self._abilities : abilities // ignore: cast_nullable_to_non_nullable
+as List<Ability>?,baseExperience: freezed == baseExperience ? _self.baseExperience : baseExperience // ignore: cast_nullable_to_non_nullable
+as int?,cries: freezed == cries ? _self.cries : cries // ignore: cast_nullable_to_non_nullable
+as Cries?,forms: freezed == forms ? _self._forms : forms // ignore: cast_nullable_to_non_nullable
+as List<Species>?,gameIndices: freezed == gameIndices ? _self._gameIndices : gameIndices // ignore: cast_nullable_to_non_nullable
+as List<GameIndex>?,height: freezed == height ? _self.height : height // ignore: cast_nullable_to_non_nullable
+as int?,heldItems: freezed == heldItems ? _self._heldItems : heldItems // ignore: cast_nullable_to_non_nullable
+as List<dynamic>?,id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,isDefault: freezed == isDefault ? _self.isDefault : isDefault // ignore: cast_nullable_to_non_nullable
+as bool?,locationAreaEncounters: freezed == locationAreaEncounters ? _self.locationAreaEncounters : locationAreaEncounters // ignore: cast_nullable_to_non_nullable
+as String?,moves: freezed == moves ? _self._moves : moves // ignore: cast_nullable_to_non_nullable
+as List<Move>?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,order: freezed == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
+as int?,pastAbilities: freezed == pastAbilities ? _self._pastAbilities : pastAbilities // ignore: cast_nullable_to_non_nullable
+as List<PastAbility>?,pastTypes: freezed == pastTypes ? _self._pastTypes : pastTypes // ignore: cast_nullable_to_non_nullable
+as List<dynamic>?,species: freezed == species ? _self.species : species // ignore: cast_nullable_to_non_nullable
+as Species?,sprites: freezed == sprites ? _self.sprites : sprites // ignore: cast_nullable_to_non_nullable
+as Sprites?,stats: freezed == stats ? _self._stats : stats // ignore: cast_nullable_to_non_nullable
+as List<Stat>?,types: freezed == types ? _self._types : types // ignore: cast_nullable_to_non_nullable
+as List<Type>?,weight: null == weight ? _self.weight : weight // ignore: cast_nullable_to_non_nullable
 as int,
   ));
 }
@@ -407,27 +434,36 @@ as int,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$CriesCopyWith<$Res> get cries {
-  
-  return $CriesCopyWith<$Res>(_self.cries, (value) {
+$CriesCopyWith<$Res>? get cries {
+    if (_self.cries == null) {
+    return null;
+  }
+
+  return $CriesCopyWith<$Res>(_self.cries!, (value) {
     return _then(_self.copyWith(cries: value));
   });
 }/// Create a copy of PokemonDetail
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get species {
-  
-  return $SpeciesCopyWith<$Res>(_self.species, (value) {
+$SpeciesCopyWith<$Res>? get species {
+    if (_self.species == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.species!, (value) {
     return _then(_self.copyWith(species: value));
   });
 }/// Create a copy of PokemonDetail
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpritesCopyWith<$Res> get sprites {
-  
-  return $SpritesCopyWith<$Res>(_self.sprites, (value) {
+$SpritesCopyWith<$Res>? get sprites {
+    if (_self.sprites == null) {
+    return null;
+  }
+
+  return $SpritesCopyWith<$Res>(_self.sprites!, (value) {
     return _then(_self.copyWith(sprites: value));
   });
 }

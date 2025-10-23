@@ -8,9 +8,15 @@ part of 'generation_ii.dart';
 
 _GenerationIi _$GenerationIiFromJson(Map<String, dynamic> json) =>
     _GenerationIi(
-      crystal: Crystal.fromJson(json['crystal'] as Map<String, dynamic>),
-      gold: Gold.fromJson(json['gold'] as Map<String, dynamic>),
-      silver: Gold.fromJson(json['silver'] as Map<String, dynamic>),
+      crystal: json['crystal'] == null
+          ? null
+          : Crystal.fromJson(json['crystal'] as Map<String, dynamic>),
+      gold: json['gold'] == null
+          ? null
+          : Gold.fromJson(json['gold'] as Map<String, dynamic>),
+      silver: json['silver'] == null
+          ? null
+          : Gold.fromJson(json['silver'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$GenerationIiToJson(_GenerationIi instance) =>

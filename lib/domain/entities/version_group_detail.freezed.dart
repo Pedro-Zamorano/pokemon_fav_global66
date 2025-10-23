@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$VersionGroupDetail {
 
- int get levelLearnedAt; Species get moveLearnMethod; int? get order; Species get versionGroup;
+ int? get levelLearnedAt; Species? get moveLearnMethod; int? get order; Species? get versionGroup;
 /// Create a copy of VersionGroupDetail
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $VersionGroupDetailCopyWith<$Res>  {
   factory $VersionGroupDetailCopyWith(VersionGroupDetail value, $Res Function(VersionGroupDetail) _then) = _$VersionGroupDetailCopyWithImpl;
 @useResult
 $Res call({
- int levelLearnedAt, Species moveLearnMethod, int? order, Species versionGroup
+ int? levelLearnedAt, Species? moveLearnMethod, int? order, Species? versionGroup
 });
 
 
-$SpeciesCopyWith<$Res> get moveLearnMethod;$SpeciesCopyWith<$Res> get versionGroup;
+$SpeciesCopyWith<$Res>? get moveLearnMethod;$SpeciesCopyWith<$Res>? get versionGroup;
 
 }
 /// @nodoc
@@ -65,31 +65,37 @@ class _$VersionGroupDetailCopyWithImpl<$Res>
 
 /// Create a copy of VersionGroupDetail
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? levelLearnedAt = null,Object? moveLearnMethod = null,Object? order = freezed,Object? versionGroup = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? levelLearnedAt = freezed,Object? moveLearnMethod = freezed,Object? order = freezed,Object? versionGroup = freezed,}) {
   return _then(_self.copyWith(
-levelLearnedAt: null == levelLearnedAt ? _self.levelLearnedAt : levelLearnedAt // ignore: cast_nullable_to_non_nullable
-as int,moveLearnMethod: null == moveLearnMethod ? _self.moveLearnMethod : moveLearnMethod // ignore: cast_nullable_to_non_nullable
-as Species,order: freezed == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
-as int?,versionGroup: null == versionGroup ? _self.versionGroup : versionGroup // ignore: cast_nullable_to_non_nullable
-as Species,
+levelLearnedAt: freezed == levelLearnedAt ? _self.levelLearnedAt : levelLearnedAt // ignore: cast_nullable_to_non_nullable
+as int?,moveLearnMethod: freezed == moveLearnMethod ? _self.moveLearnMethod : moveLearnMethod // ignore: cast_nullable_to_non_nullable
+as Species?,order: freezed == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
+as int?,versionGroup: freezed == versionGroup ? _self.versionGroup : versionGroup // ignore: cast_nullable_to_non_nullable
+as Species?,
   ));
 }
 /// Create a copy of VersionGroupDetail
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get moveLearnMethod {
-  
-  return $SpeciesCopyWith<$Res>(_self.moveLearnMethod, (value) {
+$SpeciesCopyWith<$Res>? get moveLearnMethod {
+    if (_self.moveLearnMethod == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.moveLearnMethod!, (value) {
     return _then(_self.copyWith(moveLearnMethod: value));
   });
 }/// Create a copy of VersionGroupDetail
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get versionGroup {
-  
-  return $SpeciesCopyWith<$Res>(_self.versionGroup, (value) {
+$SpeciesCopyWith<$Res>? get versionGroup {
+    if (_self.versionGroup == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.versionGroup!, (value) {
     return _then(_self.copyWith(versionGroup: value));
   });
 }
@@ -171,7 +177,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int levelLearnedAt,  Species moveLearnMethod,  int? order,  Species versionGroup)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? levelLearnedAt,  Species? moveLearnMethod,  int? order,  Species? versionGroup)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _VersionGroupDetail() when $default != null:
 return $default(_that.levelLearnedAt,_that.moveLearnMethod,_that.order,_that.versionGroup);case _:
@@ -192,7 +198,7 @@ return $default(_that.levelLearnedAt,_that.moveLearnMethod,_that.order,_that.ver
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int levelLearnedAt,  Species moveLearnMethod,  int? order,  Species versionGroup)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? levelLearnedAt,  Species? moveLearnMethod,  int? order,  Species? versionGroup)  $default,) {final _that = this;
 switch (_that) {
 case _VersionGroupDetail():
 return $default(_that.levelLearnedAt,_that.moveLearnMethod,_that.order,_that.versionGroup);}
@@ -209,7 +215,7 @@ return $default(_that.levelLearnedAt,_that.moveLearnMethod,_that.order,_that.ver
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int levelLearnedAt,  Species moveLearnMethod,  int? order,  Species versionGroup)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? levelLearnedAt,  Species? moveLearnMethod,  int? order,  Species? versionGroup)?  $default,) {final _that = this;
 switch (_that) {
 case _VersionGroupDetail() when $default != null:
 return $default(_that.levelLearnedAt,_that.moveLearnMethod,_that.order,_that.versionGroup);case _:
@@ -227,10 +233,10 @@ class _VersionGroupDetail implements VersionGroupDetail {
    _VersionGroupDetail({required this.levelLearnedAt, required this.moveLearnMethod, required this.order, required this.versionGroup});
   factory _VersionGroupDetail.fromJson(Map<String, dynamic> json) => _$VersionGroupDetailFromJson(json);
 
-@override final  int levelLearnedAt;
-@override final  Species moveLearnMethod;
+@override final  int? levelLearnedAt;
+@override final  Species? moveLearnMethod;
 @override final  int? order;
-@override final  Species versionGroup;
+@override final  Species? versionGroup;
 
 /// Create a copy of VersionGroupDetail
 /// with the given fields replaced by the non-null parameter values.
@@ -265,11 +271,11 @@ abstract mixin class _$VersionGroupDetailCopyWith<$Res> implements $VersionGroup
   factory _$VersionGroupDetailCopyWith(_VersionGroupDetail value, $Res Function(_VersionGroupDetail) _then) = __$VersionGroupDetailCopyWithImpl;
 @override @useResult
 $Res call({
- int levelLearnedAt, Species moveLearnMethod, int? order, Species versionGroup
+ int? levelLearnedAt, Species? moveLearnMethod, int? order, Species? versionGroup
 });
 
 
-@override $SpeciesCopyWith<$Res> get moveLearnMethod;@override $SpeciesCopyWith<$Res> get versionGroup;
+@override $SpeciesCopyWith<$Res>? get moveLearnMethod;@override $SpeciesCopyWith<$Res>? get versionGroup;
 
 }
 /// @nodoc
@@ -282,13 +288,13 @@ class __$VersionGroupDetailCopyWithImpl<$Res>
 
 /// Create a copy of VersionGroupDetail
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? levelLearnedAt = null,Object? moveLearnMethod = null,Object? order = freezed,Object? versionGroup = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? levelLearnedAt = freezed,Object? moveLearnMethod = freezed,Object? order = freezed,Object? versionGroup = freezed,}) {
   return _then(_VersionGroupDetail(
-levelLearnedAt: null == levelLearnedAt ? _self.levelLearnedAt : levelLearnedAt // ignore: cast_nullable_to_non_nullable
-as int,moveLearnMethod: null == moveLearnMethod ? _self.moveLearnMethod : moveLearnMethod // ignore: cast_nullable_to_non_nullable
-as Species,order: freezed == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
-as int?,versionGroup: null == versionGroup ? _self.versionGroup : versionGroup // ignore: cast_nullable_to_non_nullable
-as Species,
+levelLearnedAt: freezed == levelLearnedAt ? _self.levelLearnedAt : levelLearnedAt // ignore: cast_nullable_to_non_nullable
+as int?,moveLearnMethod: freezed == moveLearnMethod ? _self.moveLearnMethod : moveLearnMethod // ignore: cast_nullable_to_non_nullable
+as Species?,order: freezed == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
+as int?,versionGroup: freezed == versionGroup ? _self.versionGroup : versionGroup // ignore: cast_nullable_to_non_nullable
+as Species?,
   ));
 }
 
@@ -296,18 +302,24 @@ as Species,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get moveLearnMethod {
-  
-  return $SpeciesCopyWith<$Res>(_self.moveLearnMethod, (value) {
+$SpeciesCopyWith<$Res>? get moveLearnMethod {
+    if (_self.moveLearnMethod == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.moveLearnMethod!, (value) {
     return _then(_self.copyWith(moveLearnMethod: value));
   });
 }/// Create a copy of VersionGroupDetail
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get versionGroup {
-  
-  return $SpeciesCopyWith<$Res>(_self.versionGroup, (value) {
+$SpeciesCopyWith<$Res>? get versionGroup {
+    if (_self.versionGroup == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.versionGroup!, (value) {
     return _then(_self.copyWith(versionGroup: value));
   });
 }

@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GenerationVii {
 
- DreamWorld get icons; Home get ultraSunUltraMoon;
+ DreamWorld? get icons; Home? get ultraSunUltraMoon;
 /// Create a copy of GenerationVii
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $GenerationViiCopyWith<$Res>  {
   factory $GenerationViiCopyWith(GenerationVii value, $Res Function(GenerationVii) _then) = _$GenerationViiCopyWithImpl;
 @useResult
 $Res call({
- DreamWorld icons, Home ultraSunUltraMoon
+ DreamWorld? icons, Home? ultraSunUltraMoon
 });
 
 
-$DreamWorldCopyWith<$Res> get icons;$HomeCopyWith<$Res> get ultraSunUltraMoon;
+$DreamWorldCopyWith<$Res>? get icons;$HomeCopyWith<$Res>? get ultraSunUltraMoon;
 
 }
 /// @nodoc
@@ -65,29 +65,35 @@ class _$GenerationViiCopyWithImpl<$Res>
 
 /// Create a copy of GenerationVii
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? icons = null,Object? ultraSunUltraMoon = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? icons = freezed,Object? ultraSunUltraMoon = freezed,}) {
   return _then(_self.copyWith(
-icons: null == icons ? _self.icons : icons // ignore: cast_nullable_to_non_nullable
-as DreamWorld,ultraSunUltraMoon: null == ultraSunUltraMoon ? _self.ultraSunUltraMoon : ultraSunUltraMoon // ignore: cast_nullable_to_non_nullable
-as Home,
+icons: freezed == icons ? _self.icons : icons // ignore: cast_nullable_to_non_nullable
+as DreamWorld?,ultraSunUltraMoon: freezed == ultraSunUltraMoon ? _self.ultraSunUltraMoon : ultraSunUltraMoon // ignore: cast_nullable_to_non_nullable
+as Home?,
   ));
 }
 /// Create a copy of GenerationVii
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$DreamWorldCopyWith<$Res> get icons {
-  
-  return $DreamWorldCopyWith<$Res>(_self.icons, (value) {
+$DreamWorldCopyWith<$Res>? get icons {
+    if (_self.icons == null) {
+    return null;
+  }
+
+  return $DreamWorldCopyWith<$Res>(_self.icons!, (value) {
     return _then(_self.copyWith(icons: value));
   });
 }/// Create a copy of GenerationVii
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$HomeCopyWith<$Res> get ultraSunUltraMoon {
-  
-  return $HomeCopyWith<$Res>(_self.ultraSunUltraMoon, (value) {
+$HomeCopyWith<$Res>? get ultraSunUltraMoon {
+    if (_self.ultraSunUltraMoon == null) {
+    return null;
+  }
+
+  return $HomeCopyWith<$Res>(_self.ultraSunUltraMoon!, (value) {
     return _then(_self.copyWith(ultraSunUltraMoon: value));
   });
 }
@@ -169,7 +175,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( DreamWorld icons,  Home ultraSunUltraMoon)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( DreamWorld? icons,  Home? ultraSunUltraMoon)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GenerationVii() when $default != null:
 return $default(_that.icons,_that.ultraSunUltraMoon);case _:
@@ -190,7 +196,7 @@ return $default(_that.icons,_that.ultraSunUltraMoon);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( DreamWorld icons,  Home ultraSunUltraMoon)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( DreamWorld? icons,  Home? ultraSunUltraMoon)  $default,) {final _that = this;
 switch (_that) {
 case _GenerationVii():
 return $default(_that.icons,_that.ultraSunUltraMoon);}
@@ -207,7 +213,7 @@ return $default(_that.icons,_that.ultraSunUltraMoon);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( DreamWorld icons,  Home ultraSunUltraMoon)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( DreamWorld? icons,  Home? ultraSunUltraMoon)?  $default,) {final _that = this;
 switch (_that) {
 case _GenerationVii() when $default != null:
 return $default(_that.icons,_that.ultraSunUltraMoon);case _:
@@ -225,8 +231,8 @@ class _GenerationVii implements GenerationVii {
    _GenerationVii({required this.icons, required this.ultraSunUltraMoon});
   factory _GenerationVii.fromJson(Map<String, dynamic> json) => _$GenerationViiFromJson(json);
 
-@override final  DreamWorld icons;
-@override final  Home ultraSunUltraMoon;
+@override final  DreamWorld? icons;
+@override final  Home? ultraSunUltraMoon;
 
 /// Create a copy of GenerationVii
 /// with the given fields replaced by the non-null parameter values.
@@ -261,11 +267,11 @@ abstract mixin class _$GenerationViiCopyWith<$Res> implements $GenerationViiCopy
   factory _$GenerationViiCopyWith(_GenerationVii value, $Res Function(_GenerationVii) _then) = __$GenerationViiCopyWithImpl;
 @override @useResult
 $Res call({
- DreamWorld icons, Home ultraSunUltraMoon
+ DreamWorld? icons, Home? ultraSunUltraMoon
 });
 
 
-@override $DreamWorldCopyWith<$Res> get icons;@override $HomeCopyWith<$Res> get ultraSunUltraMoon;
+@override $DreamWorldCopyWith<$Res>? get icons;@override $HomeCopyWith<$Res>? get ultraSunUltraMoon;
 
 }
 /// @nodoc
@@ -278,11 +284,11 @@ class __$GenerationViiCopyWithImpl<$Res>
 
 /// Create a copy of GenerationVii
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? icons = null,Object? ultraSunUltraMoon = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? icons = freezed,Object? ultraSunUltraMoon = freezed,}) {
   return _then(_GenerationVii(
-icons: null == icons ? _self.icons : icons // ignore: cast_nullable_to_non_nullable
-as DreamWorld,ultraSunUltraMoon: null == ultraSunUltraMoon ? _self.ultraSunUltraMoon : ultraSunUltraMoon // ignore: cast_nullable_to_non_nullable
-as Home,
+icons: freezed == icons ? _self.icons : icons // ignore: cast_nullable_to_non_nullable
+as DreamWorld?,ultraSunUltraMoon: freezed == ultraSunUltraMoon ? _self.ultraSunUltraMoon : ultraSunUltraMoon // ignore: cast_nullable_to_non_nullable
+as Home?,
   ));
 }
 
@@ -290,18 +296,24 @@ as Home,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$DreamWorldCopyWith<$Res> get icons {
-  
-  return $DreamWorldCopyWith<$Res>(_self.icons, (value) {
+$DreamWorldCopyWith<$Res>? get icons {
+    if (_self.icons == null) {
+    return null;
+  }
+
+  return $DreamWorldCopyWith<$Res>(_self.icons!, (value) {
     return _then(_self.copyWith(icons: value));
   });
 }/// Create a copy of GenerationVii
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$HomeCopyWith<$Res> get ultraSunUltraMoon {
-  
-  return $HomeCopyWith<$Res>(_self.ultraSunUltraMoon, (value) {
+$HomeCopyWith<$Res>? get ultraSunUltraMoon {
+    if (_self.ultraSunUltraMoon == null) {
+    return null;
+  }
+
+  return $HomeCopyWith<$Res>(_self.ultraSunUltraMoon!, (value) {
     return _then(_self.copyWith(ultraSunUltraMoon: value));
   });
 }

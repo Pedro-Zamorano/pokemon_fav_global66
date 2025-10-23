@@ -7,8 +7,12 @@ part of 'generation_i.dart';
 // **************************************************************************
 
 _GenerationI _$GenerationIFromJson(Map<String, dynamic> json) => _GenerationI(
-  redBlue: RedBlue.fromJson(json['redBlue'] as Map<String, dynamic>),
-  yellow: RedBlue.fromJson(json['yellow'] as Map<String, dynamic>),
+  redBlue: json['redBlue'] == null
+      ? null
+      : RedBlue.fromJson(json['redBlue'] as Map<String, dynamic>),
+  yellow: json['yellow'] == null
+      ? null
+      : RedBlue.fromJson(json['yellow'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$GenerationIToJson(_GenerationI instance) =>

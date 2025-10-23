@@ -8,9 +8,9 @@ part 'stat.g.dart';
 sealed class Stat with _$Stat {
 
   factory Stat({
-    required int baseStat,
-    required int effort,
-    required Species stat,
+    required int? baseStat,
+    required int? effort,
+    required Species? stat,
   }) = _Stat;
 
   factory Stat.fromJson(Map<String, dynamic> json) => _$StatFromJson(json);

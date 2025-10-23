@@ -8,8 +8,8 @@ part 'game_index.g.dart';
 sealed class GameIndex with _$GameIndex {
 
   factory GameIndex({
-    required int gameIndex,
-    required Species version,
+    required int? gameIndex,
+    required Species? version,
   }) = _GameIndex;
 
   factory GameIndex.fromJson(Map<String, dynamic> json) => _$GameIndexFromJson(json);

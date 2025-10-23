@@ -7,7 +7,7 @@ part of 'dream_world.dart';
 // **************************************************************************
 
 _DreamWorld _$DreamWorldFromJson(Map<String, dynamic> json) => _DreamWorld(
-  frontDefault: json['frontDefault'] as String,
+  frontDefault: json['frontDefault'] as String?,
   frontFemale: json['frontFemale'],
 );
 

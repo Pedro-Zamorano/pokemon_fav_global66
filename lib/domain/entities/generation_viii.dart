@@ -8,7 +8,7 @@ part 'generation_viii.g.dart';
 sealed class GenerationViii with _$GenerationViii {
 
   factory GenerationViii({
-    required DreamWorld icons,
+    required DreamWorld? icons,
   }) = _GenerationViii;
 
   factory GenerationViii.fromJson(Map<String, dynamic> json) => _$GenerationViiiFromJson(json);

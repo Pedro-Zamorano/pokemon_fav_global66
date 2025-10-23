@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Type {
 
- int get slot; Species get type;
+ int? get slot; Species? get type;
 /// Create a copy of Type
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $TypeCopyWith<$Res>  {
   factory $TypeCopyWith(Type value, $Res Function(Type) _then) = _$TypeCopyWithImpl;
 @useResult
 $Res call({
- int slot, Species type
+ int? slot, Species? type
 });
 
 
-$SpeciesCopyWith<$Res> get type;
+$SpeciesCopyWith<$Res>? get type;
 
 }
 /// @nodoc
@@ -65,20 +65,23 @@ class _$TypeCopyWithImpl<$Res>
 
 /// Create a copy of Type
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? slot = null,Object? type = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? slot = freezed,Object? type = freezed,}) {
   return _then(_self.copyWith(
-slot: null == slot ? _self.slot : slot // ignore: cast_nullable_to_non_nullable
-as int,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as Species,
+slot: freezed == slot ? _self.slot : slot // ignore: cast_nullable_to_non_nullable
+as int?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as Species?,
   ));
 }
 /// Create a copy of Type
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get type {
-  
-  return $SpeciesCopyWith<$Res>(_self.type, (value) {
+$SpeciesCopyWith<$Res>? get type {
+    if (_self.type == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.type!, (value) {
     return _then(_self.copyWith(type: value));
   });
 }
@@ -160,7 +163,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int slot,  Species type)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? slot,  Species? type)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Type() when $default != null:
 return $default(_that.slot,_that.type);case _:
@@ -181,7 +184,7 @@ return $default(_that.slot,_that.type);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int slot,  Species type)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? slot,  Species? type)  $default,) {final _that = this;
 switch (_that) {
 case _Type():
 return $default(_that.slot,_that.type);}
@@ -198,7 +201,7 @@ return $default(_that.slot,_that.type);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int slot,  Species type)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? slot,  Species? type)?  $default,) {final _that = this;
 switch (_that) {
 case _Type() when $default != null:
 return $default(_that.slot,_that.type);case _:
@@ -216,8 +219,8 @@ class _Type implements Type {
    _Type({required this.slot, required this.type});
   factory _Type.fromJson(Map<String, dynamic> json) => _$TypeFromJson(json);
 
-@override final  int slot;
-@override final  Species type;
+@override final  int? slot;
+@override final  Species? type;
 
 /// Create a copy of Type
 /// with the given fields replaced by the non-null parameter values.
@@ -252,11 +255,11 @@ abstract mixin class _$TypeCopyWith<$Res> implements $TypeCopyWith<$Res> {
   factory _$TypeCopyWith(_Type value, $Res Function(_Type) _then) = __$TypeCopyWithImpl;
 @override @useResult
 $Res call({
- int slot, Species type
+ int? slot, Species? type
 });
 
 
-@override $SpeciesCopyWith<$Res> get type;
+@override $SpeciesCopyWith<$Res>? get type;
 
 }
 /// @nodoc
@@ -269,11 +272,11 @@ class __$TypeCopyWithImpl<$Res>
 
 /// Create a copy of Type
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? slot = null,Object? type = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? slot = freezed,Object? type = freezed,}) {
   return _then(_Type(
-slot: null == slot ? _self.slot : slot // ignore: cast_nullable_to_non_nullable
-as int,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as Species,
+slot: freezed == slot ? _self.slot : slot // ignore: cast_nullable_to_non_nullable
+as int?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as Species?,
   ));
 }
 
@@ -281,9 +284,12 @@ as Species,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get type {
-  
-  return $SpeciesCopyWith<$Res>(_self.type, (value) {
+$SpeciesCopyWith<$Res>? get type {
+    if (_self.type == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.type!, (value) {
     return _then(_self.copyWith(type: value));
   });
 }

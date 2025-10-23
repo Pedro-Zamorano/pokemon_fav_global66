@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GenerationI {
 
- RedBlue get redBlue; RedBlue get yellow;
+ RedBlue? get redBlue; RedBlue? get yellow;
 /// Create a copy of GenerationI
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $GenerationICopyWith<$Res>  {
   factory $GenerationICopyWith(GenerationI value, $Res Function(GenerationI) _then) = _$GenerationICopyWithImpl;
 @useResult
 $Res call({
- RedBlue redBlue, RedBlue yellow
+ RedBlue? redBlue, RedBlue? yellow
 });
 
 
-$RedBlueCopyWith<$Res> get redBlue;$RedBlueCopyWith<$Res> get yellow;
+$RedBlueCopyWith<$Res>? get redBlue;$RedBlueCopyWith<$Res>? get yellow;
 
 }
 /// @nodoc
@@ -65,29 +65,35 @@ class _$GenerationICopyWithImpl<$Res>
 
 /// Create a copy of GenerationI
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? redBlue = null,Object? yellow = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? redBlue = freezed,Object? yellow = freezed,}) {
   return _then(_self.copyWith(
-redBlue: null == redBlue ? _self.redBlue : redBlue // ignore: cast_nullable_to_non_nullable
-as RedBlue,yellow: null == yellow ? _self.yellow : yellow // ignore: cast_nullable_to_non_nullable
-as RedBlue,
+redBlue: freezed == redBlue ? _self.redBlue : redBlue // ignore: cast_nullable_to_non_nullable
+as RedBlue?,yellow: freezed == yellow ? _self.yellow : yellow // ignore: cast_nullable_to_non_nullable
+as RedBlue?,
   ));
 }
 /// Create a copy of GenerationI
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$RedBlueCopyWith<$Res> get redBlue {
-  
-  return $RedBlueCopyWith<$Res>(_self.redBlue, (value) {
+$RedBlueCopyWith<$Res>? get redBlue {
+    if (_self.redBlue == null) {
+    return null;
+  }
+
+  return $RedBlueCopyWith<$Res>(_self.redBlue!, (value) {
     return _then(_self.copyWith(redBlue: value));
   });
 }/// Create a copy of GenerationI
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$RedBlueCopyWith<$Res> get yellow {
-  
-  return $RedBlueCopyWith<$Res>(_self.yellow, (value) {
+$RedBlueCopyWith<$Res>? get yellow {
+    if (_self.yellow == null) {
+    return null;
+  }
+
+  return $RedBlueCopyWith<$Res>(_self.yellow!, (value) {
     return _then(_self.copyWith(yellow: value));
   });
 }
@@ -169,7 +175,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( RedBlue redBlue,  RedBlue yellow)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( RedBlue? redBlue,  RedBlue? yellow)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GenerationI() when $default != null:
 return $default(_that.redBlue,_that.yellow);case _:
@@ -190,7 +196,7 @@ return $default(_that.redBlue,_that.yellow);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( RedBlue redBlue,  RedBlue yellow)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( RedBlue? redBlue,  RedBlue? yellow)  $default,) {final _that = this;
 switch (_that) {
 case _GenerationI():
 return $default(_that.redBlue,_that.yellow);}
@@ -207,7 +213,7 @@ return $default(_that.redBlue,_that.yellow);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( RedBlue redBlue,  RedBlue yellow)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( RedBlue? redBlue,  RedBlue? yellow)?  $default,) {final _that = this;
 switch (_that) {
 case _GenerationI() when $default != null:
 return $default(_that.redBlue,_that.yellow);case _:
@@ -225,8 +231,8 @@ class _GenerationI implements GenerationI {
    _GenerationI({required this.redBlue, required this.yellow});
   factory _GenerationI.fromJson(Map<String, dynamic> json) => _$GenerationIFromJson(json);
 
-@override final  RedBlue redBlue;
-@override final  RedBlue yellow;
+@override final  RedBlue? redBlue;
+@override final  RedBlue? yellow;
 
 /// Create a copy of GenerationI
 /// with the given fields replaced by the non-null parameter values.
@@ -261,11 +267,11 @@ abstract mixin class _$GenerationICopyWith<$Res> implements $GenerationICopyWith
   factory _$GenerationICopyWith(_GenerationI value, $Res Function(_GenerationI) _then) = __$GenerationICopyWithImpl;
 @override @useResult
 $Res call({
- RedBlue redBlue, RedBlue yellow
+ RedBlue? redBlue, RedBlue? yellow
 });
 
 
-@override $RedBlueCopyWith<$Res> get redBlue;@override $RedBlueCopyWith<$Res> get yellow;
+@override $RedBlueCopyWith<$Res>? get redBlue;@override $RedBlueCopyWith<$Res>? get yellow;
 
 }
 /// @nodoc
@@ -278,11 +284,11 @@ class __$GenerationICopyWithImpl<$Res>
 
 /// Create a copy of GenerationI
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? redBlue = null,Object? yellow = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? redBlue = freezed,Object? yellow = freezed,}) {
   return _then(_GenerationI(
-redBlue: null == redBlue ? _self.redBlue : redBlue // ignore: cast_nullable_to_non_nullable
-as RedBlue,yellow: null == yellow ? _self.yellow : yellow // ignore: cast_nullable_to_non_nullable
-as RedBlue,
+redBlue: freezed == redBlue ? _self.redBlue : redBlue // ignore: cast_nullable_to_non_nullable
+as RedBlue?,yellow: freezed == yellow ? _self.yellow : yellow // ignore: cast_nullable_to_non_nullable
+as RedBlue?,
   ));
 }
 
@@ -290,18 +296,24 @@ as RedBlue,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$RedBlueCopyWith<$Res> get redBlue {
-  
-  return $RedBlueCopyWith<$Res>(_self.redBlue, (value) {
+$RedBlueCopyWith<$Res>? get redBlue {
+    if (_self.redBlue == null) {
+    return null;
+  }
+
+  return $RedBlueCopyWith<$Res>(_self.redBlue!, (value) {
     return _then(_self.copyWith(redBlue: value));
   });
 }/// Create a copy of GenerationI
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$RedBlueCopyWith<$Res> get yellow {
-  
-  return $RedBlueCopyWith<$Res>(_self.yellow, (value) {
+$RedBlueCopyWith<$Res>? get yellow {
+    if (_self.yellow == null) {
+    return null;
+  }
+
+  return $RedBlueCopyWith<$Res>(_self.yellow!, (value) {
     return _then(_self.copyWith(yellow: value));
   });
 }

@@ -7,14 +7,14 @@ part of 'crystal.dart';
 // **************************************************************************
 
 _Crystal _$CrystalFromJson(Map<String, dynamic> json) => _Crystal(
-  backDefault: json['backDefault'] as String,
-  backShiny: json['backShiny'] as String,
-  backShinyTransparent: json['backShinyTransparent'] as String,
-  backTransparent: json['backTransparent'] as String,
-  frontDefault: json['frontDefault'] as String,
-  frontShiny: json['frontShiny'] as String,
-  frontShinyTransparent: json['frontShinyTransparent'] as String,
-  frontTransparent: json['frontTransparent'] as String,
+  backDefault: json['backDefault'] as String?,
+  backShiny: json['backShiny'] as String?,
+  backShinyTransparent: json['backShinyTransparent'] as String?,
+  backTransparent: json['backTransparent'] as String?,
+  frontDefault: json['frontDefault'] as String?,
+  frontShiny: json['frontShiny'] as String?,
+  frontShinyTransparent: json['frontShinyTransparent'] as String?,
+  frontTransparent: json['frontTransparent'] as String?,
 );
 
 Map<String, dynamic> _$CrystalToJson(_Crystal instance) => <String, dynamic>{

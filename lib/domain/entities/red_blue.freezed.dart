@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$RedBlue {
 
- String get backDefault; String get backGray; String get backTransparent; String get frontDefault; String get frontGray; String get frontTransparent;
+ String? get backDefault; String? get backGray; String? get backTransparent; String? get frontDefault; String? get frontGray; String? get frontTransparent;
 /// Create a copy of RedBlue
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $RedBlueCopyWith<$Res>  {
   factory $RedBlueCopyWith(RedBlue value, $Res Function(RedBlue) _then) = _$RedBlueCopyWithImpl;
 @useResult
 $Res call({
- String backDefault, String backGray, String backTransparent, String frontDefault, String frontGray, String frontTransparent
+ String? backDefault, String? backGray, String? backTransparent, String? frontDefault, String? frontGray, String? frontTransparent
 });
 
 
@@ -65,15 +65,15 @@ class _$RedBlueCopyWithImpl<$Res>
 
 /// Create a copy of RedBlue
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? backDefault = null,Object? backGray = null,Object? backTransparent = null,Object? frontDefault = null,Object? frontGray = null,Object? frontTransparent = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? backDefault = freezed,Object? backGray = freezed,Object? backTransparent = freezed,Object? frontDefault = freezed,Object? frontGray = freezed,Object? frontTransparent = freezed,}) {
   return _then(_self.copyWith(
-backDefault: null == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
-as String,backGray: null == backGray ? _self.backGray : backGray // ignore: cast_nullable_to_non_nullable
-as String,backTransparent: null == backTransparent ? _self.backTransparent : backTransparent // ignore: cast_nullable_to_non_nullable
-as String,frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontGray: null == frontGray ? _self.frontGray : frontGray // ignore: cast_nullable_to_non_nullable
-as String,frontTransparent: null == frontTransparent ? _self.frontTransparent : frontTransparent // ignore: cast_nullable_to_non_nullable
-as String,
+backDefault: freezed == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
+as String?,backGray: freezed == backGray ? _self.backGray : backGray // ignore: cast_nullable_to_non_nullable
+as String?,backTransparent: freezed == backTransparent ? _self.backTransparent : backTransparent // ignore: cast_nullable_to_non_nullable
+as String?,frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontGray: freezed == frontGray ? _self.frontGray : frontGray // ignore: cast_nullable_to_non_nullable
+as String?,frontTransparent: freezed == frontTransparent ? _self.frontTransparent : frontTransparent // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 
@@ -155,7 +155,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String backDefault,  String backGray,  String backTransparent,  String frontDefault,  String frontGray,  String frontTransparent)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? backDefault,  String? backGray,  String? backTransparent,  String? frontDefault,  String? frontGray,  String? frontTransparent)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _RedBlue() when $default != null:
 return $default(_that.backDefault,_that.backGray,_that.backTransparent,_that.frontDefault,_that.frontGray,_that.frontTransparent);case _:
@@ -176,7 +176,7 @@ return $default(_that.backDefault,_that.backGray,_that.backTransparent,_that.fro
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String backDefault,  String backGray,  String backTransparent,  String frontDefault,  String frontGray,  String frontTransparent)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? backDefault,  String? backGray,  String? backTransparent,  String? frontDefault,  String? frontGray,  String? frontTransparent)  $default,) {final _that = this;
 switch (_that) {
 case _RedBlue():
 return $default(_that.backDefault,_that.backGray,_that.backTransparent,_that.frontDefault,_that.frontGray,_that.frontTransparent);}
@@ -193,7 +193,7 @@ return $default(_that.backDefault,_that.backGray,_that.backTransparent,_that.fro
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String backDefault,  String backGray,  String backTransparent,  String frontDefault,  String frontGray,  String frontTransparent)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? backDefault,  String? backGray,  String? backTransparent,  String? frontDefault,  String? frontGray,  String? frontTransparent)?  $default,) {final _that = this;
 switch (_that) {
 case _RedBlue() when $default != null:
 return $default(_that.backDefault,_that.backGray,_that.backTransparent,_that.frontDefault,_that.frontGray,_that.frontTransparent);case _:
@@ -211,12 +211,12 @@ class _RedBlue implements RedBlue {
    _RedBlue({required this.backDefault, required this.backGray, required this.backTransparent, required this.frontDefault, required this.frontGray, required this.frontTransparent});
   factory _RedBlue.fromJson(Map<String, dynamic> json) => _$RedBlueFromJson(json);
 
-@override final  String backDefault;
-@override final  String backGray;
-@override final  String backTransparent;
-@override final  String frontDefault;
-@override final  String frontGray;
-@override final  String frontTransparent;
+@override final  String? backDefault;
+@override final  String? backGray;
+@override final  String? backTransparent;
+@override final  String? frontDefault;
+@override final  String? frontGray;
+@override final  String? frontTransparent;
 
 /// Create a copy of RedBlue
 /// with the given fields replaced by the non-null parameter values.
@@ -251,7 +251,7 @@ abstract mixin class _$RedBlueCopyWith<$Res> implements $RedBlueCopyWith<$Res> {
   factory _$RedBlueCopyWith(_RedBlue value, $Res Function(_RedBlue) _then) = __$RedBlueCopyWithImpl;
 @override @useResult
 $Res call({
- String backDefault, String backGray, String backTransparent, String frontDefault, String frontGray, String frontTransparent
+ String? backDefault, String? backGray, String? backTransparent, String? frontDefault, String? frontGray, String? frontTransparent
 });
 
 
@@ -268,15 +268,15 @@ class __$RedBlueCopyWithImpl<$Res>
 
 /// Create a copy of RedBlue
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? backDefault = null,Object? backGray = null,Object? backTransparent = null,Object? frontDefault = null,Object? frontGray = null,Object? frontTransparent = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? backDefault = freezed,Object? backGray = freezed,Object? backTransparent = freezed,Object? frontDefault = freezed,Object? frontGray = freezed,Object? frontTransparent = freezed,}) {
   return _then(_RedBlue(
-backDefault: null == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
-as String,backGray: null == backGray ? _self.backGray : backGray // ignore: cast_nullable_to_non_nullable
-as String,backTransparent: null == backTransparent ? _self.backTransparent : backTransparent // ignore: cast_nullable_to_non_nullable
-as String,frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontGray: null == frontGray ? _self.frontGray : frontGray // ignore: cast_nullable_to_non_nullable
-as String,frontTransparent: null == frontTransparent ? _self.frontTransparent : frontTransparent // ignore: cast_nullable_to_non_nullable
-as String,
+backDefault: freezed == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
+as String?,backGray: freezed == backGray ? _self.backGray : backGray // ignore: cast_nullable_to_non_nullable
+as String?,backTransparent: freezed == backTransparent ? _self.backTransparent : backTransparent // ignore: cast_nullable_to_non_nullable
+as String?,frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontGray: freezed == frontGray ? _self.frontGray : frontGray // ignore: cast_nullable_to_non_nullable
+as String?,frontTransparent: freezed == frontTransparent ? _self.frontTransparent : frontTransparent // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 

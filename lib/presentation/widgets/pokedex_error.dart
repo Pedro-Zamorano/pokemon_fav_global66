@@ -16,13 +16,14 @@ class PokedexError extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(magikarpError),
 
         const SizedBox(height: 16),
 
-        const Text(
-          "¡Muy pronto disponible!",
+        Text(
+          title,
           textAlign: TextAlign.justify,
           style: TextStyle(
             fontSize: 20,
@@ -33,8 +34,8 @@ class PokedexError extends StatelessWidget {
 
         const SizedBox(height: 16),
 
-        const Text(
-          "Estamos trabajando para traerte esta sección. Vuelve más adelante para descubrir todas las novedades.",
+        Text(
+          description,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 14,

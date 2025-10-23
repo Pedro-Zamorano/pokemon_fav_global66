@@ -8,7 +8,7 @@ part 'generation_v.g.dart';
 sealed class GenerationV with _$GenerationV {
 
   factory GenerationV({
-    required Sprites blackWhite,
+    required Sprites? blackWhite,
   }) = _GenerationV;
 
   factory GenerationV.fromJson(Map<String, dynamic> json) => _$GenerationVFromJson(json);

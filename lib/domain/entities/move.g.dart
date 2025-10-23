@@ -7,9 +7,11 @@ part of 'move.dart';
 // **************************************************************************
 
 _Move _$MoveFromJson(Map<String, dynamic> json) => _Move(
-  move: Species.fromJson(json['move'] as Map<String, dynamic>),
-  versionGroupDetails: (json['versionGroupDetails'] as List<dynamic>)
-      .map((e) => VersionGroupDetail.fromJson(e as Map<String, dynamic>))
+  move: json['move'] == null
+      ? null
+      : Species.fromJson(json['move'] as Map<String, dynamic>),
+  versionGroupDetails: (json['versionGroupDetails'] as List<dynamic>?)
+      ?.map((e) => VersionGroupDetail.fromJson(e as Map<String, dynamic>))
       .toList(),
 );
 

@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GenerationIv {
 
- Sprites get diamondPearl; Sprites get heartgoldSoulsilver; Sprites get platinum;
+ Sprites? get diamondPearl; Sprites? get heartgoldSoulsilver; Sprites? get platinum;
 /// Create a copy of GenerationIv
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $GenerationIvCopyWith<$Res>  {
   factory $GenerationIvCopyWith(GenerationIv value, $Res Function(GenerationIv) _then) = _$GenerationIvCopyWithImpl;
 @useResult
 $Res call({
- Sprites diamondPearl, Sprites heartgoldSoulsilver, Sprites platinum
+ Sprites? diamondPearl, Sprites? heartgoldSoulsilver, Sprites? platinum
 });
 
 
-$SpritesCopyWith<$Res> get diamondPearl;$SpritesCopyWith<$Res> get heartgoldSoulsilver;$SpritesCopyWith<$Res> get platinum;
+$SpritesCopyWith<$Res>? get diamondPearl;$SpritesCopyWith<$Res>? get heartgoldSoulsilver;$SpritesCopyWith<$Res>? get platinum;
 
 }
 /// @nodoc
@@ -65,39 +65,48 @@ class _$GenerationIvCopyWithImpl<$Res>
 
 /// Create a copy of GenerationIv
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? diamondPearl = null,Object? heartgoldSoulsilver = null,Object? platinum = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? diamondPearl = freezed,Object? heartgoldSoulsilver = freezed,Object? platinum = freezed,}) {
   return _then(_self.copyWith(
-diamondPearl: null == diamondPearl ? _self.diamondPearl : diamondPearl // ignore: cast_nullable_to_non_nullable
-as Sprites,heartgoldSoulsilver: null == heartgoldSoulsilver ? _self.heartgoldSoulsilver : heartgoldSoulsilver // ignore: cast_nullable_to_non_nullable
-as Sprites,platinum: null == platinum ? _self.platinum : platinum // ignore: cast_nullable_to_non_nullable
-as Sprites,
+diamondPearl: freezed == diamondPearl ? _self.diamondPearl : diamondPearl // ignore: cast_nullable_to_non_nullable
+as Sprites?,heartgoldSoulsilver: freezed == heartgoldSoulsilver ? _self.heartgoldSoulsilver : heartgoldSoulsilver // ignore: cast_nullable_to_non_nullable
+as Sprites?,platinum: freezed == platinum ? _self.platinum : platinum // ignore: cast_nullable_to_non_nullable
+as Sprites?,
   ));
 }
 /// Create a copy of GenerationIv
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpritesCopyWith<$Res> get diamondPearl {
-  
-  return $SpritesCopyWith<$Res>(_self.diamondPearl, (value) {
+$SpritesCopyWith<$Res>? get diamondPearl {
+    if (_self.diamondPearl == null) {
+    return null;
+  }
+
+  return $SpritesCopyWith<$Res>(_self.diamondPearl!, (value) {
     return _then(_self.copyWith(diamondPearl: value));
   });
 }/// Create a copy of GenerationIv
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpritesCopyWith<$Res> get heartgoldSoulsilver {
-  
-  return $SpritesCopyWith<$Res>(_self.heartgoldSoulsilver, (value) {
+$SpritesCopyWith<$Res>? get heartgoldSoulsilver {
+    if (_self.heartgoldSoulsilver == null) {
+    return null;
+  }
+
+  return $SpritesCopyWith<$Res>(_self.heartgoldSoulsilver!, (value) {
     return _then(_self.copyWith(heartgoldSoulsilver: value));
   });
 }/// Create a copy of GenerationIv
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpritesCopyWith<$Res> get platinum {
-  
-  return $SpritesCopyWith<$Res>(_self.platinum, (value) {
+$SpritesCopyWith<$Res>? get platinum {
+    if (_self.platinum == null) {
+    return null;
+  }
+
+  return $SpritesCopyWith<$Res>(_self.platinum!, (value) {
     return _then(_self.copyWith(platinum: value));
   });
 }
@@ -179,7 +188,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Sprites diamondPearl,  Sprites heartgoldSoulsilver,  Sprites platinum)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Sprites? diamondPearl,  Sprites? heartgoldSoulsilver,  Sprites? platinum)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GenerationIv() when $default != null:
 return $default(_that.diamondPearl,_that.heartgoldSoulsilver,_that.platinum);case _:
@@ -200,7 +209,7 @@ return $default(_that.diamondPearl,_that.heartgoldSoulsilver,_that.platinum);cas
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Sprites diamondPearl,  Sprites heartgoldSoulsilver,  Sprites platinum)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Sprites? diamondPearl,  Sprites? heartgoldSoulsilver,  Sprites? platinum)  $default,) {final _that = this;
 switch (_that) {
 case _GenerationIv():
 return $default(_that.diamondPearl,_that.heartgoldSoulsilver,_that.platinum);}
@@ -217,7 +226,7 @@ return $default(_that.diamondPearl,_that.heartgoldSoulsilver,_that.platinum);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Sprites diamondPearl,  Sprites heartgoldSoulsilver,  Sprites platinum)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Sprites? diamondPearl,  Sprites? heartgoldSoulsilver,  Sprites? platinum)?  $default,) {final _that = this;
 switch (_that) {
 case _GenerationIv() when $default != null:
 return $default(_that.diamondPearl,_that.heartgoldSoulsilver,_that.platinum);case _:
@@ -235,9 +244,9 @@ class _GenerationIv implements GenerationIv {
    _GenerationIv({required this.diamondPearl, required this.heartgoldSoulsilver, required this.platinum});
   factory _GenerationIv.fromJson(Map<String, dynamic> json) => _$GenerationIvFromJson(json);
 
-@override final  Sprites diamondPearl;
-@override final  Sprites heartgoldSoulsilver;
-@override final  Sprites platinum;
+@override final  Sprites? diamondPearl;
+@override final  Sprites? heartgoldSoulsilver;
+@override final  Sprites? platinum;
 
 /// Create a copy of GenerationIv
 /// with the given fields replaced by the non-null parameter values.
@@ -272,11 +281,11 @@ abstract mixin class _$GenerationIvCopyWith<$Res> implements $GenerationIvCopyWi
   factory _$GenerationIvCopyWith(_GenerationIv value, $Res Function(_GenerationIv) _then) = __$GenerationIvCopyWithImpl;
 @override @useResult
 $Res call({
- Sprites diamondPearl, Sprites heartgoldSoulsilver, Sprites platinum
+ Sprites? diamondPearl, Sprites? heartgoldSoulsilver, Sprites? platinum
 });
 
 
-@override $SpritesCopyWith<$Res> get diamondPearl;@override $SpritesCopyWith<$Res> get heartgoldSoulsilver;@override $SpritesCopyWith<$Res> get platinum;
+@override $SpritesCopyWith<$Res>? get diamondPearl;@override $SpritesCopyWith<$Res>? get heartgoldSoulsilver;@override $SpritesCopyWith<$Res>? get platinum;
 
 }
 /// @nodoc
@@ -289,12 +298,12 @@ class __$GenerationIvCopyWithImpl<$Res>
 
 /// Create a copy of GenerationIv
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? diamondPearl = null,Object? heartgoldSoulsilver = null,Object? platinum = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? diamondPearl = freezed,Object? heartgoldSoulsilver = freezed,Object? platinum = freezed,}) {
   return _then(_GenerationIv(
-diamondPearl: null == diamondPearl ? _self.diamondPearl : diamondPearl // ignore: cast_nullable_to_non_nullable
-as Sprites,heartgoldSoulsilver: null == heartgoldSoulsilver ? _self.heartgoldSoulsilver : heartgoldSoulsilver // ignore: cast_nullable_to_non_nullable
-as Sprites,platinum: null == platinum ? _self.platinum : platinum // ignore: cast_nullable_to_non_nullable
-as Sprites,
+diamondPearl: freezed == diamondPearl ? _self.diamondPearl : diamondPearl // ignore: cast_nullable_to_non_nullable
+as Sprites?,heartgoldSoulsilver: freezed == heartgoldSoulsilver ? _self.heartgoldSoulsilver : heartgoldSoulsilver // ignore: cast_nullable_to_non_nullable
+as Sprites?,platinum: freezed == platinum ? _self.platinum : platinum // ignore: cast_nullable_to_non_nullable
+as Sprites?,
   ));
 }
 
@@ -302,27 +311,36 @@ as Sprites,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpritesCopyWith<$Res> get diamondPearl {
-  
-  return $SpritesCopyWith<$Res>(_self.diamondPearl, (value) {
+$SpritesCopyWith<$Res>? get diamondPearl {
+    if (_self.diamondPearl == null) {
+    return null;
+  }
+
+  return $SpritesCopyWith<$Res>(_self.diamondPearl!, (value) {
     return _then(_self.copyWith(diamondPearl: value));
   });
 }/// Create a copy of GenerationIv
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpritesCopyWith<$Res> get heartgoldSoulsilver {
-  
-  return $SpritesCopyWith<$Res>(_self.heartgoldSoulsilver, (value) {
+$SpritesCopyWith<$Res>? get heartgoldSoulsilver {
+    if (_self.heartgoldSoulsilver == null) {
+    return null;
+  }
+
+  return $SpritesCopyWith<$Res>(_self.heartgoldSoulsilver!, (value) {
     return _then(_self.copyWith(heartgoldSoulsilver: value));
   });
 }/// Create a copy of GenerationIv
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpritesCopyWith<$Res> get platinum {
-  
-  return $SpritesCopyWith<$Res>(_self.platinum, (value) {
+$SpritesCopyWith<$Res>? get platinum {
+    if (_self.platinum == null) {
+    return null;
+  }
+
+  return $SpritesCopyWith<$Res>(_self.platinum!, (value) {
     return _then(_self.copyWith(platinum: value));
   });
 }

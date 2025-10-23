@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Cries {
 
- String get latest; String get legacy;
+ String? get latest; String? get legacy;
 /// Create a copy of Cries
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $CriesCopyWith<$Res>  {
   factory $CriesCopyWith(Cries value, $Res Function(Cries) _then) = _$CriesCopyWithImpl;
 @useResult
 $Res call({
- String latest, String legacy
+ String? latest, String? legacy
 });
 
 
@@ -65,11 +65,11 @@ class _$CriesCopyWithImpl<$Res>
 
 /// Create a copy of Cries
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? latest = null,Object? legacy = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? latest = freezed,Object? legacy = freezed,}) {
   return _then(_self.copyWith(
-latest: null == latest ? _self.latest : latest // ignore: cast_nullable_to_non_nullable
-as String,legacy: null == legacy ? _self.legacy : legacy // ignore: cast_nullable_to_non_nullable
-as String,
+latest: freezed == latest ? _self.latest : latest // ignore: cast_nullable_to_non_nullable
+as String?,legacy: freezed == legacy ? _self.legacy : legacy // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 
@@ -151,7 +151,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String latest,  String legacy)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? latest,  String? legacy)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Cries() when $default != null:
 return $default(_that.latest,_that.legacy);case _:
@@ -172,7 +172,7 @@ return $default(_that.latest,_that.legacy);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String latest,  String legacy)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? latest,  String? legacy)  $default,) {final _that = this;
 switch (_that) {
 case _Cries():
 return $default(_that.latest,_that.legacy);}
@@ -189,7 +189,7 @@ return $default(_that.latest,_that.legacy);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String latest,  String legacy)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? latest,  String? legacy)?  $default,) {final _that = this;
 switch (_that) {
 case _Cries() when $default != null:
 return $default(_that.latest,_that.legacy);case _:
@@ -207,8 +207,8 @@ class _Cries implements Cries {
    _Cries({required this.latest, required this.legacy});
   factory _Cries.fromJson(Map<String, dynamic> json) => _$CriesFromJson(json);
 
-@override final  String latest;
-@override final  String legacy;
+@override final  String? latest;
+@override final  String? legacy;
 
 /// Create a copy of Cries
 /// with the given fields replaced by the non-null parameter values.
@@ -243,7 +243,7 @@ abstract mixin class _$CriesCopyWith<$Res> implements $CriesCopyWith<$Res> {
   factory _$CriesCopyWith(_Cries value, $Res Function(_Cries) _then) = __$CriesCopyWithImpl;
 @override @useResult
 $Res call({
- String latest, String legacy
+ String? latest, String? legacy
 });
 
 
@@ -260,11 +260,11 @@ class __$CriesCopyWithImpl<$Res>
 
 /// Create a copy of Cries
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? latest = null,Object? legacy = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? latest = freezed,Object? legacy = freezed,}) {
   return _then(_Cries(
-latest: null == latest ? _self.latest : latest // ignore: cast_nullable_to_non_nullable
-as String,legacy: null == legacy ? _self.legacy : legacy // ignore: cast_nullable_to_non_nullable
-as String,
+latest: freezed == latest ? _self.latest : latest // ignore: cast_nullable_to_non_nullable
+as String?,legacy: freezed == legacy ? _self.legacy : legacy // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 

@@ -7,13 +7,13 @@ part 'sprites.g.dart';
 @freezed
 sealed class Sprites with _$Sprites {
   factory Sprites({
-    required String backDefault,
+    required String? backDefault,
     required dynamic backFemale,
-    required String backShiny,
+    required String? backShiny,
     required dynamic backShinyFemale,
-    required String frontDefault,
+    required String? frontDefault,
     required dynamic frontFemale,
-    required String frontShiny,
+    required String? frontShiny,
     required dynamic frontShinyFemale,
     required Other? other,
     required Versions? versions,

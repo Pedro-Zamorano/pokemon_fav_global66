@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Sprites {
 
- String get backDefault; dynamic get backFemale; String get backShiny; dynamic get backShinyFemale; String get frontDefault; dynamic get frontFemale; String get frontShiny; dynamic get frontShinyFemale; Other? get other; Versions? get versions; Sprites? get animated;
+ String? get backDefault; dynamic get backFemale; String? get backShiny; dynamic get backShinyFemale; String? get frontDefault; dynamic get frontFemale; String? get frontShiny; dynamic get frontShinyFemale; Other? get other; Versions? get versions; Sprites? get animated;
 /// Create a copy of Sprites
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $SpritesCopyWith<$Res>  {
   factory $SpritesCopyWith(Sprites value, $Res Function(Sprites) _then) = _$SpritesCopyWithImpl;
 @useResult
 $Res call({
- String backDefault, dynamic backFemale, String backShiny, dynamic backShinyFemale, String frontDefault, dynamic frontFemale, String frontShiny, dynamic frontShinyFemale, Other? other, Versions? versions, Sprites? animated
+ String? backDefault, dynamic backFemale, String? backShiny, dynamic backShinyFemale, String? frontDefault, dynamic frontFemale, String? frontShiny, dynamic frontShinyFemale, Other? other, Versions? versions, Sprites? animated
 });
 
 
@@ -65,16 +65,16 @@ class _$SpritesCopyWithImpl<$Res>
 
 /// Create a copy of Sprites
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? backDefault = null,Object? backFemale = freezed,Object? backShiny = null,Object? backShinyFemale = freezed,Object? frontDefault = null,Object? frontFemale = freezed,Object? frontShiny = null,Object? frontShinyFemale = freezed,Object? other = freezed,Object? versions = freezed,Object? animated = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? backDefault = freezed,Object? backFemale = freezed,Object? backShiny = freezed,Object? backShinyFemale = freezed,Object? frontDefault = freezed,Object? frontFemale = freezed,Object? frontShiny = freezed,Object? frontShinyFemale = freezed,Object? other = freezed,Object? versions = freezed,Object? animated = freezed,}) {
   return _then(_self.copyWith(
-backDefault: null == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
-as String,backFemale: freezed == backFemale ? _self.backFemale : backFemale // ignore: cast_nullable_to_non_nullable
-as dynamic,backShiny: null == backShiny ? _self.backShiny : backShiny // ignore: cast_nullable_to_non_nullable
-as String,backShinyFemale: freezed == backShinyFemale ? _self.backShinyFemale : backShinyFemale // ignore: cast_nullable_to_non_nullable
-as dynamic,frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontFemale: freezed == frontFemale ? _self.frontFemale : frontFemale // ignore: cast_nullable_to_non_nullable
-as dynamic,frontShiny: null == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
-as String,frontShinyFemale: freezed == frontShinyFemale ? _self.frontShinyFemale : frontShinyFemale // ignore: cast_nullable_to_non_nullable
+backDefault: freezed == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
+as String?,backFemale: freezed == backFemale ? _self.backFemale : backFemale // ignore: cast_nullable_to_non_nullable
+as dynamic,backShiny: freezed == backShiny ? _self.backShiny : backShiny // ignore: cast_nullable_to_non_nullable
+as String?,backShinyFemale: freezed == backShinyFemale ? _self.backShinyFemale : backShinyFemale // ignore: cast_nullable_to_non_nullable
+as dynamic,frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontFemale: freezed == frontFemale ? _self.frontFemale : frontFemale // ignore: cast_nullable_to_non_nullable
+as dynamic,frontShiny: freezed == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
+as String?,frontShinyFemale: freezed == frontShinyFemale ? _self.frontShinyFemale : frontShinyFemale // ignore: cast_nullable_to_non_nullable
 as dynamic,other: freezed == other ? _self.other : other // ignore: cast_nullable_to_non_nullable
 as Other?,versions: freezed == versions ? _self.versions : versions // ignore: cast_nullable_to_non_nullable
 as Versions?,animated: freezed == animated ? _self.animated : animated // ignore: cast_nullable_to_non_nullable
@@ -196,7 +196,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String backDefault,  dynamic backFemale,  String backShiny,  dynamic backShinyFemale,  String frontDefault,  dynamic frontFemale,  String frontShiny,  dynamic frontShinyFemale,  Other? other,  Versions? versions,  Sprites? animated)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? backDefault,  dynamic backFemale,  String? backShiny,  dynamic backShinyFemale,  String? frontDefault,  dynamic frontFemale,  String? frontShiny,  dynamic frontShinyFemale,  Other? other,  Versions? versions,  Sprites? animated)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Sprites() when $default != null:
 return $default(_that.backDefault,_that.backFemale,_that.backShiny,_that.backShinyFemale,_that.frontDefault,_that.frontFemale,_that.frontShiny,_that.frontShinyFemale,_that.other,_that.versions,_that.animated);case _:
@@ -217,7 +217,7 @@ return $default(_that.backDefault,_that.backFemale,_that.backShiny,_that.backShi
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String backDefault,  dynamic backFemale,  String backShiny,  dynamic backShinyFemale,  String frontDefault,  dynamic frontFemale,  String frontShiny,  dynamic frontShinyFemale,  Other? other,  Versions? versions,  Sprites? animated)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? backDefault,  dynamic backFemale,  String? backShiny,  dynamic backShinyFemale,  String? frontDefault,  dynamic frontFemale,  String? frontShiny,  dynamic frontShinyFemale,  Other? other,  Versions? versions,  Sprites? animated)  $default,) {final _that = this;
 switch (_that) {
 case _Sprites():
 return $default(_that.backDefault,_that.backFemale,_that.backShiny,_that.backShinyFemale,_that.frontDefault,_that.frontFemale,_that.frontShiny,_that.frontShinyFemale,_that.other,_that.versions,_that.animated);}
@@ -234,7 +234,7 @@ return $default(_that.backDefault,_that.backFemale,_that.backShiny,_that.backShi
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String backDefault,  dynamic backFemale,  String backShiny,  dynamic backShinyFemale,  String frontDefault,  dynamic frontFemale,  String frontShiny,  dynamic frontShinyFemale,  Other? other,  Versions? versions,  Sprites? animated)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? backDefault,  dynamic backFemale,  String? backShiny,  dynamic backShinyFemale,  String? frontDefault,  dynamic frontFemale,  String? frontShiny,  dynamic frontShinyFemale,  Other? other,  Versions? versions,  Sprites? animated)?  $default,) {final _that = this;
 switch (_that) {
 case _Sprites() when $default != null:
 return $default(_that.backDefault,_that.backFemale,_that.backShiny,_that.backShinyFemale,_that.frontDefault,_that.frontFemale,_that.frontShiny,_that.frontShinyFemale,_that.other,_that.versions,_that.animated);case _:
@@ -252,13 +252,13 @@ class _Sprites implements Sprites {
    _Sprites({required this.backDefault, required this.backFemale, required this.backShiny, required this.backShinyFemale, required this.frontDefault, required this.frontFemale, required this.frontShiny, required this.frontShinyFemale, required this.other, required this.versions, required this.animated});
   factory _Sprites.fromJson(Map<String, dynamic> json) => _$SpritesFromJson(json);
 
-@override final  String backDefault;
+@override final  String? backDefault;
 @override final  dynamic backFemale;
-@override final  String backShiny;
+@override final  String? backShiny;
 @override final  dynamic backShinyFemale;
-@override final  String frontDefault;
+@override final  String? frontDefault;
 @override final  dynamic frontFemale;
-@override final  String frontShiny;
+@override final  String? frontShiny;
 @override final  dynamic frontShinyFemale;
 @override final  Other? other;
 @override final  Versions? versions;
@@ -297,7 +297,7 @@ abstract mixin class _$SpritesCopyWith<$Res> implements $SpritesCopyWith<$Res> {
   factory _$SpritesCopyWith(_Sprites value, $Res Function(_Sprites) _then) = __$SpritesCopyWithImpl;
 @override @useResult
 $Res call({
- String backDefault, dynamic backFemale, String backShiny, dynamic backShinyFemale, String frontDefault, dynamic frontFemale, String frontShiny, dynamic frontShinyFemale, Other? other, Versions? versions, Sprites? animated
+ String? backDefault, dynamic backFemale, String? backShiny, dynamic backShinyFemale, String? frontDefault, dynamic frontFemale, String? frontShiny, dynamic frontShinyFemale, Other? other, Versions? versions, Sprites? animated
 });
 
 
@@ -314,16 +314,16 @@ class __$SpritesCopyWithImpl<$Res>
 
 /// Create a copy of Sprites
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? backDefault = null,Object? backFemale = freezed,Object? backShiny = null,Object? backShinyFemale = freezed,Object? frontDefault = null,Object? frontFemale = freezed,Object? frontShiny = null,Object? frontShinyFemale = freezed,Object? other = freezed,Object? versions = freezed,Object? animated = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? backDefault = freezed,Object? backFemale = freezed,Object? backShiny = freezed,Object? backShinyFemale = freezed,Object? frontDefault = freezed,Object? frontFemale = freezed,Object? frontShiny = freezed,Object? frontShinyFemale = freezed,Object? other = freezed,Object? versions = freezed,Object? animated = freezed,}) {
   return _then(_Sprites(
-backDefault: null == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
-as String,backFemale: freezed == backFemale ? _self.backFemale : backFemale // ignore: cast_nullable_to_non_nullable
-as dynamic,backShiny: null == backShiny ? _self.backShiny : backShiny // ignore: cast_nullable_to_non_nullable
-as String,backShinyFemale: freezed == backShinyFemale ? _self.backShinyFemale : backShinyFemale // ignore: cast_nullable_to_non_nullable
-as dynamic,frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontFemale: freezed == frontFemale ? _self.frontFemale : frontFemale // ignore: cast_nullable_to_non_nullable
-as dynamic,frontShiny: null == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
-as String,frontShinyFemale: freezed == frontShinyFemale ? _self.frontShinyFemale : frontShinyFemale // ignore: cast_nullable_to_non_nullable
+backDefault: freezed == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
+as String?,backFemale: freezed == backFemale ? _self.backFemale : backFemale // ignore: cast_nullable_to_non_nullable
+as dynamic,backShiny: freezed == backShiny ? _self.backShiny : backShiny // ignore: cast_nullable_to_non_nullable
+as String?,backShinyFemale: freezed == backShinyFemale ? _self.backShinyFemale : backShinyFemale // ignore: cast_nullable_to_non_nullable
+as dynamic,frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontFemale: freezed == frontFemale ? _self.frontFemale : frontFemale // ignore: cast_nullable_to_non_nullable
+as dynamic,frontShiny: freezed == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
+as String?,frontShinyFemale: freezed == frontShinyFemale ? _self.frontShinyFemale : frontShinyFemale // ignore: cast_nullable_to_non_nullable
 as dynamic,other: freezed == other ? _self.other : other // ignore: cast_nullable_to_non_nullable
 as Other?,versions: freezed == versions ? _self.versions : versions // ignore: cast_nullable_to_non_nullable
 as Versions?,animated: freezed == animated ? _self.animated : animated // ignore: cast_nullable_to_non_nullable

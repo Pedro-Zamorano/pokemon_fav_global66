@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Species {
 
- String get name; String get url;
+ String? get name; String? get url;
 /// Create a copy of Species
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $SpeciesCopyWith<$Res>  {
   factory $SpeciesCopyWith(Species value, $Res Function(Species) _then) = _$SpeciesCopyWithImpl;
 @useResult
 $Res call({
- String name, String url
+ String? name, String? url
 });
 
 
@@ -65,11 +65,11 @@ class _$SpeciesCopyWithImpl<$Res>
 
 /// Create a copy of Species
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? url = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? name = freezed,Object? url = freezed,}) {
   return _then(_self.copyWith(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
-as String,
+name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 
@@ -151,7 +151,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  String url)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  String? url)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Species() when $default != null:
 return $default(_that.name,_that.url);case _:
@@ -172,7 +172,7 @@ return $default(_that.name,_that.url);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  String url)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  String? url)  $default,) {final _that = this;
 switch (_that) {
 case _Species():
 return $default(_that.name,_that.url);}
@@ -189,7 +189,7 @@ return $default(_that.name,_that.url);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  String url)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  String? url)?  $default,) {final _that = this;
 switch (_that) {
 case _Species() when $default != null:
 return $default(_that.name,_that.url);case _:
@@ -207,8 +207,8 @@ class _Species implements Species {
    _Species({required this.name, required this.url});
   factory _Species.fromJson(Map<String, dynamic> json) => _$SpeciesFromJson(json);
 
-@override final  String name;
-@override final  String url;
+@override final  String? name;
+@override final  String? url;
 
 /// Create a copy of Species
 /// with the given fields replaced by the non-null parameter values.
@@ -243,7 +243,7 @@ abstract mixin class _$SpeciesCopyWith<$Res> implements $SpeciesCopyWith<$Res> {
   factory _$SpeciesCopyWith(_Species value, $Res Function(_Species) _then) = __$SpeciesCopyWithImpl;
 @override @useResult
 $Res call({
- String name, String url
+ String? name, String? url
 });
 
 
@@ -260,11 +260,11 @@ class __$SpeciesCopyWithImpl<$Res>
 
 /// Create a copy of Species
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? url = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? name = freezed,Object? url = freezed,}) {
   return _then(_Species(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
-as String,
+name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 

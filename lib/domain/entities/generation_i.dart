@@ -8,8 +8,8 @@ part 'generation_i.g.dart';
 sealed class GenerationI with _$GenerationI {
 
   factory GenerationI({
-    required RedBlue redBlue,
-    required RedBlue yellow,
+    required RedBlue? redBlue,
+    required RedBlue? yellow,
   }) = _GenerationI;
 
   factory GenerationI.fromJson(Map<String, dynamic> json) => _$GenerationIFromJson(json);

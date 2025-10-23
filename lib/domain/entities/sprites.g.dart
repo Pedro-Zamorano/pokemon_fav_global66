@@ -7,13 +7,13 @@ part of 'sprites.dart';
 // **************************************************************************
 
 _Sprites _$SpritesFromJson(Map<String, dynamic> json) => _Sprites(
-  backDefault: json['backDefault'] as String,
+  backDefault: json['backDefault'] as String?,
   backFemale: json['backFemale'],
-  backShiny: json['backShiny'] as String,
+  backShiny: json['backShiny'] as String?,
   backShinyFemale: json['backShinyFemale'],
-  frontDefault: json['frontDefault'] as String,
+  frontDefault: json['frontDefault'] as String?,
   frontFemale: json['frontFemale'],
-  frontShiny: json['frontShiny'] as String,
+  frontShiny: json['frontShiny'] as String?,
   frontShinyFemale: json['frontShinyFemale'],
   other: json['other'] == null
       ? null

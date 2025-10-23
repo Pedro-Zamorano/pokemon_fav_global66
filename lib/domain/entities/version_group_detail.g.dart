@@ -8,14 +8,14 @@ part of 'version_group_detail.dart';
 
 _VersionGroupDetail _$VersionGroupDetailFromJson(Map<String, dynamic> json) =>
     _VersionGroupDetail(
-      levelLearnedAt: (json['levelLearnedAt'] as num).toInt(),
-      moveLearnMethod: Species.fromJson(
-        json['moveLearnMethod'] as Map<String, dynamic>,
-      ),
+      levelLearnedAt: (json['levelLearnedAt'] as num?)?.toInt(),
+      moveLearnMethod: json['moveLearnMethod'] == null
+          ? null
+          : Species.fromJson(json['moveLearnMethod'] as Map<String, dynamic>),
       order: (json['order'] as num?)?.toInt(),
-      versionGroup: Species.fromJson(
-        json['versionGroup'] as Map<String, dynamic>,
-      ),
+      versionGroup: json['versionGroup'] == null
+          ? null
+          : Species.fromJson(json['versionGroup'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$VersionGroupDetailToJson(_VersionGroupDetail instance) =>

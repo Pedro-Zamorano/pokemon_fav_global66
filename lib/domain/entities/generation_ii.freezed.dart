@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GenerationIi {
 
- Crystal get crystal; Gold get gold; Gold get silver;
+ Crystal? get crystal; Gold? get gold; Gold? get silver;
 /// Create a copy of GenerationIi
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $GenerationIiCopyWith<$Res>  {
   factory $GenerationIiCopyWith(GenerationIi value, $Res Function(GenerationIi) _then) = _$GenerationIiCopyWithImpl;
 @useResult
 $Res call({
- Crystal crystal, Gold gold, Gold silver
+ Crystal? crystal, Gold? gold, Gold? silver
 });
 
 
-$CrystalCopyWith<$Res> get crystal;$GoldCopyWith<$Res> get gold;$GoldCopyWith<$Res> get silver;
+$CrystalCopyWith<$Res>? get crystal;$GoldCopyWith<$Res>? get gold;$GoldCopyWith<$Res>? get silver;
 
 }
 /// @nodoc
@@ -65,39 +65,48 @@ class _$GenerationIiCopyWithImpl<$Res>
 
 /// Create a copy of GenerationIi
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? crystal = null,Object? gold = null,Object? silver = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? crystal = freezed,Object? gold = freezed,Object? silver = freezed,}) {
   return _then(_self.copyWith(
-crystal: null == crystal ? _self.crystal : crystal // ignore: cast_nullable_to_non_nullable
-as Crystal,gold: null == gold ? _self.gold : gold // ignore: cast_nullable_to_non_nullable
-as Gold,silver: null == silver ? _self.silver : silver // ignore: cast_nullable_to_non_nullable
-as Gold,
+crystal: freezed == crystal ? _self.crystal : crystal // ignore: cast_nullable_to_non_nullable
+as Crystal?,gold: freezed == gold ? _self.gold : gold // ignore: cast_nullable_to_non_nullable
+as Gold?,silver: freezed == silver ? _self.silver : silver // ignore: cast_nullable_to_non_nullable
+as Gold?,
   ));
 }
 /// Create a copy of GenerationIi
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$CrystalCopyWith<$Res> get crystal {
-  
-  return $CrystalCopyWith<$Res>(_self.crystal, (value) {
+$CrystalCopyWith<$Res>? get crystal {
+    if (_self.crystal == null) {
+    return null;
+  }
+
+  return $CrystalCopyWith<$Res>(_self.crystal!, (value) {
     return _then(_self.copyWith(crystal: value));
   });
 }/// Create a copy of GenerationIi
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$GoldCopyWith<$Res> get gold {
-  
-  return $GoldCopyWith<$Res>(_self.gold, (value) {
+$GoldCopyWith<$Res>? get gold {
+    if (_self.gold == null) {
+    return null;
+  }
+
+  return $GoldCopyWith<$Res>(_self.gold!, (value) {
     return _then(_self.copyWith(gold: value));
   });
 }/// Create a copy of GenerationIi
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$GoldCopyWith<$Res> get silver {
-  
-  return $GoldCopyWith<$Res>(_self.silver, (value) {
+$GoldCopyWith<$Res>? get silver {
+    if (_self.silver == null) {
+    return null;
+  }
+
+  return $GoldCopyWith<$Res>(_self.silver!, (value) {
     return _then(_self.copyWith(silver: value));
   });
 }
@@ -179,7 +188,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Crystal crystal,  Gold gold,  Gold silver)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Crystal? crystal,  Gold? gold,  Gold? silver)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GenerationIi() when $default != null:
 return $default(_that.crystal,_that.gold,_that.silver);case _:
@@ -200,7 +209,7 @@ return $default(_that.crystal,_that.gold,_that.silver);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Crystal crystal,  Gold gold,  Gold silver)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Crystal? crystal,  Gold? gold,  Gold? silver)  $default,) {final _that = this;
 switch (_that) {
 case _GenerationIi():
 return $default(_that.crystal,_that.gold,_that.silver);}
@@ -217,7 +226,7 @@ return $default(_that.crystal,_that.gold,_that.silver);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Crystal crystal,  Gold gold,  Gold silver)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Crystal? crystal,  Gold? gold,  Gold? silver)?  $default,) {final _that = this;
 switch (_that) {
 case _GenerationIi() when $default != null:
 return $default(_that.crystal,_that.gold,_that.silver);case _:
@@ -235,9 +244,9 @@ class _GenerationIi implements GenerationIi {
    _GenerationIi({required this.crystal, required this.gold, required this.silver});
   factory _GenerationIi.fromJson(Map<String, dynamic> json) => _$GenerationIiFromJson(json);
 
-@override final  Crystal crystal;
-@override final  Gold gold;
-@override final  Gold silver;
+@override final  Crystal? crystal;
+@override final  Gold? gold;
+@override final  Gold? silver;
 
 /// Create a copy of GenerationIi
 /// with the given fields replaced by the non-null parameter values.
@@ -272,11 +281,11 @@ abstract mixin class _$GenerationIiCopyWith<$Res> implements $GenerationIiCopyWi
   factory _$GenerationIiCopyWith(_GenerationIi value, $Res Function(_GenerationIi) _then) = __$GenerationIiCopyWithImpl;
 @override @useResult
 $Res call({
- Crystal crystal, Gold gold, Gold silver
+ Crystal? crystal, Gold? gold, Gold? silver
 });
 
 
-@override $CrystalCopyWith<$Res> get crystal;@override $GoldCopyWith<$Res> get gold;@override $GoldCopyWith<$Res> get silver;
+@override $CrystalCopyWith<$Res>? get crystal;@override $GoldCopyWith<$Res>? get gold;@override $GoldCopyWith<$Res>? get silver;
 
 }
 /// @nodoc
@@ -289,12 +298,12 @@ class __$GenerationIiCopyWithImpl<$Res>
 
 /// Create a copy of GenerationIi
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? crystal = null,Object? gold = null,Object? silver = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? crystal = freezed,Object? gold = freezed,Object? silver = freezed,}) {
   return _then(_GenerationIi(
-crystal: null == crystal ? _self.crystal : crystal // ignore: cast_nullable_to_non_nullable
-as Crystal,gold: null == gold ? _self.gold : gold // ignore: cast_nullable_to_non_nullable
-as Gold,silver: null == silver ? _self.silver : silver // ignore: cast_nullable_to_non_nullable
-as Gold,
+crystal: freezed == crystal ? _self.crystal : crystal // ignore: cast_nullable_to_non_nullable
+as Crystal?,gold: freezed == gold ? _self.gold : gold // ignore: cast_nullable_to_non_nullable
+as Gold?,silver: freezed == silver ? _self.silver : silver // ignore: cast_nullable_to_non_nullable
+as Gold?,
   ));
 }
 
@@ -302,27 +311,36 @@ as Gold,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$CrystalCopyWith<$Res> get crystal {
-  
-  return $CrystalCopyWith<$Res>(_self.crystal, (value) {
+$CrystalCopyWith<$Res>? get crystal {
+    if (_self.crystal == null) {
+    return null;
+  }
+
+  return $CrystalCopyWith<$Res>(_self.crystal!, (value) {
     return _then(_self.copyWith(crystal: value));
   });
 }/// Create a copy of GenerationIi
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$GoldCopyWith<$Res> get gold {
-  
-  return $GoldCopyWith<$Res>(_self.gold, (value) {
+$GoldCopyWith<$Res>? get gold {
+    if (_self.gold == null) {
+    return null;
+  }
+
+  return $GoldCopyWith<$Res>(_self.gold!, (value) {
     return _then(_self.copyWith(gold: value));
   });
 }/// Create a copy of GenerationIi
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$GoldCopyWith<$Res> get silver {
-  
-  return $GoldCopyWith<$Res>(_self.silver, (value) {
+$GoldCopyWith<$Res>? get silver {
+    if (_self.silver == null) {
+    return null;
+  }
+
+  return $GoldCopyWith<$Res>(_self.silver!, (value) {
     return _then(_self.copyWith(silver: value));
   });
 }

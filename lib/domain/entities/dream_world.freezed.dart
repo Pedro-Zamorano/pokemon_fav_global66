@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$DreamWorld {
 
- String get frontDefault; dynamic get frontFemale;
+ String? get frontDefault; dynamic get frontFemale;
 /// Create a copy of DreamWorld
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $DreamWorldCopyWith<$Res>  {
   factory $DreamWorldCopyWith(DreamWorld value, $Res Function(DreamWorld) _then) = _$DreamWorldCopyWithImpl;
 @useResult
 $Res call({
- String frontDefault, dynamic frontFemale
+ String? frontDefault, dynamic frontFemale
 });
 
 
@@ -65,10 +65,10 @@ class _$DreamWorldCopyWithImpl<$Res>
 
 /// Create a copy of DreamWorld
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? frontDefault = null,Object? frontFemale = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? frontDefault = freezed,Object? frontFemale = freezed,}) {
   return _then(_self.copyWith(
-frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontFemale: freezed == frontFemale ? _self.frontFemale : frontFemale // ignore: cast_nullable_to_non_nullable
+frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontFemale: freezed == frontFemale ? _self.frontFemale : frontFemale // ignore: cast_nullable_to_non_nullable
 as dynamic,
   ));
 }
@@ -151,7 +151,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String frontDefault,  dynamic frontFemale)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? frontDefault,  dynamic frontFemale)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _DreamWorld() when $default != null:
 return $default(_that.frontDefault,_that.frontFemale);case _:
@@ -172,7 +172,7 @@ return $default(_that.frontDefault,_that.frontFemale);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String frontDefault,  dynamic frontFemale)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? frontDefault,  dynamic frontFemale)  $default,) {final _that = this;
 switch (_that) {
 case _DreamWorld():
 return $default(_that.frontDefault,_that.frontFemale);}
@@ -189,7 +189,7 @@ return $default(_that.frontDefault,_that.frontFemale);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String frontDefault,  dynamic frontFemale)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? frontDefault,  dynamic frontFemale)?  $default,) {final _that = this;
 switch (_that) {
 case _DreamWorld() when $default != null:
 return $default(_that.frontDefault,_that.frontFemale);case _:
@@ -207,7 +207,7 @@ class _DreamWorld implements DreamWorld {
    _DreamWorld({required this.frontDefault, required this.frontFemale});
   factory _DreamWorld.fromJson(Map<String, dynamic> json) => _$DreamWorldFromJson(json);
 
-@override final  String frontDefault;
+@override final  String? frontDefault;
 @override final  dynamic frontFemale;
 
 /// Create a copy of DreamWorld
@@ -243,7 +243,7 @@ abstract mixin class _$DreamWorldCopyWith<$Res> implements $DreamWorldCopyWith<$
   factory _$DreamWorldCopyWith(_DreamWorld value, $Res Function(_DreamWorld) _then) = __$DreamWorldCopyWithImpl;
 @override @useResult
 $Res call({
- String frontDefault, dynamic frontFemale
+ String? frontDefault, dynamic frontFemale
 });
 
 
@@ -260,10 +260,10 @@ class __$DreamWorldCopyWithImpl<$Res>
 
 /// Create a copy of DreamWorld
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? frontDefault = null,Object? frontFemale = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? frontDefault = freezed,Object? frontFemale = freezed,}) {
   return _then(_DreamWorld(
-frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontFemale: freezed == frontFemale ? _self.frontFemale : frontFemale // ignore: cast_nullable_to_non_nullable
+frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontFemale: freezed == frontFemale ? _self.frontFemale : frontFemale // ignore: cast_nullable_to_non_nullable
 as dynamic,
   ));
 }

@@ -7,12 +7,12 @@ part 'red_blue.g.dart';
 sealed class RedBlue with _$RedBlue {
 
   factory RedBlue({
-    required String backDefault,
-    required String backGray,
-    required String backTransparent,
-    required String frontDefault,
-    required String frontGray,
-    required String frontTransparent,
+    required String? backDefault,
+    required String? backGray,
+    required String? backTransparent,
+    required String? frontDefault,
+    required String? frontGray,
+    required String? frontTransparent,
   }) = _RedBlue;
 
   factory RedBlue.fromJson(Map<String, dynamic> json) => _$RedBlueFromJson(json);

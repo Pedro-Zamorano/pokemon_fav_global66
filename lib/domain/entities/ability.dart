@@ -8,8 +8,8 @@ part 'ability.g.dart';
 sealed class Ability with _$Ability {
   factory Ability({
     required Species? ability,
-    required bool isHidden,
-    required int slot,
+    required bool? isHidden,
+    required int? slot,
   }) = _Ability;
 
   factory Ability.fromJson(Map<String, dynamic> json) =>

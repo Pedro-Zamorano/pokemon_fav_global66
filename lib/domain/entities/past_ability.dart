@@ -7,8 +7,8 @@ part 'past_ability.g.dart';
 @freezed
 sealed class PastAbility with _$PastAbility {
   factory PastAbility({
-    required List<Ability> abilities,
-    required Species generation,
+    required List<Ability>? abilities,
+    required Species? generation,
   }) = _PastAbility;
 
   factory PastAbility.fromJson(Map<String, dynamic> json) =>

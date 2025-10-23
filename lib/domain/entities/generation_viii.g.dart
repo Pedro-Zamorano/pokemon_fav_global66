@@ -8,7 +8,9 @@ part of 'generation_viii.dart';
 
 _GenerationViii _$GenerationViiiFromJson(Map<String, dynamic> json) =>
     _GenerationViii(
-      icons: DreamWorld.fromJson(json['icons'] as Map<String, dynamic>),
+      icons: json['icons'] == null
+          ? null
+          : DreamWorld.fromJson(json['icons'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$GenerationViiiToJson(_GenerationViii instance) =>

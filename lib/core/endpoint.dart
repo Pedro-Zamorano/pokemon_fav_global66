@@ -1,0 +1,1 @@
+final String pokemonPath = "https://pokeapi.co/api/v2/pokemon";

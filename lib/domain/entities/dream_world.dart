@@ -7,7 +7,7 @@ part 'dream_world.g.dart';
 sealed class DreamWorld with _$DreamWorld {
 
   factory DreamWorld({
-    required String frontDefault,
+    required String? frontDefault,
     required dynamic frontFemale,
   }) = _DreamWorld;
 

@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Ability {
 
- Species? get ability; bool get isHidden; int get slot;
+ Species? get ability; bool? get isHidden; int? get slot;
 /// Create a copy of Ability
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $AbilityCopyWith<$Res>  {
   factory $AbilityCopyWith(Ability value, $Res Function(Ability) _then) = _$AbilityCopyWithImpl;
 @useResult
 $Res call({
- Species? ability, bool isHidden, int slot
+ Species? ability, bool? isHidden, int? slot
 });
 
 
@@ -65,12 +65,12 @@ class _$AbilityCopyWithImpl<$Res>
 
 /// Create a copy of Ability
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? ability = freezed,Object? isHidden = null,Object? slot = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? ability = freezed,Object? isHidden = freezed,Object? slot = freezed,}) {
   return _then(_self.copyWith(
 ability: freezed == ability ? _self.ability : ability // ignore: cast_nullable_to_non_nullable
-as Species?,isHidden: null == isHidden ? _self.isHidden : isHidden // ignore: cast_nullable_to_non_nullable
-as bool,slot: null == slot ? _self.slot : slot // ignore: cast_nullable_to_non_nullable
-as int,
+as Species?,isHidden: freezed == isHidden ? _self.isHidden : isHidden // ignore: cast_nullable_to_non_nullable
+as bool?,slot: freezed == slot ? _self.slot : slot // ignore: cast_nullable_to_non_nullable
+as int?,
   ));
 }
 /// Create a copy of Ability
@@ -164,7 +164,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Species? ability,  bool isHidden,  int slot)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Species? ability,  bool? isHidden,  int? slot)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Ability() when $default != null:
 return $default(_that.ability,_that.isHidden,_that.slot);case _:
@@ -185,7 +185,7 @@ return $default(_that.ability,_that.isHidden,_that.slot);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Species? ability,  bool isHidden,  int slot)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Species? ability,  bool? isHidden,  int? slot)  $default,) {final _that = this;
 switch (_that) {
 case _Ability():
 return $default(_that.ability,_that.isHidden,_that.slot);}
@@ -202,7 +202,7 @@ return $default(_that.ability,_that.isHidden,_that.slot);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Species? ability,  bool isHidden,  int slot)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Species? ability,  bool? isHidden,  int? slot)?  $default,) {final _that = this;
 switch (_that) {
 case _Ability() when $default != null:
 return $default(_that.ability,_that.isHidden,_that.slot);case _:
@@ -221,8 +221,8 @@ class _Ability implements Ability {
   factory _Ability.fromJson(Map<String, dynamic> json) => _$AbilityFromJson(json);
 
 @override final  Species? ability;
-@override final  bool isHidden;
-@override final  int slot;
+@override final  bool? isHidden;
+@override final  int? slot;
 
 /// Create a copy of Ability
 /// with the given fields replaced by the non-null parameter values.
@@ -257,7 +257,7 @@ abstract mixin class _$AbilityCopyWith<$Res> implements $AbilityCopyWith<$Res> {
   factory _$AbilityCopyWith(_Ability value, $Res Function(_Ability) _then) = __$AbilityCopyWithImpl;
 @override @useResult
 $Res call({
- Species? ability, bool isHidden, int slot
+ Species? ability, bool? isHidden, int? slot
 });
 
 
@@ -274,12 +274,12 @@ class __$AbilityCopyWithImpl<$Res>
 
 /// Create a copy of Ability
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? ability = freezed,Object? isHidden = null,Object? slot = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? ability = freezed,Object? isHidden = freezed,Object? slot = freezed,}) {
   return _then(_Ability(
 ability: freezed == ability ? _self.ability : ability // ignore: cast_nullable_to_non_nullable
-as Species?,isHidden: null == isHidden ? _self.isHidden : isHidden // ignore: cast_nullable_to_non_nullable
-as bool,slot: null == slot ? _self.slot : slot // ignore: cast_nullable_to_non_nullable
-as int,
+as Species?,isHidden: freezed == isHidden ? _self.isHidden : isHidden // ignore: cast_nullable_to_non_nullable
+as bool?,slot: freezed == slot ? _self.slot : slot // ignore: cast_nullable_to_non_nullable
+as int?,
   ));
 }
 

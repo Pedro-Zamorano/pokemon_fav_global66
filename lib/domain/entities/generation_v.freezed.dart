@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GenerationV {
 
- Sprites get blackWhite;
+ Sprites? get blackWhite;
 /// Create a copy of GenerationV
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $GenerationVCopyWith<$Res>  {
   factory $GenerationVCopyWith(GenerationV value, $Res Function(GenerationV) _then) = _$GenerationVCopyWithImpl;
 @useResult
 $Res call({
- Sprites blackWhite
+ Sprites? blackWhite
 });
 
 
-$SpritesCopyWith<$Res> get blackWhite;
+$SpritesCopyWith<$Res>? get blackWhite;
 
 }
 /// @nodoc
@@ -65,19 +65,22 @@ class _$GenerationVCopyWithImpl<$Res>
 
 /// Create a copy of GenerationV
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? blackWhite = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? blackWhite = freezed,}) {
   return _then(_self.copyWith(
-blackWhite: null == blackWhite ? _self.blackWhite : blackWhite // ignore: cast_nullable_to_non_nullable
-as Sprites,
+blackWhite: freezed == blackWhite ? _self.blackWhite : blackWhite // ignore: cast_nullable_to_non_nullable
+as Sprites?,
   ));
 }
 /// Create a copy of GenerationV
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpritesCopyWith<$Res> get blackWhite {
-  
-  return $SpritesCopyWith<$Res>(_self.blackWhite, (value) {
+$SpritesCopyWith<$Res>? get blackWhite {
+    if (_self.blackWhite == null) {
+    return null;
+  }
+
+  return $SpritesCopyWith<$Res>(_self.blackWhite!, (value) {
     return _then(_self.copyWith(blackWhite: value));
   });
 }
@@ -159,7 +162,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Sprites blackWhite)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Sprites? blackWhite)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GenerationV() when $default != null:
 return $default(_that.blackWhite);case _:
@@ -180,7 +183,7 @@ return $default(_that.blackWhite);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Sprites blackWhite)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Sprites? blackWhite)  $default,) {final _that = this;
 switch (_that) {
 case _GenerationV():
 return $default(_that.blackWhite);}
@@ -197,7 +200,7 @@ return $default(_that.blackWhite);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Sprites blackWhite)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Sprites? blackWhite)?  $default,) {final _that = this;
 switch (_that) {
 case _GenerationV() when $default != null:
 return $default(_that.blackWhite);case _:
@@ -215,7 +218,7 @@ class _GenerationV implements GenerationV {
    _GenerationV({required this.blackWhite});
   factory _GenerationV.fromJson(Map<String, dynamic> json) => _$GenerationVFromJson(json);
 
-@override final  Sprites blackWhite;
+@override final  Sprites? blackWhite;
 
 /// Create a copy of GenerationV
 /// with the given fields replaced by the non-null parameter values.
@@ -250,11 +253,11 @@ abstract mixin class _$GenerationVCopyWith<$Res> implements $GenerationVCopyWith
   factory _$GenerationVCopyWith(_GenerationV value, $Res Function(_GenerationV) _then) = __$GenerationVCopyWithImpl;
 @override @useResult
 $Res call({
- Sprites blackWhite
+ Sprites? blackWhite
 });
 
 
-@override $SpritesCopyWith<$Res> get blackWhite;
+@override $SpritesCopyWith<$Res>? get blackWhite;
 
 }
 /// @nodoc
@@ -267,10 +270,10 @@ class __$GenerationVCopyWithImpl<$Res>
 
 /// Create a copy of GenerationV
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? blackWhite = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? blackWhite = freezed,}) {
   return _then(_GenerationV(
-blackWhite: null == blackWhite ? _self.blackWhite : blackWhite // ignore: cast_nullable_to_non_nullable
-as Sprites,
+blackWhite: freezed == blackWhite ? _self.blackWhite : blackWhite // ignore: cast_nullable_to_non_nullable
+as Sprites?,
   ));
 }
 
@@ -278,9 +281,12 @@ as Sprites,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpritesCopyWith<$Res> get blackWhite {
-  
-  return $SpritesCopyWith<$Res>(_self.blackWhite, (value) {
+$SpritesCopyWith<$Res>? get blackWhite {
+    if (_self.blackWhite == null) {
+    return null;
+  }
+
+  return $SpritesCopyWith<$Res>(_self.blackWhite!, (value) {
     return _then(_self.copyWith(blackWhite: value));
   });
 }

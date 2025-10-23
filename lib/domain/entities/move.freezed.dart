@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Move {
 
- Species get move; List<VersionGroupDetail> get versionGroupDetails;
+ Species? get move; List<VersionGroupDetail>? get versionGroupDetails;
 /// Create a copy of Move
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $MoveCopyWith<$Res>  {
   factory $MoveCopyWith(Move value, $Res Function(Move) _then) = _$MoveCopyWithImpl;
 @useResult
 $Res call({
- Species move, List<VersionGroupDetail> versionGroupDetails
+ Species? move, List<VersionGroupDetail>? versionGroupDetails
 });
 
 
-$SpeciesCopyWith<$Res> get move;
+$SpeciesCopyWith<$Res>? get move;
 
 }
 /// @nodoc
@@ -65,20 +65,23 @@ class _$MoveCopyWithImpl<$Res>
 
 /// Create a copy of Move
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? move = null,Object? versionGroupDetails = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? move = freezed,Object? versionGroupDetails = freezed,}) {
   return _then(_self.copyWith(
-move: null == move ? _self.move : move // ignore: cast_nullable_to_non_nullable
-as Species,versionGroupDetails: null == versionGroupDetails ? _self.versionGroupDetails : versionGroupDetails // ignore: cast_nullable_to_non_nullable
-as List<VersionGroupDetail>,
+move: freezed == move ? _self.move : move // ignore: cast_nullable_to_non_nullable
+as Species?,versionGroupDetails: freezed == versionGroupDetails ? _self.versionGroupDetails : versionGroupDetails // ignore: cast_nullable_to_non_nullable
+as List<VersionGroupDetail>?,
   ));
 }
 /// Create a copy of Move
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get move {
-  
-  return $SpeciesCopyWith<$Res>(_self.move, (value) {
+$SpeciesCopyWith<$Res>? get move {
+    if (_self.move == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.move!, (value) {
     return _then(_self.copyWith(move: value));
   });
 }
@@ -160,7 +163,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Species move,  List<VersionGroupDetail> versionGroupDetails)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Species? move,  List<VersionGroupDetail>? versionGroupDetails)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Move() when $default != null:
 return $default(_that.move,_that.versionGroupDetails);case _:
@@ -181,7 +184,7 @@ return $default(_that.move,_that.versionGroupDetails);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Species move,  List<VersionGroupDetail> versionGroupDetails)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Species? move,  List<VersionGroupDetail>? versionGroupDetails)  $default,) {final _that = this;
 switch (_that) {
 case _Move():
 return $default(_that.move,_that.versionGroupDetails);}
@@ -198,7 +201,7 @@ return $default(_that.move,_that.versionGroupDetails);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Species move,  List<VersionGroupDetail> versionGroupDetails)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Species? move,  List<VersionGroupDetail>? versionGroupDetails)?  $default,) {final _that = this;
 switch (_that) {
 case _Move() when $default != null:
 return $default(_that.move,_that.versionGroupDetails);case _:
@@ -213,15 +216,17 @@ return $default(_that.move,_that.versionGroupDetails);case _:
 @JsonSerializable()
 
 class _Move implements Move {
-   _Move({required this.move, required final  List<VersionGroupDetail> versionGroupDetails}): _versionGroupDetails = versionGroupDetails;
+   _Move({required this.move, required final  List<VersionGroupDetail>? versionGroupDetails}): _versionGroupDetails = versionGroupDetails;
   factory _Move.fromJson(Map<String, dynamic> json) => _$MoveFromJson(json);
 
-@override final  Species move;
- final  List<VersionGroupDetail> _versionGroupDetails;
-@override List<VersionGroupDetail> get versionGroupDetails {
+@override final  Species? move;
+ final  List<VersionGroupDetail>? _versionGroupDetails;
+@override List<VersionGroupDetail>? get versionGroupDetails {
+  final value = _versionGroupDetails;
+  if (value == null) return null;
   if (_versionGroupDetails is EqualUnmodifiableListView) return _versionGroupDetails;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_versionGroupDetails);
+  return EqualUnmodifiableListView(value);
 }
 
 
@@ -258,11 +263,11 @@ abstract mixin class _$MoveCopyWith<$Res> implements $MoveCopyWith<$Res> {
   factory _$MoveCopyWith(_Move value, $Res Function(_Move) _then) = __$MoveCopyWithImpl;
 @override @useResult
 $Res call({
- Species move, List<VersionGroupDetail> versionGroupDetails
+ Species? move, List<VersionGroupDetail>? versionGroupDetails
 });
 
 
-@override $SpeciesCopyWith<$Res> get move;
+@override $SpeciesCopyWith<$Res>? get move;
 
 }
 /// @nodoc
@@ -275,11 +280,11 @@ class __$MoveCopyWithImpl<$Res>
 
 /// Create a copy of Move
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? move = null,Object? versionGroupDetails = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? move = freezed,Object? versionGroupDetails = freezed,}) {
   return _then(_Move(
-move: null == move ? _self.move : move // ignore: cast_nullable_to_non_nullable
-as Species,versionGroupDetails: null == versionGroupDetails ? _self._versionGroupDetails : versionGroupDetails // ignore: cast_nullable_to_non_nullable
-as List<VersionGroupDetail>,
+move: freezed == move ? _self.move : move // ignore: cast_nullable_to_non_nullable
+as Species?,versionGroupDetails: freezed == versionGroupDetails ? _self._versionGroupDetails : versionGroupDetails // ignore: cast_nullable_to_non_nullable
+as List<VersionGroupDetail>?,
   ));
 }
 
@@ -287,9 +292,12 @@ as List<VersionGroupDetail>,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get move {
-  
-  return $SpeciesCopyWith<$Res>(_self.move, (value) {
+$SpeciesCopyWith<$Res>? get move {
+    if (_self.move == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.move!, (value) {
     return _then(_self.copyWith(move: value));
   });
 }

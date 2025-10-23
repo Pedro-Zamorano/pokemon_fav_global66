@@ -8,8 +8,8 @@ part 'move.g.dart';
 sealed class Move with _$Move {
 
   factory Move({
-    required Species move,
-    required List<VersionGroupDetail> versionGroupDetails,
+    required Species? move,
+    required List<VersionGroupDetail>? versionGroupDetails,
   }) = _Move;
 
   factory Move.fromJson(Map<String, dynamic> json) => _$MoveFromJson(json);

@@ -8,38 +8,44 @@ part of 'pokemon_detail.dart';
 
 _PokemonDetail _$PokemonDetailFromJson(Map<String, dynamic> json) =>
     _PokemonDetail(
-      abilities: (json['abilities'] as List<dynamic>)
-          .map((e) => Ability.fromJson(e as Map<String, dynamic>))
+      abilities: (json['abilities'] as List<dynamic>?)
+          ?.map((e) => Ability.fromJson(e as Map<String, dynamic>))
           .toList(),
-      baseExperience: (json['baseExperience'] as num).toInt(),
-      cries: Cries.fromJson(json['cries'] as Map<String, dynamic>),
-      forms: (json['forms'] as List<dynamic>)
-          .map((e) => Species.fromJson(e as Map<String, dynamic>))
+      baseExperience: (json['baseExperience'] as num?)?.toInt(),
+      cries: json['cries'] == null
+          ? null
+          : Cries.fromJson(json['cries'] as Map<String, dynamic>),
+      forms: (json['forms'] as List<dynamic>?)
+          ?.map((e) => Species.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gameIndices: (json['gameIndices'] as List<dynamic>)
-          .map((e) => GameIndex.fromJson(e as Map<String, dynamic>))
+      gameIndices: (json['gameIndices'] as List<dynamic>?)
+          ?.map((e) => GameIndex.fromJson(e as Map<String, dynamic>))
           .toList(),
-      height: (json['height'] as num).toInt(),
-      heldItems: json['heldItems'] as List<dynamic>,
-      id: (json['id'] as num).toInt(),
-      isDefault: json['isDefault'] as bool,
-      locationAreaEncounters: json['locationAreaEncounters'] as String,
-      moves: (json['moves'] as List<dynamic>)
-          .map((e) => Move.fromJson(e as Map<String, dynamic>))
+      height: (json['height'] as num?)?.toInt(),
+      heldItems: json['heldItems'] as List<dynamic>?,
+      id: (json['id'] as num?)?.toInt(),
+      isDefault: json['isDefault'] as bool?,
+      locationAreaEncounters: json['locationAreaEncounters'] as String?,
+      moves: (json['moves'] as List<dynamic>?)
+          ?.map((e) => Move.fromJson(e as Map<String, dynamic>))
           .toList(),
-      name: json['name'] as String,
-      order: (json['order'] as num).toInt(),
-      pastAbilities: (json['pastAbilities'] as List<dynamic>)
-          .map((e) => PastAbility.fromJson(e as Map<String, dynamic>))
+      name: json['name'] as String?,
+      order: (json['order'] as num?)?.toInt(),
+      pastAbilities: (json['pastAbilities'] as List<dynamic>?)
+          ?.map((e) => PastAbility.fromJson(e as Map<String, dynamic>))
           .toList(),
-      pastTypes: json['pastTypes'] as List<dynamic>,
-      species: Species.fromJson(json['species'] as Map<String, dynamic>),
-      sprites: Sprites.fromJson(json['sprites'] as Map<String, dynamic>),
-      stats: (json['stats'] as List<dynamic>)
-          .map((e) => Stat.fromJson(e as Map<String, dynamic>))
+      pastTypes: json['pastTypes'] as List<dynamic>?,
+      species: json['species'] == null
+          ? null
+          : Species.fromJson(json['species'] as Map<String, dynamic>),
+      sprites: json['sprites'] == null
+          ? null
+          : Sprites.fromJson(json['sprites'] as Map<String, dynamic>),
+      stats: (json['stats'] as List<dynamic>?)
+          ?.map((e) => Stat.fromJson(e as Map<String, dynamic>))
           .toList(),
-      types: (json['types'] as List<dynamic>)
-          .map((e) => Type.fromJson(e as Map<String, dynamic>))
+      types: (json['types'] as List<dynamic>?)
+          ?.map((e) => Type.fromJson(e as Map<String, dynamic>))
           .toList(),
       weight: (json['weight'] as num).toInt(),
     );

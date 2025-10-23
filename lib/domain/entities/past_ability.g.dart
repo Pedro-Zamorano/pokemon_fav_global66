@@ -7,10 +7,12 @@ part of 'past_ability.dart';
 // **************************************************************************
 
 _PastAbility _$PastAbilityFromJson(Map<String, dynamic> json) => _PastAbility(
-  abilities: (json['abilities'] as List<dynamic>)
-      .map((e) => Ability.fromJson(e as Map<String, dynamic>))
+  abilities: (json['abilities'] as List<dynamic>?)
+      ?.map((e) => Ability.fromJson(e as Map<String, dynamic>))
       .toList(),
-  generation: Species.fromJson(json['generation'] as Map<String, dynamic>),
+  generation: json['generation'] == null
+      ? null
+      : Species.fromJson(json['generation'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$PastAbilityToJson(_PastAbility instance) =>

@@ -7,7 +7,9 @@ part of 'generation_v.dart';
 // **************************************************************************
 
 _GenerationV _$GenerationVFromJson(Map<String, dynamic> json) => _GenerationV(
-  blackWhite: Sprites.fromJson(json['blackWhite'] as Map<String, dynamic>),
+  blackWhite: json['blackWhite'] == null
+      ? null
+      : Sprites.fromJson(json['blackWhite'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$GenerationVToJson(_GenerationV instance) =>

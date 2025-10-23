@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$OfficialArtwork {
 
- String get frontDefault; String get frontShiny;
+ String? get frontDefault; String? get frontShiny;
 /// Create a copy of OfficialArtwork
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $OfficialArtworkCopyWith<$Res>  {
   factory $OfficialArtworkCopyWith(OfficialArtwork value, $Res Function(OfficialArtwork) _then) = _$OfficialArtworkCopyWithImpl;
 @useResult
 $Res call({
- String frontDefault, String frontShiny
+ String? frontDefault, String? frontShiny
 });
 
 
@@ -65,11 +65,11 @@ class _$OfficialArtworkCopyWithImpl<$Res>
 
 /// Create a copy of OfficialArtwork
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? frontDefault = null,Object? frontShiny = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? frontDefault = freezed,Object? frontShiny = freezed,}) {
   return _then(_self.copyWith(
-frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontShiny: null == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
-as String,
+frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontShiny: freezed == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 
@@ -151,7 +151,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String frontDefault,  String frontShiny)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? frontDefault,  String? frontShiny)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _OfficialArtwork() when $default != null:
 return $default(_that.frontDefault,_that.frontShiny);case _:
@@ -172,7 +172,7 @@ return $default(_that.frontDefault,_that.frontShiny);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String frontDefault,  String frontShiny)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? frontDefault,  String? frontShiny)  $default,) {final _that = this;
 switch (_that) {
 case _OfficialArtwork():
 return $default(_that.frontDefault,_that.frontShiny);}
@@ -189,7 +189,7 @@ return $default(_that.frontDefault,_that.frontShiny);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String frontDefault,  String frontShiny)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? frontDefault,  String? frontShiny)?  $default,) {final _that = this;
 switch (_that) {
 case _OfficialArtwork() when $default != null:
 return $default(_that.frontDefault,_that.frontShiny);case _:
@@ -207,8 +207,8 @@ class _OfficialArtwork implements OfficialArtwork {
    _OfficialArtwork({required this.frontDefault, required this.frontShiny});
   factory _OfficialArtwork.fromJson(Map<String, dynamic> json) => _$OfficialArtworkFromJson(json);
 
-@override final  String frontDefault;
-@override final  String frontShiny;
+@override final  String? frontDefault;
+@override final  String? frontShiny;
 
 /// Create a copy of OfficialArtwork
 /// with the given fields replaced by the non-null parameter values.
@@ -243,7 +243,7 @@ abstract mixin class _$OfficialArtworkCopyWith<$Res> implements $OfficialArtwork
   factory _$OfficialArtworkCopyWith(_OfficialArtwork value, $Res Function(_OfficialArtwork) _then) = __$OfficialArtworkCopyWithImpl;
 @override @useResult
 $Res call({
- String frontDefault, String frontShiny
+ String? frontDefault, String? frontShiny
 });
 
 
@@ -260,11 +260,11 @@ class __$OfficialArtworkCopyWithImpl<$Res>
 
 /// Create a copy of OfficialArtwork
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? frontDefault = null,Object? frontShiny = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? frontDefault = freezed,Object? frontShiny = freezed,}) {
   return _then(_OfficialArtwork(
-frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontShiny: null == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
-as String,
+frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontShiny: freezed == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 

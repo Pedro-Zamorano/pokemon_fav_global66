@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$PastAbility {
 
- List<Ability> get abilities; Species get generation;
+ List<Ability>? get abilities; Species? get generation;
 /// Create a copy of PastAbility
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $PastAbilityCopyWith<$Res>  {
   factory $PastAbilityCopyWith(PastAbility value, $Res Function(PastAbility) _then) = _$PastAbilityCopyWithImpl;
 @useResult
 $Res call({
- List<Ability> abilities, Species generation
+ List<Ability>? abilities, Species? generation
 });
 
 
-$SpeciesCopyWith<$Res> get generation;
+$SpeciesCopyWith<$Res>? get generation;
 
 }
 /// @nodoc
@@ -65,20 +65,23 @@ class _$PastAbilityCopyWithImpl<$Res>
 
 /// Create a copy of PastAbility
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? abilities = null,Object? generation = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? abilities = freezed,Object? generation = freezed,}) {
   return _then(_self.copyWith(
-abilities: null == abilities ? _self.abilities : abilities // ignore: cast_nullable_to_non_nullable
-as List<Ability>,generation: null == generation ? _self.generation : generation // ignore: cast_nullable_to_non_nullable
-as Species,
+abilities: freezed == abilities ? _self.abilities : abilities // ignore: cast_nullable_to_non_nullable
+as List<Ability>?,generation: freezed == generation ? _self.generation : generation // ignore: cast_nullable_to_non_nullable
+as Species?,
   ));
 }
 /// Create a copy of PastAbility
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get generation {
-  
-  return $SpeciesCopyWith<$Res>(_self.generation, (value) {
+$SpeciesCopyWith<$Res>? get generation {
+    if (_self.generation == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.generation!, (value) {
     return _then(_self.copyWith(generation: value));
   });
 }
@@ -160,7 +163,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<Ability> abilities,  Species generation)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<Ability>? abilities,  Species? generation)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _PastAbility() when $default != null:
 return $default(_that.abilities,_that.generation);case _:
@@ -181,7 +184,7 @@ return $default(_that.abilities,_that.generation);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<Ability> abilities,  Species generation)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<Ability>? abilities,  Species? generation)  $default,) {final _that = this;
 switch (_that) {
 case _PastAbility():
 return $default(_that.abilities,_that.generation);}
@@ -198,7 +201,7 @@ return $default(_that.abilities,_that.generation);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<Ability> abilities,  Species generation)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<Ability>? abilities,  Species? generation)?  $default,) {final _that = this;
 switch (_that) {
 case _PastAbility() when $default != null:
 return $default(_that.abilities,_that.generation);case _:
@@ -213,17 +216,19 @@ return $default(_that.abilities,_that.generation);case _:
 @JsonSerializable()
 
 class _PastAbility implements PastAbility {
-   _PastAbility({required final  List<Ability> abilities, required this.generation}): _abilities = abilities;
+   _PastAbility({required final  List<Ability>? abilities, required this.generation}): _abilities = abilities;
   factory _PastAbility.fromJson(Map<String, dynamic> json) => _$PastAbilityFromJson(json);
 
- final  List<Ability> _abilities;
-@override List<Ability> get abilities {
+ final  List<Ability>? _abilities;
+@override List<Ability>? get abilities {
+  final value = _abilities;
+  if (value == null) return null;
   if (_abilities is EqualUnmodifiableListView) return _abilities;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_abilities);
+  return EqualUnmodifiableListView(value);
 }
 
-@override final  Species generation;
+@override final  Species? generation;
 
 /// Create a copy of PastAbility
 /// with the given fields replaced by the non-null parameter values.
@@ -258,11 +263,11 @@ abstract mixin class _$PastAbilityCopyWith<$Res> implements $PastAbilityCopyWith
   factory _$PastAbilityCopyWith(_PastAbility value, $Res Function(_PastAbility) _then) = __$PastAbilityCopyWithImpl;
 @override @useResult
 $Res call({
- List<Ability> abilities, Species generation
+ List<Ability>? abilities, Species? generation
 });
 
 
-@override $SpeciesCopyWith<$Res> get generation;
+@override $SpeciesCopyWith<$Res>? get generation;
 
 }
 /// @nodoc
@@ -275,11 +280,11 @@ class __$PastAbilityCopyWithImpl<$Res>
 
 /// Create a copy of PastAbility
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? abilities = null,Object? generation = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? abilities = freezed,Object? generation = freezed,}) {
   return _then(_PastAbility(
-abilities: null == abilities ? _self._abilities : abilities // ignore: cast_nullable_to_non_nullable
-as List<Ability>,generation: null == generation ? _self.generation : generation // ignore: cast_nullable_to_non_nullable
-as Species,
+abilities: freezed == abilities ? _self._abilities : abilities // ignore: cast_nullable_to_non_nullable
+as List<Ability>?,generation: freezed == generation ? _self.generation : generation // ignore: cast_nullable_to_non_nullable
+as Species?,
   ));
 }
 
@@ -287,9 +292,12 @@ as Species,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get generation {
-  
-  return $SpeciesCopyWith<$Res>(_self.generation, (value) {
+$SpeciesCopyWith<$Res>? get generation {
+    if (_self.generation == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.generation!, (value) {
     return _then(_self.copyWith(generation: value));
   });
 }

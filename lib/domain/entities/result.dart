@@ -1,0 +1,14 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'result.freezed.dart';
+part 'result.g.dart';
+
+@freezed
+sealed class Result with _$Result {
+  factory Result({
+    required String? name,
+    required String? url,
+  }) = _Result;
+
+  factory Result.fromJson(Map<String, dynamic> json) => _$ResultFromJson(json);
+}

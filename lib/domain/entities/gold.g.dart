@@ -7,10 +7,10 @@ part of 'gold.dart';
 // **************************************************************************
 
 _Gold _$GoldFromJson(Map<String, dynamic> json) => _Gold(
-  backDefault: json['backDefault'] as String,
-  backShiny: json['backShiny'] as String,
-  frontDefault: json['frontDefault'] as String,
-  frontShiny: json['frontShiny'] as String,
+  backDefault: json['backDefault'] as String?,
+  backShiny: json['backShiny'] as String?,
+  frontDefault: json['frontDefault'] as String?,
+  frontShiny: json['frontShiny'] as String?,
   frontTransparent: json['frontTransparent'] as String?,
 );
 

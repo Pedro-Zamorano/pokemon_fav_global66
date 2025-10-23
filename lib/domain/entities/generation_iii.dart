@@ -8,9 +8,9 @@ part 'generation_iii.g.dart';
 sealed class GenerationIii with _$GenerationIii {
 
   factory GenerationIii({
-    required OfficialArtwork emerald,
-    required Gold fireredLeafgreen,
-    required Gold rubySapphire,
+    required OfficialArtwork? emerald,
+    required Gold? fireredLeafgreen,
+    required Gold? rubySapphire,
   }) = _GenerationIii;
 
   factory GenerationIii.fromJson(Map<String, dynamic> json) => _$GenerationIiiFromJson(json);

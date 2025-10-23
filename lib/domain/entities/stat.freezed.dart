@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Stat {
 
- int get baseStat; int get effort; Species get stat;
+ int? get baseStat; int? get effort; Species? get stat;
 /// Create a copy of Stat
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $StatCopyWith<$Res>  {
   factory $StatCopyWith(Stat value, $Res Function(Stat) _then) = _$StatCopyWithImpl;
 @useResult
 $Res call({
- int baseStat, int effort, Species stat
+ int? baseStat, int? effort, Species? stat
 });
 
 
-$SpeciesCopyWith<$Res> get stat;
+$SpeciesCopyWith<$Res>? get stat;
 
 }
 /// @nodoc
@@ -65,21 +65,24 @@ class _$StatCopyWithImpl<$Res>
 
 /// Create a copy of Stat
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? baseStat = null,Object? effort = null,Object? stat = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? baseStat = freezed,Object? effort = freezed,Object? stat = freezed,}) {
   return _then(_self.copyWith(
-baseStat: null == baseStat ? _self.baseStat : baseStat // ignore: cast_nullable_to_non_nullable
-as int,effort: null == effort ? _self.effort : effort // ignore: cast_nullable_to_non_nullable
-as int,stat: null == stat ? _self.stat : stat // ignore: cast_nullable_to_non_nullable
-as Species,
+baseStat: freezed == baseStat ? _self.baseStat : baseStat // ignore: cast_nullable_to_non_nullable
+as int?,effort: freezed == effort ? _self.effort : effort // ignore: cast_nullable_to_non_nullable
+as int?,stat: freezed == stat ? _self.stat : stat // ignore: cast_nullable_to_non_nullable
+as Species?,
   ));
 }
 /// Create a copy of Stat
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get stat {
-  
-  return $SpeciesCopyWith<$Res>(_self.stat, (value) {
+$SpeciesCopyWith<$Res>? get stat {
+    if (_self.stat == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.stat!, (value) {
     return _then(_self.copyWith(stat: value));
   });
 }
@@ -161,7 +164,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int baseStat,  int effort,  Species stat)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? baseStat,  int? effort,  Species? stat)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Stat() when $default != null:
 return $default(_that.baseStat,_that.effort,_that.stat);case _:
@@ -182,7 +185,7 @@ return $default(_that.baseStat,_that.effort,_that.stat);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int baseStat,  int effort,  Species stat)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? baseStat,  int? effort,  Species? stat)  $default,) {final _that = this;
 switch (_that) {
 case _Stat():
 return $default(_that.baseStat,_that.effort,_that.stat);}
@@ -199,7 +202,7 @@ return $default(_that.baseStat,_that.effort,_that.stat);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int baseStat,  int effort,  Species stat)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? baseStat,  int? effort,  Species? stat)?  $default,) {final _that = this;
 switch (_that) {
 case _Stat() when $default != null:
 return $default(_that.baseStat,_that.effort,_that.stat);case _:
@@ -217,9 +220,9 @@ class _Stat implements Stat {
    _Stat({required this.baseStat, required this.effort, required this.stat});
   factory _Stat.fromJson(Map<String, dynamic> json) => _$StatFromJson(json);
 
-@override final  int baseStat;
-@override final  int effort;
-@override final  Species stat;
+@override final  int? baseStat;
+@override final  int? effort;
+@override final  Species? stat;
 
 /// Create a copy of Stat
 /// with the given fields replaced by the non-null parameter values.
@@ -254,11 +257,11 @@ abstract mixin class _$StatCopyWith<$Res> implements $StatCopyWith<$Res> {
   factory _$StatCopyWith(_Stat value, $Res Function(_Stat) _then) = __$StatCopyWithImpl;
 @override @useResult
 $Res call({
- int baseStat, int effort, Species stat
+ int? baseStat, int? effort, Species? stat
 });
 
 
-@override $SpeciesCopyWith<$Res> get stat;
+@override $SpeciesCopyWith<$Res>? get stat;
 
 }
 /// @nodoc
@@ -271,12 +274,12 @@ class __$StatCopyWithImpl<$Res>
 
 /// Create a copy of Stat
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? baseStat = null,Object? effort = null,Object? stat = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? baseStat = freezed,Object? effort = freezed,Object? stat = freezed,}) {
   return _then(_Stat(
-baseStat: null == baseStat ? _self.baseStat : baseStat // ignore: cast_nullable_to_non_nullable
-as int,effort: null == effort ? _self.effort : effort // ignore: cast_nullable_to_non_nullable
-as int,stat: null == stat ? _self.stat : stat // ignore: cast_nullable_to_non_nullable
-as Species,
+baseStat: freezed == baseStat ? _self.baseStat : baseStat // ignore: cast_nullable_to_non_nullable
+as int?,effort: freezed == effort ? _self.effort : effort // ignore: cast_nullable_to_non_nullable
+as int?,stat: freezed == stat ? _self.stat : stat // ignore: cast_nullable_to_non_nullable
+as Species?,
   ));
 }
 
@@ -284,9 +287,12 @@ as Species,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get stat {
-  
-  return $SpeciesCopyWith<$Res>(_self.stat, (value) {
+$SpeciesCopyWith<$Res>? get stat {
+    if (_self.stat == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.stat!, (value) {
     return _then(_self.copyWith(stat: value));
   });
 }

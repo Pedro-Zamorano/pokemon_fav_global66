@@ -7,10 +7,10 @@ part 'gold.g.dart';
 sealed class Gold with _$Gold {
 
   factory Gold({
-    required String backDefault,
-    required String backShiny,
-    required String frontDefault,
-    required String frontShiny,
+    required String? backDefault,
+    required String? backShiny,
+    required String? frontDefault,
+    required String? frontShiny,
     required String? frontTransparent,
   }) = _Gold;
 

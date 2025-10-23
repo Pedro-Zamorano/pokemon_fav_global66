@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Other {
 
- DreamWorld get dreamWorld; Home get home; OfficialArtwork get officialArtwork; Sprites get showdown;
+ DreamWorld? get dreamWorld; Home? get home; OfficialArtwork? get officialArtwork; Sprites? get showdown;
 /// Create a copy of Other
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $OtherCopyWith<$Res>  {
   factory $OtherCopyWith(Other value, $Res Function(Other) _then) = _$OtherCopyWithImpl;
 @useResult
 $Res call({
- DreamWorld dreamWorld, Home home, OfficialArtwork officialArtwork, Sprites showdown
+ DreamWorld? dreamWorld, Home? home, OfficialArtwork? officialArtwork, Sprites? showdown
 });
 
 
-$DreamWorldCopyWith<$Res> get dreamWorld;$HomeCopyWith<$Res> get home;$OfficialArtworkCopyWith<$Res> get officialArtwork;$SpritesCopyWith<$Res> get showdown;
+$DreamWorldCopyWith<$Res>? get dreamWorld;$HomeCopyWith<$Res>? get home;$OfficialArtworkCopyWith<$Res>? get officialArtwork;$SpritesCopyWith<$Res>? get showdown;
 
 }
 /// @nodoc
@@ -65,49 +65,61 @@ class _$OtherCopyWithImpl<$Res>
 
 /// Create a copy of Other
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? dreamWorld = null,Object? home = null,Object? officialArtwork = null,Object? showdown = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? dreamWorld = freezed,Object? home = freezed,Object? officialArtwork = freezed,Object? showdown = freezed,}) {
   return _then(_self.copyWith(
-dreamWorld: null == dreamWorld ? _self.dreamWorld : dreamWorld // ignore: cast_nullable_to_non_nullable
-as DreamWorld,home: null == home ? _self.home : home // ignore: cast_nullable_to_non_nullable
-as Home,officialArtwork: null == officialArtwork ? _self.officialArtwork : officialArtwork // ignore: cast_nullable_to_non_nullable
-as OfficialArtwork,showdown: null == showdown ? _self.showdown : showdown // ignore: cast_nullable_to_non_nullable
-as Sprites,
+dreamWorld: freezed == dreamWorld ? _self.dreamWorld : dreamWorld // ignore: cast_nullable_to_non_nullable
+as DreamWorld?,home: freezed == home ? _self.home : home // ignore: cast_nullable_to_non_nullable
+as Home?,officialArtwork: freezed == officialArtwork ? _self.officialArtwork : officialArtwork // ignore: cast_nullable_to_non_nullable
+as OfficialArtwork?,showdown: freezed == showdown ? _self.showdown : showdown // ignore: cast_nullable_to_non_nullable
+as Sprites?,
   ));
 }
 /// Create a copy of Other
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$DreamWorldCopyWith<$Res> get dreamWorld {
-  
-  return $DreamWorldCopyWith<$Res>(_self.dreamWorld, (value) {
+$DreamWorldCopyWith<$Res>? get dreamWorld {
+    if (_self.dreamWorld == null) {
+    return null;
+  }
+
+  return $DreamWorldCopyWith<$Res>(_self.dreamWorld!, (value) {
     return _then(_self.copyWith(dreamWorld: value));
   });
 }/// Create a copy of Other
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$HomeCopyWith<$Res> get home {
-  
-  return $HomeCopyWith<$Res>(_self.home, (value) {
+$HomeCopyWith<$Res>? get home {
+    if (_self.home == null) {
+    return null;
+  }
+
+  return $HomeCopyWith<$Res>(_self.home!, (value) {
     return _then(_self.copyWith(home: value));
   });
 }/// Create a copy of Other
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$OfficialArtworkCopyWith<$Res> get officialArtwork {
-  
-  return $OfficialArtworkCopyWith<$Res>(_self.officialArtwork, (value) {
+$OfficialArtworkCopyWith<$Res>? get officialArtwork {
+    if (_self.officialArtwork == null) {
+    return null;
+  }
+
+  return $OfficialArtworkCopyWith<$Res>(_self.officialArtwork!, (value) {
     return _then(_self.copyWith(officialArtwork: value));
   });
 }/// Create a copy of Other
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpritesCopyWith<$Res> get showdown {
-  
-  return $SpritesCopyWith<$Res>(_self.showdown, (value) {
+$SpritesCopyWith<$Res>? get showdown {
+    if (_self.showdown == null) {
+    return null;
+  }
+
+  return $SpritesCopyWith<$Res>(_self.showdown!, (value) {
     return _then(_self.copyWith(showdown: value));
   });
 }
@@ -189,7 +201,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( DreamWorld dreamWorld,  Home home,  OfficialArtwork officialArtwork,  Sprites showdown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( DreamWorld? dreamWorld,  Home? home,  OfficialArtwork? officialArtwork,  Sprites? showdown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Other() when $default != null:
 return $default(_that.dreamWorld,_that.home,_that.officialArtwork,_that.showdown);case _:
@@ -210,7 +222,7 @@ return $default(_that.dreamWorld,_that.home,_that.officialArtwork,_that.showdown
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( DreamWorld dreamWorld,  Home home,  OfficialArtwork officialArtwork,  Sprites showdown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( DreamWorld? dreamWorld,  Home? home,  OfficialArtwork? officialArtwork,  Sprites? showdown)  $default,) {final _that = this;
 switch (_that) {
 case _Other():
 return $default(_that.dreamWorld,_that.home,_that.officialArtwork,_that.showdown);}
@@ -227,7 +239,7 @@ return $default(_that.dreamWorld,_that.home,_that.officialArtwork,_that.showdown
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( DreamWorld dreamWorld,  Home home,  OfficialArtwork officialArtwork,  Sprites showdown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( DreamWorld? dreamWorld,  Home? home,  OfficialArtwork? officialArtwork,  Sprites? showdown)?  $default,) {final _that = this;
 switch (_that) {
 case _Other() when $default != null:
 return $default(_that.dreamWorld,_that.home,_that.officialArtwork,_that.showdown);case _:
@@ -245,10 +257,10 @@ class _Other implements Other {
    _Other({required this.dreamWorld, required this.home, required this.officialArtwork, required this.showdown});
   factory _Other.fromJson(Map<String, dynamic> json) => _$OtherFromJson(json);
 
-@override final  DreamWorld dreamWorld;
-@override final  Home home;
-@override final  OfficialArtwork officialArtwork;
-@override final  Sprites showdown;
+@override final  DreamWorld? dreamWorld;
+@override final  Home? home;
+@override final  OfficialArtwork? officialArtwork;
+@override final  Sprites? showdown;
 
 /// Create a copy of Other
 /// with the given fields replaced by the non-null parameter values.
@@ -283,11 +295,11 @@ abstract mixin class _$OtherCopyWith<$Res> implements $OtherCopyWith<$Res> {
   factory _$OtherCopyWith(_Other value, $Res Function(_Other) _then) = __$OtherCopyWithImpl;
 @override @useResult
 $Res call({
- DreamWorld dreamWorld, Home home, OfficialArtwork officialArtwork, Sprites showdown
+ DreamWorld? dreamWorld, Home? home, OfficialArtwork? officialArtwork, Sprites? showdown
 });
 
 
-@override $DreamWorldCopyWith<$Res> get dreamWorld;@override $HomeCopyWith<$Res> get home;@override $OfficialArtworkCopyWith<$Res> get officialArtwork;@override $SpritesCopyWith<$Res> get showdown;
+@override $DreamWorldCopyWith<$Res>? get dreamWorld;@override $HomeCopyWith<$Res>? get home;@override $OfficialArtworkCopyWith<$Res>? get officialArtwork;@override $SpritesCopyWith<$Res>? get showdown;
 
 }
 /// @nodoc
@@ -300,13 +312,13 @@ class __$OtherCopyWithImpl<$Res>
 
 /// Create a copy of Other
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? dreamWorld = null,Object? home = null,Object? officialArtwork = null,Object? showdown = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? dreamWorld = freezed,Object? home = freezed,Object? officialArtwork = freezed,Object? showdown = freezed,}) {
   return _then(_Other(
-dreamWorld: null == dreamWorld ? _self.dreamWorld : dreamWorld // ignore: cast_nullable_to_non_nullable
-as DreamWorld,home: null == home ? _self.home : home // ignore: cast_nullable_to_non_nullable
-as Home,officialArtwork: null == officialArtwork ? _self.officialArtwork : officialArtwork // ignore: cast_nullable_to_non_nullable
-as OfficialArtwork,showdown: null == showdown ? _self.showdown : showdown // ignore: cast_nullable_to_non_nullable
-as Sprites,
+dreamWorld: freezed == dreamWorld ? _self.dreamWorld : dreamWorld // ignore: cast_nullable_to_non_nullable
+as DreamWorld?,home: freezed == home ? _self.home : home // ignore: cast_nullable_to_non_nullable
+as Home?,officialArtwork: freezed == officialArtwork ? _self.officialArtwork : officialArtwork // ignore: cast_nullable_to_non_nullable
+as OfficialArtwork?,showdown: freezed == showdown ? _self.showdown : showdown // ignore: cast_nullable_to_non_nullable
+as Sprites?,
   ));
 }
 
@@ -314,36 +326,48 @@ as Sprites,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$DreamWorldCopyWith<$Res> get dreamWorld {
-  
-  return $DreamWorldCopyWith<$Res>(_self.dreamWorld, (value) {
+$DreamWorldCopyWith<$Res>? get dreamWorld {
+    if (_self.dreamWorld == null) {
+    return null;
+  }
+
+  return $DreamWorldCopyWith<$Res>(_self.dreamWorld!, (value) {
     return _then(_self.copyWith(dreamWorld: value));
   });
 }/// Create a copy of Other
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$HomeCopyWith<$Res> get home {
-  
-  return $HomeCopyWith<$Res>(_self.home, (value) {
+$HomeCopyWith<$Res>? get home {
+    if (_self.home == null) {
+    return null;
+  }
+
+  return $HomeCopyWith<$Res>(_self.home!, (value) {
     return _then(_self.copyWith(home: value));
   });
 }/// Create a copy of Other
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$OfficialArtworkCopyWith<$Res> get officialArtwork {
-  
-  return $OfficialArtworkCopyWith<$Res>(_self.officialArtwork, (value) {
+$OfficialArtworkCopyWith<$Res>? get officialArtwork {
+    if (_self.officialArtwork == null) {
+    return null;
+  }
+
+  return $OfficialArtworkCopyWith<$Res>(_self.officialArtwork!, (value) {
     return _then(_self.copyWith(officialArtwork: value));
   });
 }/// Create a copy of Other
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpritesCopyWith<$Res> get showdown {
-  
-  return $SpritesCopyWith<$Res>(_self.showdown, (value) {
+$SpritesCopyWith<$Res>? get showdown {
+    if (_self.showdown == null) {
+    return null;
+  }
+
+  return $SpritesCopyWith<$Res>(_self.showdown!, (value) {
     return _then(_self.copyWith(showdown: value));
   });
 }

@@ -7,8 +7,8 @@ part 'official_artwork.g.dart';
 sealed class OfficialArtwork with _$OfficialArtwork {
 
   factory OfficialArtwork({
-    required String frontDefault,
-    required String frontShiny,
+    required String? frontDefault,
+    required String? frontShiny,
   }) = _OfficialArtwork;
 
   factory OfficialArtwork.fromJson(Map<String, dynamic> json) => _$OfficialArtworkFromJson(json);

@@ -8,8 +8,8 @@ part 'type.g.dart';
 sealed class Type with _$Type {
 
   factory Type({
-    required int slot,
-    required Species type,
+    required int? slot,
+    required Species? type,
   }) = _Type;
 
   factory Type.fromJson(Map<String, dynamic> json) => _$TypeFromJson(json);

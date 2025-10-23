@@ -24,3 +24,6 @@ export 'entities/dream_world.dart';
 export 'entities/generation_viii.dart';
 export 'entities/stat.dart';
 export 'entities/type.dart';
+
+export 'entities/pokemon_response.dart';
+export 'entities/result.dart';

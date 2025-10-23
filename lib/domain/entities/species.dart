@@ -5,7 +5,10 @@ part 'species.g.dart';
 
 @freezed
 sealed class Species with _$Species {
-  factory Species({required String name, required String url}) = _Species;
+  factory Species({
+    required String? name,
+    required String? url,
+  }) = _Species;
 
   factory Species.fromJson(Map<String, dynamic> json) =>
       _$SpeciesFromJson(json);

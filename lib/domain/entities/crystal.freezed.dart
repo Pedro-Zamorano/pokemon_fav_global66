@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Crystal {
 
- String get backDefault; String get backShiny; String get backShinyTransparent; String get backTransparent; String get frontDefault; String get frontShiny; String get frontShinyTransparent; String get frontTransparent;
+ String? get backDefault; String? get backShiny; String? get backShinyTransparent; String? get backTransparent; String? get frontDefault; String? get frontShiny; String? get frontShinyTransparent; String? get frontTransparent;
 /// Create a copy of Crystal
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $CrystalCopyWith<$Res>  {
   factory $CrystalCopyWith(Crystal value, $Res Function(Crystal) _then) = _$CrystalCopyWithImpl;
 @useResult
 $Res call({
- String backDefault, String backShiny, String backShinyTransparent, String backTransparent, String frontDefault, String frontShiny, String frontShinyTransparent, String frontTransparent
+ String? backDefault, String? backShiny, String? backShinyTransparent, String? backTransparent, String? frontDefault, String? frontShiny, String? frontShinyTransparent, String? frontTransparent
 });
 
 
@@ -65,17 +65,17 @@ class _$CrystalCopyWithImpl<$Res>
 
 /// Create a copy of Crystal
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? backDefault = null,Object? backShiny = null,Object? backShinyTransparent = null,Object? backTransparent = null,Object? frontDefault = null,Object? frontShiny = null,Object? frontShinyTransparent = null,Object? frontTransparent = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? backDefault = freezed,Object? backShiny = freezed,Object? backShinyTransparent = freezed,Object? backTransparent = freezed,Object? frontDefault = freezed,Object? frontShiny = freezed,Object? frontShinyTransparent = freezed,Object? frontTransparent = freezed,}) {
   return _then(_self.copyWith(
-backDefault: null == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
-as String,backShiny: null == backShiny ? _self.backShiny : backShiny // ignore: cast_nullable_to_non_nullable
-as String,backShinyTransparent: null == backShinyTransparent ? _self.backShinyTransparent : backShinyTransparent // ignore: cast_nullable_to_non_nullable
-as String,backTransparent: null == backTransparent ? _self.backTransparent : backTransparent // ignore: cast_nullable_to_non_nullable
-as String,frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontShiny: null == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
-as String,frontShinyTransparent: null == frontShinyTransparent ? _self.frontShinyTransparent : frontShinyTransparent // ignore: cast_nullable_to_non_nullable
-as String,frontTransparent: null == frontTransparent ? _self.frontTransparent : frontTransparent // ignore: cast_nullable_to_non_nullable
-as String,
+backDefault: freezed == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
+as String?,backShiny: freezed == backShiny ? _self.backShiny : backShiny // ignore: cast_nullable_to_non_nullable
+as String?,backShinyTransparent: freezed == backShinyTransparent ? _self.backShinyTransparent : backShinyTransparent // ignore: cast_nullable_to_non_nullable
+as String?,backTransparent: freezed == backTransparent ? _self.backTransparent : backTransparent // ignore: cast_nullable_to_non_nullable
+as String?,frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontShiny: freezed == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
+as String?,frontShinyTransparent: freezed == frontShinyTransparent ? _self.frontShinyTransparent : frontShinyTransparent // ignore: cast_nullable_to_non_nullable
+as String?,frontTransparent: freezed == frontTransparent ? _self.frontTransparent : frontTransparent // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 
@@ -157,7 +157,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String backDefault,  String backShiny,  String backShinyTransparent,  String backTransparent,  String frontDefault,  String frontShiny,  String frontShinyTransparent,  String frontTransparent)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? backDefault,  String? backShiny,  String? backShinyTransparent,  String? backTransparent,  String? frontDefault,  String? frontShiny,  String? frontShinyTransparent,  String? frontTransparent)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Crystal() when $default != null:
 return $default(_that.backDefault,_that.backShiny,_that.backShinyTransparent,_that.backTransparent,_that.frontDefault,_that.frontShiny,_that.frontShinyTransparent,_that.frontTransparent);case _:
@@ -178,7 +178,7 @@ return $default(_that.backDefault,_that.backShiny,_that.backShinyTransparent,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String backDefault,  String backShiny,  String backShinyTransparent,  String backTransparent,  String frontDefault,  String frontShiny,  String frontShinyTransparent,  String frontTransparent)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? backDefault,  String? backShiny,  String? backShinyTransparent,  String? backTransparent,  String? frontDefault,  String? frontShiny,  String? frontShinyTransparent,  String? frontTransparent)  $default,) {final _that = this;
 switch (_that) {
 case _Crystal():
 return $default(_that.backDefault,_that.backShiny,_that.backShinyTransparent,_that.backTransparent,_that.frontDefault,_that.frontShiny,_that.frontShinyTransparent,_that.frontTransparent);}
@@ -195,7 +195,7 @@ return $default(_that.backDefault,_that.backShiny,_that.backShinyTransparent,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String backDefault,  String backShiny,  String backShinyTransparent,  String backTransparent,  String frontDefault,  String frontShiny,  String frontShinyTransparent,  String frontTransparent)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? backDefault,  String? backShiny,  String? backShinyTransparent,  String? backTransparent,  String? frontDefault,  String? frontShiny,  String? frontShinyTransparent,  String? frontTransparent)?  $default,) {final _that = this;
 switch (_that) {
 case _Crystal() when $default != null:
 return $default(_that.backDefault,_that.backShiny,_that.backShinyTransparent,_that.backTransparent,_that.frontDefault,_that.frontShiny,_that.frontShinyTransparent,_that.frontTransparent);case _:
@@ -213,14 +213,14 @@ class _Crystal implements Crystal {
    _Crystal({required this.backDefault, required this.backShiny, required this.backShinyTransparent, required this.backTransparent, required this.frontDefault, required this.frontShiny, required this.frontShinyTransparent, required this.frontTransparent});
   factory _Crystal.fromJson(Map<String, dynamic> json) => _$CrystalFromJson(json);
 
-@override final  String backDefault;
-@override final  String backShiny;
-@override final  String backShinyTransparent;
-@override final  String backTransparent;
-@override final  String frontDefault;
-@override final  String frontShiny;
-@override final  String frontShinyTransparent;
-@override final  String frontTransparent;
+@override final  String? backDefault;
+@override final  String? backShiny;
+@override final  String? backShinyTransparent;
+@override final  String? backTransparent;
+@override final  String? frontDefault;
+@override final  String? frontShiny;
+@override final  String? frontShinyTransparent;
+@override final  String? frontTransparent;
 
 /// Create a copy of Crystal
 /// with the given fields replaced by the non-null parameter values.
@@ -255,7 +255,7 @@ abstract mixin class _$CrystalCopyWith<$Res> implements $CrystalCopyWith<$Res> {
   factory _$CrystalCopyWith(_Crystal value, $Res Function(_Crystal) _then) = __$CrystalCopyWithImpl;
 @override @useResult
 $Res call({
- String backDefault, String backShiny, String backShinyTransparent, String backTransparent, String frontDefault, String frontShiny, String frontShinyTransparent, String frontTransparent
+ String? backDefault, String? backShiny, String? backShinyTransparent, String? backTransparent, String? frontDefault, String? frontShiny, String? frontShinyTransparent, String? frontTransparent
 });
 
 
@@ -272,17 +272,17 @@ class __$CrystalCopyWithImpl<$Res>
 
 /// Create a copy of Crystal
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? backDefault = null,Object? backShiny = null,Object? backShinyTransparent = null,Object? backTransparent = null,Object? frontDefault = null,Object? frontShiny = null,Object? frontShinyTransparent = null,Object? frontTransparent = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? backDefault = freezed,Object? backShiny = freezed,Object? backShinyTransparent = freezed,Object? backTransparent = freezed,Object? frontDefault = freezed,Object? frontShiny = freezed,Object? frontShinyTransparent = freezed,Object? frontTransparent = freezed,}) {
   return _then(_Crystal(
-backDefault: null == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
-as String,backShiny: null == backShiny ? _self.backShiny : backShiny // ignore: cast_nullable_to_non_nullable
-as String,backShinyTransparent: null == backShinyTransparent ? _self.backShinyTransparent : backShinyTransparent // ignore: cast_nullable_to_non_nullable
-as String,backTransparent: null == backTransparent ? _self.backTransparent : backTransparent // ignore: cast_nullable_to_non_nullable
-as String,frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontShiny: null == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
-as String,frontShinyTransparent: null == frontShinyTransparent ? _self.frontShinyTransparent : frontShinyTransparent // ignore: cast_nullable_to_non_nullable
-as String,frontTransparent: null == frontTransparent ? _self.frontTransparent : frontTransparent // ignore: cast_nullable_to_non_nullable
-as String,
+backDefault: freezed == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
+as String?,backShiny: freezed == backShiny ? _self.backShiny : backShiny // ignore: cast_nullable_to_non_nullable
+as String?,backShinyTransparent: freezed == backShinyTransparent ? _self.backShinyTransparent : backShinyTransparent // ignore: cast_nullable_to_non_nullable
+as String?,backTransparent: freezed == backTransparent ? _self.backTransparent : backTransparent // ignore: cast_nullable_to_non_nullable
+as String?,frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontShiny: freezed == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
+as String?,frontShinyTransparent: freezed == frontShinyTransparent ? _self.frontShinyTransparent : frontShinyTransparent // ignore: cast_nullable_to_non_nullable
+as String?,frontTransparent: freezed == frontTransparent ? _self.frontTransparent : frontTransparent // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 

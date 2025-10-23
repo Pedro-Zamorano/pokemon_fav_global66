@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Gold {
 
- String get backDefault; String get backShiny; String get frontDefault; String get frontShiny; String? get frontTransparent;
+ String? get backDefault; String? get backShiny; String? get frontDefault; String? get frontShiny; String? get frontTransparent;
 /// Create a copy of Gold
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $GoldCopyWith<$Res>  {
   factory $GoldCopyWith(Gold value, $Res Function(Gold) _then) = _$GoldCopyWithImpl;
 @useResult
 $Res call({
- String backDefault, String backShiny, String frontDefault, String frontShiny, String? frontTransparent
+ String? backDefault, String? backShiny, String? frontDefault, String? frontShiny, String? frontTransparent
 });
 
 
@@ -65,13 +65,13 @@ class _$GoldCopyWithImpl<$Res>
 
 /// Create a copy of Gold
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? backDefault = null,Object? backShiny = null,Object? frontDefault = null,Object? frontShiny = null,Object? frontTransparent = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? backDefault = freezed,Object? backShiny = freezed,Object? frontDefault = freezed,Object? frontShiny = freezed,Object? frontTransparent = freezed,}) {
   return _then(_self.copyWith(
-backDefault: null == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
-as String,backShiny: null == backShiny ? _self.backShiny : backShiny // ignore: cast_nullable_to_non_nullable
-as String,frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontShiny: null == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
-as String,frontTransparent: freezed == frontTransparent ? _self.frontTransparent : frontTransparent // ignore: cast_nullable_to_non_nullable
+backDefault: freezed == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
+as String?,backShiny: freezed == backShiny ? _self.backShiny : backShiny // ignore: cast_nullable_to_non_nullable
+as String?,frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontShiny: freezed == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
+as String?,frontTransparent: freezed == frontTransparent ? _self.frontTransparent : frontTransparent // ignore: cast_nullable_to_non_nullable
 as String?,
   ));
 }
@@ -154,7 +154,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String backDefault,  String backShiny,  String frontDefault,  String frontShiny,  String? frontTransparent)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? backDefault,  String? backShiny,  String? frontDefault,  String? frontShiny,  String? frontTransparent)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Gold() when $default != null:
 return $default(_that.backDefault,_that.backShiny,_that.frontDefault,_that.frontShiny,_that.frontTransparent);case _:
@@ -175,7 +175,7 @@ return $default(_that.backDefault,_that.backShiny,_that.frontDefault,_that.front
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String backDefault,  String backShiny,  String frontDefault,  String frontShiny,  String? frontTransparent)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? backDefault,  String? backShiny,  String? frontDefault,  String? frontShiny,  String? frontTransparent)  $default,) {final _that = this;
 switch (_that) {
 case _Gold():
 return $default(_that.backDefault,_that.backShiny,_that.frontDefault,_that.frontShiny,_that.frontTransparent);}
@@ -192,7 +192,7 @@ return $default(_that.backDefault,_that.backShiny,_that.frontDefault,_that.front
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String backDefault,  String backShiny,  String frontDefault,  String frontShiny,  String? frontTransparent)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? backDefault,  String? backShiny,  String? frontDefault,  String? frontShiny,  String? frontTransparent)?  $default,) {final _that = this;
 switch (_that) {
 case _Gold() when $default != null:
 return $default(_that.backDefault,_that.backShiny,_that.frontDefault,_that.frontShiny,_that.frontTransparent);case _:
@@ -210,10 +210,10 @@ class _Gold implements Gold {
    _Gold({required this.backDefault, required this.backShiny, required this.frontDefault, required this.frontShiny, required this.frontTransparent});
   factory _Gold.fromJson(Map<String, dynamic> json) => _$GoldFromJson(json);
 
-@override final  String backDefault;
-@override final  String backShiny;
-@override final  String frontDefault;
-@override final  String frontShiny;
+@override final  String? backDefault;
+@override final  String? backShiny;
+@override final  String? frontDefault;
+@override final  String? frontShiny;
 @override final  String? frontTransparent;
 
 /// Create a copy of Gold
@@ -249,7 +249,7 @@ abstract mixin class _$GoldCopyWith<$Res> implements $GoldCopyWith<$Res> {
   factory _$GoldCopyWith(_Gold value, $Res Function(_Gold) _then) = __$GoldCopyWithImpl;
 @override @useResult
 $Res call({
- String backDefault, String backShiny, String frontDefault, String frontShiny, String? frontTransparent
+ String? backDefault, String? backShiny, String? frontDefault, String? frontShiny, String? frontTransparent
 });
 
 
@@ -266,13 +266,13 @@ class __$GoldCopyWithImpl<$Res>
 
 /// Create a copy of Gold
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? backDefault = null,Object? backShiny = null,Object? frontDefault = null,Object? frontShiny = null,Object? frontTransparent = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? backDefault = freezed,Object? backShiny = freezed,Object? frontDefault = freezed,Object? frontShiny = freezed,Object? frontTransparent = freezed,}) {
   return _then(_Gold(
-backDefault: null == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
-as String,backShiny: null == backShiny ? _self.backShiny : backShiny // ignore: cast_nullable_to_non_nullable
-as String,frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontShiny: null == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
-as String,frontTransparent: freezed == frontTransparent ? _self.frontTransparent : frontTransparent // ignore: cast_nullable_to_non_nullable
+backDefault: freezed == backDefault ? _self.backDefault : backDefault // ignore: cast_nullable_to_non_nullable
+as String?,backShiny: freezed == backShiny ? _self.backShiny : backShiny // ignore: cast_nullable_to_non_nullable
+as String?,frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontShiny: freezed == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
+as String?,frontTransparent: freezed == frontTransparent ? _self.frontTransparent : frontTransparent // ignore: cast_nullable_to_non_nullable
 as String?,
   ));
 }

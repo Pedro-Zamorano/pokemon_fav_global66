@@ -7,12 +7,20 @@ part of 'other.dart';
 // **************************************************************************
 
 _Other _$OtherFromJson(Map<String, dynamic> json) => _Other(
-  dreamWorld: DreamWorld.fromJson(json['dreamWorld'] as Map<String, dynamic>),
-  home: Home.fromJson(json['home'] as Map<String, dynamic>),
-  officialArtwork: OfficialArtwork.fromJson(
-    json['officialArtwork'] as Map<String, dynamic>,
-  ),
-  showdown: Sprites.fromJson(json['showdown'] as Map<String, dynamic>),
+  dreamWorld: json['dreamWorld'] == null
+      ? null
+      : DreamWorld.fromJson(json['dreamWorld'] as Map<String, dynamic>),
+  home: json['home'] == null
+      ? null
+      : Home.fromJson(json['home'] as Map<String, dynamic>),
+  officialArtwork: json['officialArtwork'] == null
+      ? null
+      : OfficialArtwork.fromJson(
+          json['officialArtwork'] as Map<String, dynamic>,
+        ),
+  showdown: json['showdown'] == null
+      ? null
+      : Sprites.fromJson(json['showdown'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$OtherToJson(_Other instance) => <String, dynamic>{

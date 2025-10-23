@@ -7,9 +7,9 @@ part 'home.g.dart';
 sealed class Home with _$Home {
 
   factory Home({
-    required String frontDefault,
+    required String? frontDefault,
     required dynamic frontFemale,
-    required String frontShiny,
+    required String? frontShiny,
     required dynamic frontShinyFemale,
   }) = _Home;
 

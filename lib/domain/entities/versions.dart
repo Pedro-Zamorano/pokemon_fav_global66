@@ -7,14 +7,14 @@ part 'versions.g.dart';
 @freezed
 sealed class Versions with _$Versions {
   factory Versions({
-    required GenerationI generationI,
-    required GenerationIi generationIi,
-    required GenerationIii generationIii,
-    required GenerationIv generationIv,
-    required GenerationV generationV,
-    required Map<String, Home> generationVi,
-    required GenerationVii generationVii,
-    required GenerationViii generationViii,
+    required GenerationI? generationI,
+    required GenerationIi? generationIi,
+    required GenerationIii? generationIii,
+    required GenerationIv? generationIv,
+    required GenerationV? generationV,
+    required Map<String, Home>? generationVi,
+    required GenerationVii? generationVii,
+    required GenerationViii? generationViii,
   }) = _Versions;
 
   factory Versions.fromJson(Map<String, dynamic> json) =>

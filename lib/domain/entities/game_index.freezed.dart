@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GameIndex {
 
- int get gameIndex; Species get version;
+ int? get gameIndex; Species? get version;
 /// Create a copy of GameIndex
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $GameIndexCopyWith<$Res>  {
   factory $GameIndexCopyWith(GameIndex value, $Res Function(GameIndex) _then) = _$GameIndexCopyWithImpl;
 @useResult
 $Res call({
- int gameIndex, Species version
+ int? gameIndex, Species? version
 });
 
 
-$SpeciesCopyWith<$Res> get version;
+$SpeciesCopyWith<$Res>? get version;
 
 }
 /// @nodoc
@@ -65,20 +65,23 @@ class _$GameIndexCopyWithImpl<$Res>
 
 /// Create a copy of GameIndex
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? gameIndex = null,Object? version = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? gameIndex = freezed,Object? version = freezed,}) {
   return _then(_self.copyWith(
-gameIndex: null == gameIndex ? _self.gameIndex : gameIndex // ignore: cast_nullable_to_non_nullable
-as int,version: null == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
-as Species,
+gameIndex: freezed == gameIndex ? _self.gameIndex : gameIndex // ignore: cast_nullable_to_non_nullable
+as int?,version: freezed == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
+as Species?,
   ));
 }
 /// Create a copy of GameIndex
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get version {
-  
-  return $SpeciesCopyWith<$Res>(_self.version, (value) {
+$SpeciesCopyWith<$Res>? get version {
+    if (_self.version == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.version!, (value) {
     return _then(_self.copyWith(version: value));
   });
 }
@@ -160,7 +163,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int gameIndex,  Species version)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? gameIndex,  Species? version)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GameIndex() when $default != null:
 return $default(_that.gameIndex,_that.version);case _:
@@ -181,7 +184,7 @@ return $default(_that.gameIndex,_that.version);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int gameIndex,  Species version)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? gameIndex,  Species? version)  $default,) {final _that = this;
 switch (_that) {
 case _GameIndex():
 return $default(_that.gameIndex,_that.version);}
@@ -198,7 +201,7 @@ return $default(_that.gameIndex,_that.version);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int gameIndex,  Species version)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? gameIndex,  Species? version)?  $default,) {final _that = this;
 switch (_that) {
 case _GameIndex() when $default != null:
 return $default(_that.gameIndex,_that.version);case _:
@@ -216,8 +219,8 @@ class _GameIndex implements GameIndex {
    _GameIndex({required this.gameIndex, required this.version});
   factory _GameIndex.fromJson(Map<String, dynamic> json) => _$GameIndexFromJson(json);
 
-@override final  int gameIndex;
-@override final  Species version;
+@override final  int? gameIndex;
+@override final  Species? version;
 
 /// Create a copy of GameIndex
 /// with the given fields replaced by the non-null parameter values.
@@ -252,11 +255,11 @@ abstract mixin class _$GameIndexCopyWith<$Res> implements $GameIndexCopyWith<$Re
   factory _$GameIndexCopyWith(_GameIndex value, $Res Function(_GameIndex) _then) = __$GameIndexCopyWithImpl;
 @override @useResult
 $Res call({
- int gameIndex, Species version
+ int? gameIndex, Species? version
 });
 
 
-@override $SpeciesCopyWith<$Res> get version;
+@override $SpeciesCopyWith<$Res>? get version;
 
 }
 /// @nodoc
@@ -269,11 +272,11 @@ class __$GameIndexCopyWithImpl<$Res>
 
 /// Create a copy of GameIndex
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? gameIndex = null,Object? version = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? gameIndex = freezed,Object? version = freezed,}) {
   return _then(_GameIndex(
-gameIndex: null == gameIndex ? _self.gameIndex : gameIndex // ignore: cast_nullable_to_non_nullable
-as int,version: null == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
-as Species,
+gameIndex: freezed == gameIndex ? _self.gameIndex : gameIndex // ignore: cast_nullable_to_non_nullable
+as int?,version: freezed == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
+as Species?,
   ));
 }
 
@@ -281,9 +284,12 @@ as Species,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SpeciesCopyWith<$Res> get version {
-  
-  return $SpeciesCopyWith<$Res>(_self.version, (value) {
+$SpeciesCopyWith<$Res>? get version {
+    if (_self.version == null) {
+    return null;
+  }
+
+  return $SpeciesCopyWith<$Res>(_self.version!, (value) {
     return _then(_self.copyWith(version: value));
   });
 }

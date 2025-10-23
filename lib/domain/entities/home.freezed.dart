@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Home {
 
- String get frontDefault; dynamic get frontFemale; String get frontShiny; dynamic get frontShinyFemale;
+ String? get frontDefault; dynamic get frontFemale; String? get frontShiny; dynamic get frontShinyFemale;
 /// Create a copy of Home
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $HomeCopyWith<$Res>  {
   factory $HomeCopyWith(Home value, $Res Function(Home) _then) = _$HomeCopyWithImpl;
 @useResult
 $Res call({
- String frontDefault, dynamic frontFemale, String frontShiny, dynamic frontShinyFemale
+ String? frontDefault, dynamic frontFemale, String? frontShiny, dynamic frontShinyFemale
 });
 
 
@@ -65,12 +65,12 @@ class _$HomeCopyWithImpl<$Res>
 
 /// Create a copy of Home
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? frontDefault = null,Object? frontFemale = freezed,Object? frontShiny = null,Object? frontShinyFemale = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? frontDefault = freezed,Object? frontFemale = freezed,Object? frontShiny = freezed,Object? frontShinyFemale = freezed,}) {
   return _then(_self.copyWith(
-frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontFemale: freezed == frontFemale ? _self.frontFemale : frontFemale // ignore: cast_nullable_to_non_nullable
-as dynamic,frontShiny: null == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
-as String,frontShinyFemale: freezed == frontShinyFemale ? _self.frontShinyFemale : frontShinyFemale // ignore: cast_nullable_to_non_nullable
+frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontFemale: freezed == frontFemale ? _self.frontFemale : frontFemale // ignore: cast_nullable_to_non_nullable
+as dynamic,frontShiny: freezed == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
+as String?,frontShinyFemale: freezed == frontShinyFemale ? _self.frontShinyFemale : frontShinyFemale // ignore: cast_nullable_to_non_nullable
 as dynamic,
   ));
 }
@@ -153,7 +153,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String frontDefault,  dynamic frontFemale,  String frontShiny,  dynamic frontShinyFemale)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? frontDefault,  dynamic frontFemale,  String? frontShiny,  dynamic frontShinyFemale)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Home() when $default != null:
 return $default(_that.frontDefault,_that.frontFemale,_that.frontShiny,_that.frontShinyFemale);case _:
@@ -174,7 +174,7 @@ return $default(_that.frontDefault,_that.frontFemale,_that.frontShiny,_that.fron
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String frontDefault,  dynamic frontFemale,  String frontShiny,  dynamic frontShinyFemale)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? frontDefault,  dynamic frontFemale,  String? frontShiny,  dynamic frontShinyFemale)  $default,) {final _that = this;
 switch (_that) {
 case _Home():
 return $default(_that.frontDefault,_that.frontFemale,_that.frontShiny,_that.frontShinyFemale);}
@@ -191,7 +191,7 @@ return $default(_that.frontDefault,_that.frontFemale,_that.frontShiny,_that.fron
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String frontDefault,  dynamic frontFemale,  String frontShiny,  dynamic frontShinyFemale)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? frontDefault,  dynamic frontFemale,  String? frontShiny,  dynamic frontShinyFemale)?  $default,) {final _that = this;
 switch (_that) {
 case _Home() when $default != null:
 return $default(_that.frontDefault,_that.frontFemale,_that.frontShiny,_that.frontShinyFemale);case _:
@@ -209,9 +209,9 @@ class _Home implements Home {
    _Home({required this.frontDefault, required this.frontFemale, required this.frontShiny, required this.frontShinyFemale});
   factory _Home.fromJson(Map<String, dynamic> json) => _$HomeFromJson(json);
 
-@override final  String frontDefault;
+@override final  String? frontDefault;
 @override final  dynamic frontFemale;
-@override final  String frontShiny;
+@override final  String? frontShiny;
 @override final  dynamic frontShinyFemale;
 
 /// Create a copy of Home
@@ -247,7 +247,7 @@ abstract mixin class _$HomeCopyWith<$Res> implements $HomeCopyWith<$Res> {
   factory _$HomeCopyWith(_Home value, $Res Function(_Home) _then) = __$HomeCopyWithImpl;
 @override @useResult
 $Res call({
- String frontDefault, dynamic frontFemale, String frontShiny, dynamic frontShinyFemale
+ String? frontDefault, dynamic frontFemale, String? frontShiny, dynamic frontShinyFemale
 });
 
 
@@ -264,12 +264,12 @@ class __$HomeCopyWithImpl<$Res>
 
 /// Create a copy of Home
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? frontDefault = null,Object? frontFemale = freezed,Object? frontShiny = null,Object? frontShinyFemale = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? frontDefault = freezed,Object? frontFemale = freezed,Object? frontShiny = freezed,Object? frontShinyFemale = freezed,}) {
   return _then(_Home(
-frontDefault: null == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
-as String,frontFemale: freezed == frontFemale ? _self.frontFemale : frontFemale // ignore: cast_nullable_to_non_nullable
-as dynamic,frontShiny: null == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
-as String,frontShinyFemale: freezed == frontShinyFemale ? _self.frontShinyFemale : frontShinyFemale // ignore: cast_nullable_to_non_nullable
+frontDefault: freezed == frontDefault ? _self.frontDefault : frontDefault // ignore: cast_nullable_to_non_nullable
+as String?,frontFemale: freezed == frontFemale ? _self.frontFemale : frontFemale // ignore: cast_nullable_to_non_nullable
+as dynamic,frontShiny: freezed == frontShiny ? _self.frontShiny : frontShiny // ignore: cast_nullable_to_non_nullable
+as String?,frontShinyFemale: freezed == frontShinyFemale ? _self.frontShinyFemale : frontShinyFemale // ignore: cast_nullable_to_non_nullable
 as dynamic,
   ));
 }

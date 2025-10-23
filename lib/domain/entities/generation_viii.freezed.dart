@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GenerationViii {
 
- DreamWorld get icons;
+ DreamWorld? get icons;
 /// Create a copy of GenerationViii
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $GenerationViiiCopyWith<$Res>  {
   factory $GenerationViiiCopyWith(GenerationViii value, $Res Function(GenerationViii) _then) = _$GenerationViiiCopyWithImpl;
 @useResult
 $Res call({
- DreamWorld icons
+ DreamWorld? icons
 });
 
 
-$DreamWorldCopyWith<$Res> get icons;
+$DreamWorldCopyWith<$Res>? get icons;
 
 }
 /// @nodoc
@@ -65,19 +65,22 @@ class _$GenerationViiiCopyWithImpl<$Res>
 
 /// Create a copy of GenerationViii
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? icons = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? icons = freezed,}) {
   return _then(_self.copyWith(
-icons: null == icons ? _self.icons : icons // ignore: cast_nullable_to_non_nullable
-as DreamWorld,
+icons: freezed == icons ? _self.icons : icons // ignore: cast_nullable_to_non_nullable
+as DreamWorld?,
   ));
 }
 /// Create a copy of GenerationViii
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$DreamWorldCopyWith<$Res> get icons {
-  
-  return $DreamWorldCopyWith<$Res>(_self.icons, (value) {
+$DreamWorldCopyWith<$Res>? get icons {
+    if (_self.icons == null) {
+    return null;
+  }
+
+  return $DreamWorldCopyWith<$Res>(_self.icons!, (value) {
     return _then(_self.copyWith(icons: value));
   });
 }
@@ -159,7 +162,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( DreamWorld icons)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( DreamWorld? icons)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GenerationViii() when $default != null:
 return $default(_that.icons);case _:
@@ -180,7 +183,7 @@ return $default(_that.icons);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( DreamWorld icons)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( DreamWorld? icons)  $default,) {final _that = this;
 switch (_that) {
 case _GenerationViii():
 return $default(_that.icons);}
@@ -197,7 +200,7 @@ return $default(_that.icons);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( DreamWorld icons)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( DreamWorld? icons)?  $default,) {final _that = this;
 switch (_that) {
 case _GenerationViii() when $default != null:
 return $default(_that.icons);case _:
@@ -215,7 +218,7 @@ class _GenerationViii implements GenerationViii {
    _GenerationViii({required this.icons});
   factory _GenerationViii.fromJson(Map<String, dynamic> json) => _$GenerationViiiFromJson(json);
 
-@override final  DreamWorld icons;
+@override final  DreamWorld? icons;
 
 /// Create a copy of GenerationViii
 /// with the given fields replaced by the non-null parameter values.
@@ -250,11 +253,11 @@ abstract mixin class _$GenerationViiiCopyWith<$Res> implements $GenerationViiiCo
   factory _$GenerationViiiCopyWith(_GenerationViii value, $Res Function(_GenerationViii) _then) = __$GenerationViiiCopyWithImpl;
 @override @useResult
 $Res call({
- DreamWorld icons
+ DreamWorld? icons
 });
 
 
-@override $DreamWorldCopyWith<$Res> get icons;
+@override $DreamWorldCopyWith<$Res>? get icons;
 
 }
 /// @nodoc
@@ -267,10 +270,10 @@ class __$GenerationViiiCopyWithImpl<$Res>
 
 /// Create a copy of GenerationViii
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? icons = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? icons = freezed,}) {
   return _then(_GenerationViii(
-icons: null == icons ? _self.icons : icons // ignore: cast_nullable_to_non_nullable
-as DreamWorld,
+icons: freezed == icons ? _self.icons : icons // ignore: cast_nullable_to_non_nullable
+as DreamWorld?,
   ));
 }
 
@@ -278,9 +281,12 @@ as DreamWorld,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$DreamWorldCopyWith<$Res> get icons {
-  
-  return $DreamWorldCopyWith<$Res>(_self.icons, (value) {
+$DreamWorldCopyWith<$Res>? get icons {
+    if (_self.icons == null) {
+    return null;
+  }
+
+  return $DreamWorldCopyWith<$Res>(_self.icons!, (value) {
     return _then(_self.copyWith(icons: value));
   });
 }

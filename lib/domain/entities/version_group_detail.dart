@@ -7,10 +7,10 @@ part 'version_group_detail.g.dart';
 @freezed
 sealed class VersionGroupDetail with _$VersionGroupDetail {
   factory VersionGroupDetail({
-    required int levelLearnedAt,
-    required Species moveLearnMethod,
+    required int? levelLearnedAt,
+    required Species? moveLearnMethod,
     required int? order,
-    required Species versionGroup,
+    required Species? versionGroup,
   }) = _VersionGroupDetail;
 
   factory VersionGroupDetail.fromJson(Map<String, dynamic> json) =>
