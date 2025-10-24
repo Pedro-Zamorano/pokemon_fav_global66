@@ -27,3 +27,5 @@ export 'entities/type.dart';
 
 export 'entities/pokemon_response.dart';
 export 'entities/result.dart';
+
+export 'entities/pokemon_card.dart';
