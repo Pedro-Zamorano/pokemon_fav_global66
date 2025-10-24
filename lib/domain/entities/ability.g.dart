@@ -10,12 +10,12 @@ _Ability _$AbilityFromJson(Map<String, dynamic> json) => _Ability(
   ability: json['ability'] == null
       ? null
       : Species.fromJson(json['ability'] as Map<String, dynamic>),
-  isHidden: json['isHidden'] as bool?,
+  isHidden: json['is_hidden'] as bool?,
   slot: (json['slot'] as num?)?.toInt(),
 );
 
 Map<String, dynamic> _$AbilityToJson(_Ability instance) => <String, dynamic>{
   'ability': instance.ability,
-  'isHidden': instance.isHidden,
+  'is_hidden': instance.isHidden,
   'slot': instance.slot,
 };

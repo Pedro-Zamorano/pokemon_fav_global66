@@ -205,8 +205,8 @@ return $default(_that.backDefault,_that.backGray,_that.backTransparent,_that.fro
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _RedBlue implements RedBlue {
    _RedBlue({required this.backDefault, required this.backGray, required this.backTransparent, required this.frontDefault, required this.frontGray, required this.frontTransparent});
   factory _RedBlue.fromJson(Map<String, dynamic> json) => _$RedBlueFromJson(json);

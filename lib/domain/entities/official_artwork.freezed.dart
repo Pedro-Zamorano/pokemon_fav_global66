@@ -201,8 +201,8 @@ return $default(_that.frontDefault,_that.frontShiny);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _OfficialArtwork implements OfficialArtwork {
    _OfficialArtwork({required this.frontDefault, required this.frontShiny});
   factory _OfficialArtwork.fromJson(Map<String, dynamic> json) => _$OfficialArtworkFromJson(json);

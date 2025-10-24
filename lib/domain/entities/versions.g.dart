@@ -7,39 +7,41 @@ part of 'versions.dart';
 // **************************************************************************
 
 _Versions _$VersionsFromJson(Map<String, dynamic> json) => _Versions(
-  generationI: json['generationI'] == null
+  generationI: json['generation_i'] == null
       ? null
-      : GenerationI.fromJson(json['generationI'] as Map<String, dynamic>),
-  generationIi: json['generationIi'] == null
+      : GenerationI.fromJson(json['generation_i'] as Map<String, dynamic>),
+  generationIi: json['generation_ii'] == null
       ? null
-      : GenerationIi.fromJson(json['generationIi'] as Map<String, dynamic>),
-  generationIii: json['generationIii'] == null
+      : GenerationIi.fromJson(json['generation_ii'] as Map<String, dynamic>),
+  generationIii: json['generation_iii'] == null
       ? null
-      : GenerationIii.fromJson(json['generationIii'] as Map<String, dynamic>),
-  generationIv: json['generationIv'] == null
+      : GenerationIii.fromJson(json['generation_iii'] as Map<String, dynamic>),
+  generationIv: json['generation_iv'] == null
       ? null
-      : GenerationIv.fromJson(json['generationIv'] as Map<String, dynamic>),
-  generationV: json['generationV'] == null
+      : GenerationIv.fromJson(json['generation_iv'] as Map<String, dynamic>),
+  generationV: json['generation_v'] == null
       ? null
-      : GenerationV.fromJson(json['generationV'] as Map<String, dynamic>),
-  generationVi: (json['generationVi'] as Map<String, dynamic>?)?.map(
+      : GenerationV.fromJson(json['generation_v'] as Map<String, dynamic>),
+  generationVi: (json['generation_vi'] as Map<String, dynamic>?)?.map(
     (k, e) => MapEntry(k, Home.fromJson(e as Map<String, dynamic>)),
   ),
-  generationVii: json['generationVii'] == null
+  generationVii: json['generation_vii'] == null
       ? null
-      : GenerationVii.fromJson(json['generationVii'] as Map<String, dynamic>),
-  generationViii: json['generationViii'] == null
+      : GenerationVii.fromJson(json['generation_vii'] as Map<String, dynamic>),
+  generationViii: json['generation_viii'] == null
       ? null
-      : GenerationViii.fromJson(json['generationViii'] as Map<String, dynamic>),
+      : GenerationViii.fromJson(
+          json['generation_viii'] as Map<String, dynamic>,
+        ),
 );
 
 Map<String, dynamic> _$VersionsToJson(_Versions instance) => <String, dynamic>{
-  'generationI': instance.generationI,
-  'generationIi': instance.generationIi,
-  'generationIii': instance.generationIii,
-  'generationIv': instance.generationIv,
-  'generationV': instance.generationV,
-  'generationVi': instance.generationVi,
-  'generationVii': instance.generationVii,
-  'generationViii': instance.generationViii,
+  'generation_i': instance.generationI,
+  'generation_ii': instance.generationIi,
+  'generation_iii': instance.generationIii,
+  'generation_iv': instance.generationIv,
+  'generation_v': instance.generationV,
+  'generation_vi': instance.generationVi,
+  'generation_vii': instance.generationVii,
+  'generation_viii': instance.generationViii,
 };

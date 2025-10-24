@@ -5,7 +5,7 @@ part 'crystal.g.dart';
 
 @freezed
 sealed class Crystal with _$Crystal {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Crystal({
     required String? backDefault,
     required String? backShiny,

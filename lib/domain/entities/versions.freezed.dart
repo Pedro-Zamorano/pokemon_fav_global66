@@ -291,8 +291,8 @@ return $default(_that.generationI,_that.generationIi,_that.generationIii,_that.g
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _Versions implements Versions {
    _Versions({required this.generationI, required this.generationIi, required this.generationIii, required this.generationIv, required this.generationV, required final  Map<String, Home>? generationVi, required this.generationVii, required this.generationViii}): _generationVi = generationVi;
   factory _Versions.fromJson(Map<String, dynamic> json) => _$VersionsFromJson(json);

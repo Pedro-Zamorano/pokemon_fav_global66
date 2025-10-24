@@ -214,8 +214,8 @@ return $default(_that.baseStat,_that.effort,_that.stat);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _Stat implements Stat {
    _Stat({required this.baseStat, required this.effort, required this.stat});
   factory _Stat.fromJson(Map<String, dynamic> json) => _$StatFromJson(json);

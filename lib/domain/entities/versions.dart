@@ -6,6 +6,7 @@ part 'versions.g.dart';
 
 @freezed
 sealed class Versions with _$Versions {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Versions({
     required GenerationI? generationI,
     required GenerationIi? generationIi,

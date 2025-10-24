@@ -8,20 +8,20 @@ part of 'version_group_detail.dart';
 
 _VersionGroupDetail _$VersionGroupDetailFromJson(Map<String, dynamic> json) =>
     _VersionGroupDetail(
-      levelLearnedAt: (json['levelLearnedAt'] as num?)?.toInt(),
-      moveLearnMethod: json['moveLearnMethod'] == null
+      levelLearnedAt: (json['level_learned_at'] as num?)?.toInt(),
+      moveLearnMethod: json['move_learn_method'] == null
           ? null
-          : Species.fromJson(json['moveLearnMethod'] as Map<String, dynamic>),
+          : Species.fromJson(json['move_learn_method'] as Map<String, dynamic>),
       order: (json['order'] as num?)?.toInt(),
-      versionGroup: json['versionGroup'] == null
+      versionGroup: json['version_group'] == null
           ? null
-          : Species.fromJson(json['versionGroup'] as Map<String, dynamic>),
+          : Species.fromJson(json['version_group'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$VersionGroupDetailToJson(_VersionGroupDetail instance) =>
     <String, dynamic>{
-      'levelLearnedAt': instance.levelLearnedAt,
-      'moveLearnMethod': instance.moveLearnMethod,
+      'level_learned_at': instance.levelLearnedAt,
+      'move_learn_method': instance.moveLearnMethod,
       'order': instance.order,
-      'versionGroup': instance.versionGroup,
+      'version_group': instance.versionGroup,
     };

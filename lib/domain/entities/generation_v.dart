@@ -6,7 +6,7 @@ part 'generation_v.g.dart';
 
 @freezed
 sealed class GenerationV with _$GenerationV {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory GenerationV({
     required Sprites? blackWhite,
   }) = _GenerationV;

@@ -6,7 +6,7 @@ part 'stat.g.dart';
 
 @freezed
 sealed class Stat with _$Stat {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Stat({
     required int? baseStat,
     required int? effort,

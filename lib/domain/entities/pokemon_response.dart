@@ -6,6 +6,7 @@ part 'pokemon_response.g.dart';
 
 @freezed
 sealed class PokemonResponse with _$PokemonResponse {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory PokemonResponse({
     required int? count,
     required String? next,

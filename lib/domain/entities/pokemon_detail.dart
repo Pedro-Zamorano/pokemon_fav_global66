@@ -6,6 +6,7 @@ part 'pokemon_detail.g.dart';
 
 @freezed
 sealed class PokemonDetail with _$PokemonDetail {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory PokemonDetail({
     required List<Ability>? abilities,
     required int? baseExperience,

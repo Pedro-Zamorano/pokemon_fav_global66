@@ -6,6 +6,7 @@ part 'past_ability.g.dart';
 
 @freezed
 sealed class PastAbility with _$PastAbility {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory PastAbility({
     required List<Ability>? abilities,
     required Species? generation,

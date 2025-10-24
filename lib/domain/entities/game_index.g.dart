@@ -7,7 +7,7 @@ part of 'game_index.dart';
 // **************************************************************************
 
 _GameIndex _$GameIndexFromJson(Map<String, dynamic> json) => _GameIndex(
-  gameIndex: (json['gameIndex'] as num?)?.toInt(),
+  gameIndex: (json['game_index'] as num?)?.toInt(),
   version: json['version'] == null
       ? null
       : Species.fromJson(json['version'] as Map<String, dynamic>),
@@ -15,6 +15,6 @@ _GameIndex _$GameIndexFromJson(Map<String, dynamic> json) => _GameIndex(
 
 Map<String, dynamic> _$GameIndexToJson(_GameIndex instance) =>
     <String, dynamic>{
-      'gameIndex': instance.gameIndex,
+      'game_index': instance.gameIndex,
       'version': instance.version,
     };

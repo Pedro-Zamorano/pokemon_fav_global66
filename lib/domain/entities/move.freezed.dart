@@ -213,8 +213,8 @@ return $default(_that.move,_that.versionGroupDetails);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _Move implements Move {
    _Move({required this.move, required final  List<VersionGroupDetail>? versionGroupDetails}): _versionGroupDetails = versionGroupDetails;
   factory _Move.fromJson(Map<String, dynamic> json) => _$MoveFromJson(json);

@@ -6,7 +6,7 @@ part 'generation_iv.g.dart';
 
 @freezed
 sealed class GenerationIv with _$GenerationIv {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory GenerationIv({
     required Sprites? diamondPearl,
     required Sprites? heartgoldSoulsilver,

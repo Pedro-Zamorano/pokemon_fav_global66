@@ -227,8 +227,8 @@ return $default(_that.levelLearnedAt,_that.moveLearnMethod,_that.order,_that.ver
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _VersionGroupDetail implements VersionGroupDetail {
    _VersionGroupDetail({required this.levelLearnedAt, required this.moveLearnMethod, required this.order, required this.versionGroup});
   factory _VersionGroupDetail.fromJson(Map<String, dynamic> json) => _$VersionGroupDetailFromJson(json);

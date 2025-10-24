@@ -6,6 +6,7 @@ part 'version_group_detail.g.dart';
 
 @freezed
 sealed class VersionGroupDetail with _$VersionGroupDetail {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory VersionGroupDetail({
     required int? levelLearnedAt,
     required Species? moveLearnMethod,

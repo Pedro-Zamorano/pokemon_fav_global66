@@ -6,6 +6,7 @@ part 'other.g.dart';
 
 @freezed
 sealed class Other with _$Other {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Other({
     required DreamWorld? dreamWorld,
     required Home? home,

@@ -213,8 +213,8 @@ return $default(_that.abilities,_that.generation);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _PastAbility implements PastAbility {
    _PastAbility({required final  List<Ability>? abilities, required this.generation}): _abilities = abilities;
   factory _PastAbility.fromJson(Map<String, dynamic> json) => _$PastAbilityFromJson(json);

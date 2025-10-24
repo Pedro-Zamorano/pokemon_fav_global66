@@ -6,7 +6,7 @@ part 'game_index.g.dart';
 
 @freezed
 sealed class GameIndex with _$GameIndex {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory GameIndex({
     required int? gameIndex,
     required Species? version,

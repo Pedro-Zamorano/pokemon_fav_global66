@@ -5,7 +5,7 @@ part 'gold.g.dart';
 
 @freezed
 sealed class Gold with _$Gold {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Gold({
     required String? backDefault,
     required String? backShiny,

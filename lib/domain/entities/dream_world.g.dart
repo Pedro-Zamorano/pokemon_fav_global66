@@ -7,12 +7,12 @@ part of 'dream_world.dart';
 // **************************************************************************
 
 _DreamWorld _$DreamWorldFromJson(Map<String, dynamic> json) => _DreamWorld(
-  frontDefault: json['frontDefault'] as String?,
-  frontFemale: json['frontFemale'],
+  frontDefault: json['front_default'] as String?,
+  frontFemale: json['front_female'],
 );
 
 Map<String, dynamic> _$DreamWorldToJson(_DreamWorld instance) =>
     <String, dynamic>{
-      'frontDefault': instance.frontDefault,
-      'frontFemale': instance.frontFemale,
+      'front_default': instance.frontDefault,
+      'front_female': instance.frontFemale,
     };

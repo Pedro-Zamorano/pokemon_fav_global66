@@ -6,6 +6,7 @@ part 'ability.g.dart';
 
 @freezed
 sealed class Ability with _$Ability {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Ability({
     required Species? ability,
     required bool? isHidden,

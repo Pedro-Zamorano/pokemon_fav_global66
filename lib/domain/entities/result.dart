@@ -5,6 +5,7 @@ part 'result.g.dart';
 
 @freezed
 sealed class Result with _$Result {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Result({
     required String? name,
     required String? url,

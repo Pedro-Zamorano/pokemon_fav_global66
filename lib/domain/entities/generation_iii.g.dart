@@ -11,17 +11,17 @@ _GenerationIii _$GenerationIiiFromJson(Map<String, dynamic> json) =>
       emerald: json['emerald'] == null
           ? null
           : OfficialArtwork.fromJson(json['emerald'] as Map<String, dynamic>),
-      fireredLeafgreen: json['fireredLeafgreen'] == null
+      fireredLeafgreen: json['firered_leafgreen'] == null
           ? null
-          : Gold.fromJson(json['fireredLeafgreen'] as Map<String, dynamic>),
-      rubySapphire: json['rubySapphire'] == null
+          : Gold.fromJson(json['firered_leafgreen'] as Map<String, dynamic>),
+      rubySapphire: json['ruby_sapphire'] == null
           ? null
-          : Gold.fromJson(json['rubySapphire'] as Map<String, dynamic>),
+          : Gold.fromJson(json['ruby_sapphire'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$GenerationIiiToJson(_GenerationIii instance) =>
     <String, dynamic>{
       'emerald': instance.emerald,
-      'fireredLeafgreen': instance.fireredLeafgreen,
-      'rubySapphire': instance.rubySapphire,
+      'firered_leafgreen': instance.fireredLeafgreen,
+      'ruby_sapphire': instance.rubySapphire,
     };

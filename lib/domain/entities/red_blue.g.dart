@@ -7,19 +7,19 @@ part of 'red_blue.dart';
 // **************************************************************************
 
 _RedBlue _$RedBlueFromJson(Map<String, dynamic> json) => _RedBlue(
-  backDefault: json['backDefault'] as String?,
-  backGray: json['backGray'] as String?,
-  backTransparent: json['backTransparent'] as String?,
-  frontDefault: json['frontDefault'] as String?,
-  frontGray: json['frontGray'] as String?,
-  frontTransparent: json['frontTransparent'] as String?,
+  backDefault: json['back_default'] as String?,
+  backGray: json['back_gray'] as String?,
+  backTransparent: json['back_transparent'] as String?,
+  frontDefault: json['front_default'] as String?,
+  frontGray: json['front_gray'] as String?,
+  frontTransparent: json['front_transparent'] as String?,
 );
 
 Map<String, dynamic> _$RedBlueToJson(_RedBlue instance) => <String, dynamic>{
-  'backDefault': instance.backDefault,
-  'backGray': instance.backGray,
-  'backTransparent': instance.backTransparent,
-  'frontDefault': instance.frontDefault,
-  'frontGray': instance.frontGray,
-  'frontTransparent': instance.frontTransparent,
+  'back_default': instance.backDefault,
+  'back_gray': instance.backGray,
+  'back_transparent': instance.backTransparent,
+  'front_default': instance.frontDefault,
+  'front_gray': instance.frontGray,
+  'front_transparent': instance.frontTransparent,
 };

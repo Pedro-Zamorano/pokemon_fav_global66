@@ -6,6 +6,7 @@ part 'sprites.g.dart';
 
 @freezed
 sealed class Sprites with _$Sprites {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Sprites({
     required String? backDefault,
     required dynamic backFemale,

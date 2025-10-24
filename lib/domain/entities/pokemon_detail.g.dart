@@ -11,30 +11,30 @@ _PokemonDetail _$PokemonDetailFromJson(Map<String, dynamic> json) =>
       abilities: (json['abilities'] as List<dynamic>?)
           ?.map((e) => Ability.fromJson(e as Map<String, dynamic>))
           .toList(),
-      baseExperience: (json['baseExperience'] as num?)?.toInt(),
+      baseExperience: (json['base_experience'] as num?)?.toInt(),
       cries: json['cries'] == null
           ? null
           : Cries.fromJson(json['cries'] as Map<String, dynamic>),
       forms: (json['forms'] as List<dynamic>?)
           ?.map((e) => Species.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gameIndices: (json['gameIndices'] as List<dynamic>?)
+      gameIndices: (json['game_indices'] as List<dynamic>?)
           ?.map((e) => GameIndex.fromJson(e as Map<String, dynamic>))
           .toList(),
       height: (json['height'] as num?)?.toInt(),
-      heldItems: json['heldItems'] as List<dynamic>?,
+      heldItems: json['held_items'] as List<dynamic>?,
       id: (json['id'] as num?)?.toInt(),
-      isDefault: json['isDefault'] as bool?,
-      locationAreaEncounters: json['locationAreaEncounters'] as String?,
+      isDefault: json['is_default'] as bool?,
+      locationAreaEncounters: json['location_area_encounters'] as String?,
       moves: (json['moves'] as List<dynamic>?)
           ?.map((e) => Move.fromJson(e as Map<String, dynamic>))
           .toList(),
       name: json['name'] as String?,
       order: (json['order'] as num?)?.toInt(),
-      pastAbilities: (json['pastAbilities'] as List<dynamic>?)
+      pastAbilities: (json['past_abilities'] as List<dynamic>?)
           ?.map((e) => PastAbility.fromJson(e as Map<String, dynamic>))
           .toList(),
-      pastTypes: json['pastTypes'] as List<dynamic>?,
+      pastTypes: json['past_types'] as List<dynamic>?,
       species: json['species'] == null
           ? null
           : Species.fromJson(json['species'] as Map<String, dynamic>),
@@ -53,20 +53,20 @@ _PokemonDetail _$PokemonDetailFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$PokemonDetailToJson(_PokemonDetail instance) =>
     <String, dynamic>{
       'abilities': instance.abilities,
-      'baseExperience': instance.baseExperience,
+      'base_experience': instance.baseExperience,
       'cries': instance.cries,
       'forms': instance.forms,
-      'gameIndices': instance.gameIndices,
+      'game_indices': instance.gameIndices,
       'height': instance.height,
-      'heldItems': instance.heldItems,
+      'held_items': instance.heldItems,
       'id': instance.id,
-      'isDefault': instance.isDefault,
-      'locationAreaEncounters': instance.locationAreaEncounters,
+      'is_default': instance.isDefault,
+      'location_area_encounters': instance.locationAreaEncounters,
       'moves': instance.moves,
       'name': instance.name,
       'order': instance.order,
-      'pastAbilities': instance.pastAbilities,
-      'pastTypes': instance.pastTypes,
+      'past_abilities': instance.pastAbilities,
+      'past_types': instance.pastTypes,
       'species': instance.species,
       'sprites': instance.sprites,
       'stats': instance.stats,

@@ -5,6 +5,7 @@ part 'species.g.dart';
 
 @freezed
 sealed class Species with _$Species {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Species({
     required String? name,
     required String? url,

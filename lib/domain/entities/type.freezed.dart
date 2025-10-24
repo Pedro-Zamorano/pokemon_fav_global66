@@ -213,8 +213,8 @@ return $default(_that.slot,_that.type);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _Type implements Type {
    _Type({required this.slot, required this.type});
   factory _Type.fromJson(Map<String, dynamic> json) => _$TypeFromJson(json);

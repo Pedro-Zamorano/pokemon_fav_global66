@@ -213,8 +213,8 @@ return $default(_that.gameIndex,_that.version);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _GameIndex implements GameIndex {
    _GameIndex({required this.gameIndex, required this.version});
   factory _GameIndex.fromJson(Map<String, dynamic> json) => _$GameIndexFromJson(json);

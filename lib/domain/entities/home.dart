@@ -5,7 +5,7 @@ part 'home.g.dart';
 
 @freezed
 sealed class Home with _$Home {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Home({
     required String? frontDefault,
     required dynamic frontFemale,

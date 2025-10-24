@@ -6,7 +6,7 @@ part 'generation_vii.g.dart';
 
 @freezed
 sealed class GenerationVii with _$GenerationVii {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory GenerationVii({
     required DreamWorld? icons,
     required Home? ultraSunUltraMoon,

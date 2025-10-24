@@ -251,8 +251,8 @@ return $default(_that.dreamWorld,_that.home,_that.officialArtwork,_that.showdown
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _Other implements Other {
    _Other({required this.dreamWorld, required this.home, required this.officialArtwork, required this.showdown});
   factory _Other.fromJson(Map<String, dynamic> json) => _$OtherFromJson(json);

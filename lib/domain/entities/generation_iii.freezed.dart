@@ -238,8 +238,8 @@ return $default(_that.emerald,_that.fireredLeafgreen,_that.rubySapphire);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _GenerationIii implements GenerationIii {
    _GenerationIii({required this.emerald, required this.fireredLeafgreen, required this.rubySapphire});
   factory _GenerationIii.fromJson(Map<String, dynamic> json) => _$GenerationIiiFromJson(json);

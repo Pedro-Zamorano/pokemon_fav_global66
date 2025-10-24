@@ -201,8 +201,8 @@ return $default(_that.frontDefault,_that.frontFemale);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _DreamWorld implements DreamWorld {
    _DreamWorld({required this.frontDefault, required this.frontFemale});
   factory _DreamWorld.fromJson(Map<String, dynamic> json) => _$DreamWorldFromJson(json);

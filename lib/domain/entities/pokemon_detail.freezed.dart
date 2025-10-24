@@ -255,8 +255,8 @@ return $default(_that.abilities,_that.baseExperience,_that.cries,_that.forms,_th
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _PokemonDetail implements PokemonDetail {
    _PokemonDetail({required final  List<Ability>? abilities, required this.baseExperience, required this.cries, required final  List<Species>? forms, required final  List<GameIndex>? gameIndices, required this.height, required final  List<dynamic>? heldItems, required this.id, required this.isDefault, required this.locationAreaEncounters, required final  List<Move>? moves, required this.name, required this.order, required final  List<PastAbility>? pastAbilities, required final  List<dynamic>? pastTypes, required this.species, required this.sprites, required final  List<Stat>? stats, required final  List<Type>? types, required this.weight}): _abilities = abilities,_forms = forms,_gameIndices = gameIndices,_heldItems = heldItems,_moves = moves,_pastAbilities = pastAbilities,_pastTypes = pastTypes,_stats = stats,_types = types;
   factory _PokemonDetail.fromJson(Map<String, dynamic> json) => _$PokemonDetailFromJson(json);

@@ -7,13 +7,13 @@ part of 'generation_i.dart';
 // **************************************************************************
 
 _GenerationI _$GenerationIFromJson(Map<String, dynamic> json) => _GenerationI(
-  redBlue: json['redBlue'] == null
+  redBlue: json['red_blue'] == null
       ? null
-      : RedBlue.fromJson(json['redBlue'] as Map<String, dynamic>),
+      : RedBlue.fromJson(json['red_blue'] as Map<String, dynamic>),
   yellow: json['yellow'] == null
       ? null
       : RedBlue.fromJson(json['yellow'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$GenerationIToJson(_GenerationI instance) =>
-    <String, dynamic>{'redBlue': instance.redBlue, 'yellow': instance.yellow};
+    <String, dynamic>{'red_blue': instance.redBlue, 'yellow': instance.yellow};

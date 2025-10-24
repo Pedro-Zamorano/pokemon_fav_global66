@@ -6,7 +6,7 @@ part 'type.g.dart';
 
 @freezed
 sealed class Type with _$Type {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Type({
     required int? slot,
     required Species? type,

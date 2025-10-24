@@ -5,6 +5,7 @@ part 'cries.g.dart';
 
 @freezed
 sealed class Cries with _$Cries {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Cries({
     required String? latest,
     required String? legacy,

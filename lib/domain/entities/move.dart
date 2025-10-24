@@ -6,7 +6,7 @@ part 'move.g.dart';
 
 @freezed
 sealed class Move with _$Move {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Move({
     required Species? move,
     required List<VersionGroupDetail>? versionGroupDetails,

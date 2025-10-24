@@ -203,8 +203,8 @@ return $default(_that.frontDefault,_that.frontFemale,_that.frontShiny,_that.fron
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _Home implements Home {
    _Home({required this.frontDefault, required this.frontFemale, required this.frontShiny, required this.frontShinyFemale});
   factory _Home.fromJson(Map<String, dynamic> json) => _$HomeFromJson(json);

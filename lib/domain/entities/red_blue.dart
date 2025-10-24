@@ -5,7 +5,7 @@ part 'red_blue.g.dart';
 
 @freezed
 sealed class RedBlue with _$RedBlue {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory RedBlue({
     required String? backDefault,
     required String? backGray,

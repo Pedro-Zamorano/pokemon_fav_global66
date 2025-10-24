@@ -207,8 +207,8 @@ return $default(_that.backDefault,_that.backShiny,_that.backShinyTransparent,_th
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _Crystal implements Crystal {
    _Crystal({required this.backDefault, required this.backShiny, required this.backShinyTransparent, required this.backTransparent, required this.frontDefault, required this.frontShiny, required this.frontShinyTransparent, required this.frontTransparent});
   factory _Crystal.fromJson(Map<String, dynamic> json) => _$CrystalFromJson(json);

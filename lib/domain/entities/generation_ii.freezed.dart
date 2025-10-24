@@ -238,8 +238,8 @@ return $default(_that.crystal,_that.gold,_that.silver);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _GenerationIi implements GenerationIi {
    _GenerationIi({required this.crystal, required this.gold, required this.silver});
   factory _GenerationIi.fromJson(Map<String, dynamic> json) => _$GenerationIiFromJson(json);

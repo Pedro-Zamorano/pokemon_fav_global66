@@ -8,13 +8,13 @@ part of 'generation_iv.dart';
 
 _GenerationIv _$GenerationIvFromJson(Map<String, dynamic> json) =>
     _GenerationIv(
-      diamondPearl: json['diamondPearl'] == null
+      diamondPearl: json['diamond_pearl'] == null
           ? null
-          : Sprites.fromJson(json['diamondPearl'] as Map<String, dynamic>),
-      heartgoldSoulsilver: json['heartgoldSoulsilver'] == null
+          : Sprites.fromJson(json['diamond_pearl'] as Map<String, dynamic>),
+      heartgoldSoulsilver: json['heartgold_soulsilver'] == null
           ? null
           : Sprites.fromJson(
-              json['heartgoldSoulsilver'] as Map<String, dynamic>,
+              json['heartgold_soulsilver'] as Map<String, dynamic>,
             ),
       platinum: json['platinum'] == null
           ? null
@@ -23,7 +23,7 @@ _GenerationIv _$GenerationIvFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$GenerationIvToJson(_GenerationIv instance) =>
     <String, dynamic>{
-      'diamondPearl': instance.diamondPearl,
-      'heartgoldSoulsilver': instance.heartgoldSoulsilver,
+      'diamond_pearl': instance.diamondPearl,
+      'heartgold_soulsilver': instance.heartgoldSoulsilver,
       'platinum': instance.platinum,
     };

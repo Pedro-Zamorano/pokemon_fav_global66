@@ -212,8 +212,8 @@ return $default(_that.blackWhite);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _GenerationV implements GenerationV {
    _GenerationV({required this.blackWhite});
   factory _GenerationV.fromJson(Map<String, dynamic> json) => _$GenerationVFromJson(json);

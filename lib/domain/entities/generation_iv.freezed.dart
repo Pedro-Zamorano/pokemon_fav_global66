@@ -238,8 +238,8 @@ return $default(_that.diamondPearl,_that.heartgoldSoulsilver,_that.platinum);cas
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _GenerationIv implements GenerationIv {
    _GenerationIv({required this.diamondPearl, required this.heartgoldSoulsilver, required this.platinum});
   factory _GenerationIv.fromJson(Map<String, dynamic> json) => _$GenerationIvFromJson(json);

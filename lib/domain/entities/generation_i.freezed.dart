@@ -225,8 +225,8 @@ return $default(_that.redBlue,_that.yellow);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _GenerationI implements GenerationI {
    _GenerationI({required this.redBlue, required this.yellow});
   factory _GenerationI.fromJson(Map<String, dynamic> json) => _$GenerationIFromJson(json);

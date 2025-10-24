@@ -5,7 +5,7 @@ part 'dream_world.g.dart';
 
 @freezed
 sealed class DreamWorld with _$DreamWorld {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory DreamWorld({
     required String? frontDefault,
     required dynamic frontFemale,

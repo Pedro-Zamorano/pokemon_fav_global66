@@ -246,8 +246,8 @@ return $default(_that.backDefault,_that.backFemale,_that.backShiny,_that.backShi
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _Sprites implements Sprites {
    _Sprites({required this.backDefault, required this.backFemale, required this.backShiny, required this.backShinyFemale, required this.frontDefault, required this.frontFemale, required this.frontShiny, required this.frontShinyFemale, required this.other, required this.versions, required this.animated});
   factory _Sprites.fromJson(Map<String, dynamic> json) => _$SpritesFromJson(json);

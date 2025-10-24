@@ -214,8 +214,8 @@ return $default(_that.ability,_that.isHidden,_that.slot);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _Ability implements Ability {
    _Ability({required this.ability, required this.isHidden, required this.slot});
   factory _Ability.fromJson(Map<String, dynamic> json) => _$AbilityFromJson(json);

@@ -201,8 +201,8 @@ return $default(_that.name,_that.url);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _Result implements Result {
    _Result({required this.name, required this.url});
   factory _Result.fromJson(Map<String, dynamic> json) => _$ResultFromJson(json);

@@ -7,17 +7,17 @@ part of 'gold.dart';
 // **************************************************************************
 
 _Gold _$GoldFromJson(Map<String, dynamic> json) => _Gold(
-  backDefault: json['backDefault'] as String?,
-  backShiny: json['backShiny'] as String?,
-  frontDefault: json['frontDefault'] as String?,
-  frontShiny: json['frontShiny'] as String?,
-  frontTransparent: json['frontTransparent'] as String?,
+  backDefault: json['back_default'] as String?,
+  backShiny: json['back_shiny'] as String?,
+  frontDefault: json['front_default'] as String?,
+  frontShiny: json['front_shiny'] as String?,
+  frontTransparent: json['front_transparent'] as String?,
 );
 
 Map<String, dynamic> _$GoldToJson(_Gold instance) => <String, dynamic>{
-  'backDefault': instance.backDefault,
-  'backShiny': instance.backShiny,
-  'frontDefault': instance.frontDefault,
-  'frontShiny': instance.frontShiny,
-  'frontTransparent': instance.frontTransparent,
+  'back_default': instance.backDefault,
+  'back_shiny': instance.backShiny,
+  'front_default': instance.frontDefault,
+  'front_shiny': instance.frontShiny,
+  'front_transparent': instance.frontTransparent,
 };

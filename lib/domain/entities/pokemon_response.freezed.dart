@@ -203,8 +203,8 @@ return $default(_that.count,_that.next,_that.previous,_that.results);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _PokemonResponse implements PokemonResponse {
    _PokemonResponse({required this.count, required this.next, required this.previous, required final  List<Result>? results}): _results = results;
   factory _PokemonResponse.fromJson(Map<String, dynamic> json) => _$PokemonResponseFromJson(json);

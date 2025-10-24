@@ -7,7 +7,7 @@ part of 'stat.dart';
 // **************************************************************************
 
 _Stat _$StatFromJson(Map<String, dynamic> json) => _Stat(
-  baseStat: (json['baseStat'] as num?)?.toInt(),
+  baseStat: (json['base_stat'] as num?)?.toInt(),
   effort: (json['effort'] as num?)?.toInt(),
   stat: json['stat'] == null
       ? null
@@ -15,7 +15,7 @@ _Stat _$StatFromJson(Map<String, dynamic> json) => _Stat(
 );
 
 Map<String, dynamic> _$StatToJson(_Stat instance) => <String, dynamic>{
-  'baseStat': instance.baseStat,
+  'base_stat': instance.baseStat,
   'effort': instance.effort,
   'stat': instance.stat,
 };

@@ -7,15 +7,15 @@ part of 'home.dart';
 // **************************************************************************
 
 _Home _$HomeFromJson(Map<String, dynamic> json) => _Home(
-  frontDefault: json['frontDefault'] as String?,
-  frontFemale: json['frontFemale'],
-  frontShiny: json['frontShiny'] as String?,
-  frontShinyFemale: json['frontShinyFemale'],
+  frontDefault: json['front_default'] as String?,
+  frontFemale: json['front_female'],
+  frontShiny: json['front_shiny'] as String?,
+  frontShinyFemale: json['front_shiny_female'],
 );
 
 Map<String, dynamic> _$HomeToJson(_Home instance) => <String, dynamic>{
-  'frontDefault': instance.frontDefault,
-  'frontFemale': instance.frontFemale,
-  'frontShiny': instance.frontShiny,
-  'frontShinyFemale': instance.frontShinyFemale,
+  'front_default': instance.frontDefault,
+  'front_female': instance.frontFemale,
+  'front_shiny': instance.frontShiny,
+  'front_shiny_female': instance.frontShinyFemale,
 };

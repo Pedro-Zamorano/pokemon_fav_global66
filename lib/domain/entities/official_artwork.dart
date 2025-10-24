@@ -5,7 +5,7 @@ part 'official_artwork.g.dart';
 
 @freezed
 sealed class OfficialArtwork with _$OfficialArtwork {
-
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory OfficialArtwork({
     required String? frontDefault,
     required String? frontShiny,

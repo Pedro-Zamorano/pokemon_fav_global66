@@ -11,13 +11,13 @@ _GenerationVii _$GenerationViiFromJson(Map<String, dynamic> json) =>
       icons: json['icons'] == null
           ? null
           : DreamWorld.fromJson(json['icons'] as Map<String, dynamic>),
-      ultraSunUltraMoon: json['ultraSunUltraMoon'] == null
+      ultraSunUltraMoon: json['ultra_sun_ultra_moon'] == null
           ? null
-          : Home.fromJson(json['ultraSunUltraMoon'] as Map<String, dynamic>),
+          : Home.fromJson(json['ultra_sun_ultra_moon'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$GenerationViiToJson(_GenerationVii instance) =>
     <String, dynamic>{
       'icons': instance.icons,
-      'ultraSunUltraMoon': instance.ultraSunUltraMoon,
+      'ultra_sun_ultra_moon': instance.ultraSunUltraMoon,
     };

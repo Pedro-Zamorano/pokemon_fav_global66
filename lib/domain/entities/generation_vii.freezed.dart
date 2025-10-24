@@ -225,8 +225,8 @@ return $default(_that.icons,_that.ultraSunUltraMoon);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _GenerationVii implements GenerationVii {
    _GenerationVii({required this.icons, required this.ultraSunUltraMoon});
   factory _GenerationVii.fromJson(Map<String, dynamic> json) => _$GenerationViiFromJson(json);

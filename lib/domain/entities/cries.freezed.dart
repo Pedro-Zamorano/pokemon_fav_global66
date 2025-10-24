@@ -201,8 +201,8 @@ return $default(_that.latest,_that.legacy);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _Cries implements Cries {
    _Cries({required this.latest, required this.legacy});
   factory _Cries.fromJson(Map<String, dynamic> json) => _$CriesFromJson(json);

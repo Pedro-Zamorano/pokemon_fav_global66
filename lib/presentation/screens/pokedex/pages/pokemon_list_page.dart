@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pokemon_fav_global66/core/images.dart';
-import 'package:pokemon_fav_global66/domain/domain.dart';
 import 'package:pokemon_fav_global66/domain/viewmodel/viewmodels.dart';
 import 'package:pokemon_fav_global66/helpers/capitalize.dart';
 import 'package:pokemon_fav_global66/presentation/widgets/widgets.dart';
@@ -14,7 +13,27 @@ class PokemonListPage extends ConsumerStatefulWidget {
 }
 
 class _PokemonListPageState extends ConsumerState<PokemonListPage> {
-  List<PokemonCard> pokeCards = [];
+  Color getCardColor(String type) {
+    Color cardColor = Color(0x808BC34A);
+    switch (type) {
+      case "fire":
+        cardColor = Color(0x80FF9800);
+        break;
+      case "water":
+        cardColor = Color(0x802196F3);
+        break;
+      case "bug":
+        cardColor = Color(0x8043A047);
+        break;
+      case "normal":
+        cardColor = Color(0x808BC34A);
+        break;
+      default:
+        cardColor = Color(0x808BC34A);
+        break;
+    }
+    return cardColor;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -92,103 +111,116 @@ class _PokemonListPageState extends ConsumerState<PokemonListPage> {
                     itemBuilder: (context, index) {
                       final pokemon = data.results![index];
 
-                      // todo: Ver como hacer funcionar esto:
                       final pokeDetail = ref.watch(
                         fetchPokemonDetailProvider(pokemon.name!),
                       );
 
-                      return Container(
-                        width: double.infinity,
-                        height: 102,
-                        margin: EdgeInsets.all(8),
-                        padding: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          color: Color(0x808BC34A),
-                          borderRadius: BorderRadius.circular(16),
-                          // color: Colors.green,
-                        ),
-                        child: Row(
-                          children: [
-                            // Informacion
-                            Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 8,
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "N°${index + 1}",
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w600,
-                                        fontFamily: "Poppins",
-                                        color: Color(0xFF424242),
-                                      ),
+                      return pokeDetail.when(
+                        data: (data) {
+                          Color cardColor = getCardColor(data.types![0].type!.name!);
+                          // String element = getElement(data.types![0].type!.name);
+
+                          return Container(
+                            width: double.infinity,
+                            height: 102,
+                            margin: EdgeInsets.all(8),
+                            padding: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: cardColor,
+                              borderRadius: BorderRadius.circular(16),
+                              // color: Colors.green,
+                            ),
+                            child: Row(
+                              children: [
+                                // Informacion
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 8,
                                     ),
-                                    const SizedBox(height: 4),
-                                    Text(
-                                      pokemon.name!.capitalize(),
-                                      style: TextStyle(
-                                        fontSize: 21,
-                                        fontWeight: FontWeight.w600,
-                                        fontFamily: "Poppins",
-                                        color: Color(0xFF121212),
-                                      ),
-                                    ),
-                                    const SizedBox(height: 4),
-                                    Row(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
-                                        Image.asset(planta),
-                                        const SizedBox(width: 4),
-                                        Image.asset(veneno),
+                                        Text(
+                                          "N°${index + 1}",
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w600,
+                                            fontFamily: "Poppins",
+                                            color: Color(0xFF424242),
+                                          ),
+                                        ),
+                                        const SizedBox(height: 4),
+                                        Text(
+                                          data.name!.capitalize(),
+                                          style: TextStyle(
+                                            fontSize: 21,
+                                            fontWeight: FontWeight.w600,
+                                            fontFamily: "Poppins",
+                                            color: Color(0xFF121212),
+                                          ),
+                                        ),
+                                        const SizedBox(height: 4),
+                                        Row(
+                                          children: [
+                                            Image.asset(planta),
+                                            const SizedBox(width: 4),
+                                            Image.asset(veneno),
+                                          ],
+                                        ),
                                       ],
                                     ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                            ),
 
-                            // Imagen
-                            Container(
-                              width: 126,
-                              decoration: BoxDecoration(
-                                color: Color(0xFF8BC34A),
-                                borderRadius: BorderRadius.circular(16),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  vertical: 4,
-                                  horizontal: 16,
-                                ),
-                                child: Stack(
-                                  alignment: Alignment.center,
-                                  children: [
-                                    Image.asset(grassVector),
-                                    Image.asset(bulbasaur),
-                                    Positioned(
-                                      right: 0,
-                                      top: 0,
-                                      child: GestureDetector(
-                                        onTap: () {
-                                          // todo: Hacerlo con el Provider
-                                          setState(() {
-                                            isFav = !isFav;
-                                          });
-                                        },
-                                        child: Image.asset(
-                                          isFav ? favYes : favNo,
-                                        ),
-                                      ),
+                                // Imagen
+                                Container(
+                                  width: 126,
+                                  decoration: BoxDecoration(
+                                    color: cardColor,
+                                    // color: Color(0xFF8BC34A),
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      vertical: 4,
+                                      horizontal: 16,
                                     ),
-                                  ],
+                                    child: Stack(
+                                      alignment: Alignment.center,
+                                      children: [
+                                        Image.asset(grassVector),
+                                        Image.network(
+                                            data.sprites!.frontDefault!),
+                                        Positioned(
+                                          right: 0,
+                                          top: 0,
+                                          child: GestureDetector(
+                                            onTap: () {
+                                              // todo: Hacerlo con el Provider
+                                              setState(() {
+                                                isFav = !isFav;
+                                              });
+                                            },
+                                            child: Image.asset(
+                                              isFav ? favYes : favNo,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
-                          ],
-                        ),
+                          );
+                        },
+                        error: (error, stackTrace) => _pokedexError(),
+                        loading: () =>
+                            Center(child: CircularProgressIndicator()),
                       );
                     },
                   ),
@@ -226,9 +258,7 @@ class _PokemonListPageState extends ConsumerState<PokemonListPage> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-
                 SizedBox(height: 20),
-
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Column(
@@ -261,11 +291,8 @@ class _PokemonListPageState extends ConsumerState<PokemonListPage> {
                     ],
                   ),
                 ),
-
                 Divider(),
-
                 const SizedBox(height: 4),
-
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: SizedBox(
@@ -303,7 +330,6 @@ class _PokemonListPageState extends ConsumerState<PokemonListPage> {
                     ),
                   ),
                 ),
-
                 const SizedBox(height: 10),
               ],
             ),

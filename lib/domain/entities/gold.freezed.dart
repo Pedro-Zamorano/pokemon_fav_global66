@@ -204,8 +204,8 @@ return $default(_that.backDefault,_that.backShiny,_that.frontDefault,_that.front
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _Gold implements Gold {
    _Gold({required this.backDefault, required this.backShiny, required this.frontDefault, required this.frontShiny, required this.frontTransparent});
   factory _Gold.fromJson(Map<String, dynamic> json) => _$GoldFromJson(json);
