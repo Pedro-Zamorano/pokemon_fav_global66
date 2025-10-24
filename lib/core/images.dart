@@ -6,34 +6,6 @@ String comingSoon = "assets/images/coming_soon.png";
 String favYes = "assets/images/fav_yes.png";
 String favNo = "assets/images/fav_no.png";
 
-// Pokemones
-String aggron = "assets/images/pokemons/aggron.png";
-String beedrill = "assets/images/pokemons/beedrill.png";
-String blastoise = "assets/images/pokemons/blastoise.png";
-String bulbasaur = "assets/images/pokemons/bulbasaur.png";
-String chandelure = "assets/images/pokemons/chandelure.png";
-String charizard = "assets/images/pokemons/charizard.png";
-String charmander = "assets/images/pokemons/charmander.png";
-String charmeleon = "assets/images/pokemons/charmeleon.png";
-String clefairy = "assets/images/pokemons/clefairy.png";
-String cubchoo = "assets/images/pokemons/cubchoo.png";
-String dugtrio = "assets/images/pokemons/dugtrio.png";
-String ivysaur = "assets/images/pokemons/ivysaur.png";
-String koffing = "assets/images/pokemons/koffing.png";
-String lickitung = "assets/images/pokemons/lickitung.png";
-String lucario = "assets/images/pokemons/lucario.png";
-String mew = "assets/images/pokemons/mew.png";
-String onix = "assets/images/pokemons/onix.png";
-String pikachu = "assets/images/pokemons/pikachu.png";
-String rayquaza = "assets/images/pokemons/rayquaza.png";
-String serperior = "assets/images/pokemons/serperior.png";
-String squirtle = "assets/images/pokemons/squirtle.png";
-String suicune = "assets/images/pokemons/suicune.png";
-String toucannon = "assets/images/pokemons/toucannon.png";
-String venusaur = "assets/images/pokemons/venusaur.png";
-String wartortle = "assets/images/pokemons/wartortle.png";
-String zoroark = "assets/images/pokemons/zoroark.png";
-
 // Elementos
 String bug = "assets/images/elements/bug.png";
 String dark = "assets/images/elements/dark.png";
@@ -53,8 +25,6 @@ String psychic = "assets/images/elements/psychic.png";
 String rock = "assets/images/elements/rock.png";
 String steel = "assets/images/elements/steel.png";
 String water = "assets/images/elements/water.png";
-String grassVector = "assets/images/elements/grass_vector.png";
-String fireVector = "assets/images/elements/fire_vector.png";
 
 // Estados Elementos
 String acero = "assets/images/element_status/acero.png";

@@ -35,6 +35,31 @@ class _PokemonListPageState extends ConsumerState<PokemonListPage> {
     return cardColor;
   }
 
+  String getElementImg(String type) {
+    String img = normal;
+    switch (type) {
+      case "grass":
+        img = grass;
+        break;
+      case "fire":
+        img = fire;
+        break;
+      case "water":
+        img = water;
+        break;
+      case "bug":
+        img = bug;
+        break;
+      case "normal":
+        img = normal;
+        break;
+      default:
+        img = normal;
+        break;
+    }
+    return img;
+  }
+
   @override
   Widget build(BuildContext context) {
     final pokemons = ref.watch(fetchPokemonsProvider);
@@ -117,8 +142,12 @@ class _PokemonListPageState extends ConsumerState<PokemonListPage> {
 
                       return pokeDetail.when(
                         data: (data) {
-                          Color cardColor = getCardColor(data.types![0].type!.name!);
-                          // String element = getElement(data.types![0].type!.name);
+                          Color cardColor = getCardColor(
+                            data.types![0].type!.name!,
+                          );
+                          String elementImg = getElementImg(
+                            data.types![0].type!.name!,
+                          );
 
                           return Container(
                             width: double.infinity,
@@ -166,6 +195,7 @@ class _PokemonListPageState extends ConsumerState<PokemonListPage> {
                                         const SizedBox(height: 4),
                                         Row(
                                           children: [
+                                            // todo: AQUI <----->
                                             Image.asset(planta),
                                             const SizedBox(width: 4),
                                             Image.asset(veneno),
@@ -181,7 +211,6 @@ class _PokemonListPageState extends ConsumerState<PokemonListPage> {
                                   width: 126,
                                   decoration: BoxDecoration(
                                     color: cardColor,
-                                    // color: Color(0xFF8BC34A),
                                     borderRadius: BorderRadius.circular(16),
                                   ),
                                   child: Padding(
@@ -192,9 +221,11 @@ class _PokemonListPageState extends ConsumerState<PokemonListPage> {
                                     child: Stack(
                                       alignment: Alignment.center,
                                       children: [
-                                        Image.asset(grassVector),
+                                        Image.asset(elementImg),
+                                        // todo: Manejar cuando la imagen no carga a tiempo
                                         Image.network(
-                                            data.sprites!.frontDefault!),
+                                          data.sprites!.frontDefault!,
+                                        ),
                                         Positioned(
                                           right: 0,
                                           top: 0,

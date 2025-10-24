@@ -33,7 +33,6 @@ flutter:
     - assets/images/
     - assets/images/elements/
     - assets/images/element_status/
-    - assets/images/pokemons/
 
 flutter_native_splash:
   image: assets/images/loader.png
