@@ -24,20 +24,20 @@ Utilizada como comparativo de las respuestas entregadas por Perplexity Pro.
 
 ## Stack utilizado
 Dependencias de producción:
-__dio__ versión ^5.9.0
-__flutter_riverpod__ versión ^3.0.3
-__riverpod_annotation__ versión ^3.0.3
-__freezed_annotation__ versión ^3.1.0
-__flutter_native_splash__ versión ^2.4.7
-__json_annotation__ versión ^4.9.0
+- __dio__ versión ^5.9.0
+- __flutter_riverpod__ versión ^3.0.3
+- __riverpod_annotation__ versión ^3.0.3
+- __freezed_annotation__ versión ^3.1.0
+- __flutter_native_splash__ versión ^2.4.7
+- __json_annotation__ versión ^4.9.0
 
 Dependencias de desarrollo:
-__riverpod_generator__ versión ^3.0.3
-__build_runner__ versión ^2.7.1
-__freezed__ versión ^3.2.3
-__custom_lint__ versión ^0.8.0
-__riverpod_lint__ versión ^3.0.3
-__json_serializable__ versión ^6.11.1
+- __riverpod_generator__ versión ^3.0.3
+- __build_runner__ versión ^2.7.1
+- __freezed__ versión ^3.2.3
+- __custom_lint__ versión ^0.8.0
+- __riverpod_lint__ versión ^3.0.3
+- __json_serializable__ versión ^6.11.1
 
 # Pendientes:
 - Implementar buenas prácticas de código.
