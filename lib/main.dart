@@ -1,28 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pokemon_fav_global66/presentation/screens.dart';
+
+import 'package:teste/core/core.dart';
+import 'package:teste/l10n/l10n.dart';
+import 'package:teste/presentation/presentation.dart';
 
 void main() {
-  runApp(
-    ProviderScope(
-      child: const MainApp(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        filledButtonTheme: FilledButtonThemeData(
-          style: FilledButton.styleFrom(backgroundColor: Color(0xFF1E88E5)),
-        ),
-      ),
-      home: OnboardingScreen(),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      title: 'Flutter Demo',
+      theme: appTheme(),
+      home: OnboardingPage(),
     );
   }
 }

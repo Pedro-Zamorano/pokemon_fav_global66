@@ -1,0 +1,16 @@
+{
+    "@@locale": "en",
+    "ob1Title": "All Pokemon in one place",
+    "ob1Description": "Access a wide list of Pokemon from every generation created by Nintendo",
+    "ob2Title": "Keep your Pokedex up to date",
+    "ob2Description": "Sign up and save your profile, favorite Pokemon, settings, and much more in the app",
+
+    "btnContinue": "Continue",
+    "btnLetsStart": "Let's start",
+
+    "bnbHome": "Pokedex",
+    "bnbRegion": "Region",
+    "bnbFav": "Favorites",
+    "bnbProfile": "Profile"
+
+}
