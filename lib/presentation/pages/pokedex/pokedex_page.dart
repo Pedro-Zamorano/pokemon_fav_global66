@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teste/l10n/l10n.dart';
+import 'package:teste/presentation/pages/pokedex/pokemon_list_page.dart';
 
 class PokedexPage extends StatefulWidget {
   const PokedexPage({super.key});
@@ -12,7 +13,7 @@ class _PokedexPageState extends State<PokedexPage> {
   int _selectedIndex = 0;
 
   static final List<Widget> _pages = [
-    Center(child: Text("Listado Pokemones")),
+    PokemonListPage(),
     Center(child: Text("Regiones")),
     Center(child: Text("Pokemones favoritos")),
     Center(child: Text("Perfil")),
