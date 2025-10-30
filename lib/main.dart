@@ -17,9 +17,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: appTheme(),
-      home: OnboardingPage(),
+      home: SafeArea(top: true, bottom: true, child: OnboardingPage()),
     );
   }
 }

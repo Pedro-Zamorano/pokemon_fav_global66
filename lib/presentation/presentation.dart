@@ -4,5 +4,6 @@ export './pages/onboarding/onboarding_page.dart';
 export './pages/pokedex/pokedex_page.dart';
 
 export './pages/pokedex/pokemon_list_page.dart';
+export './pages/pokedex/pokemon_favs_page.dart';
 
 // Providers

@@ -1,9 +1,9 @@
 {
     "@@locale": "en",
-    "ob1Title": "All Pokemon in one place",
-    "ob1Description": "Access a wide list of Pokemon from every generation created by Nintendo",
-    "ob2Title": "Keep your Pokedex up to date",
-    "ob2Description": "Sign up and save your profile, favorite Pokemon, settings, and much more in the app",
+    "ob1Title": "All Pokémon in one place",
+    "ob1Description": "Access an extensive list of Pokémon from every generation created by Nintendo",
+    "ob2Title": "Keep your Pokédex up-to-date",
+    "ob2Description": "Sign up and save your profile, favorite Pokémon, settings, and much more within the app",
 
     "btnContinue": "Continue",
     "btnLetsStart": "Let's start",
@@ -11,6 +11,16 @@
     "bnbHome": "Pokedex",
     "bnbRegion": "Region",
     "bnbFav": "Favorites",
-    "bnbProfile": "Profile"
+    "bnbProfile": "Profile",
+
+    "searchHint": "Search for Pokemon...",
+
+    "favAbTitle": "Favorites",
+    "noFavTitle": "You haven't marked any Pokémon as favorites",
+    "noFavDescription": "Click the heart icon on your favorite Pokémon and they will appear here",
+
+    "btnRetry": "Retry",
+    "errorTitle": "Something went wrong...",
+    "errorDescription": "We couldn't load the information right now. Please check your connection or try again later."
 
 }

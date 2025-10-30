@@ -4,6 +4,8 @@ final String onBoardingOne = "assets/images/onboarding01.png";
 final String onBoardingTwo = "assets/images/onboarding02.png";
 final String favYes = "assets/images/fav_yes.png";
 final String favNo = "assets/images/fav_no.png";
+final String magikarp = "assets/images/magikarp.png";
+final String comingSoon = "assets/images/coming_soon.png";
 
 // Elements
 final String bugElement = "assets/elements/bug.png";

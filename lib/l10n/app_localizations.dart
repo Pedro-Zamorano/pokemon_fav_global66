@@ -98,25 +98,25 @@ abstract class AppLocalizations {
   /// No description provided for @ob1Title.
   ///
   /// In en, this message translates to:
-  /// **'All Pokemon in one place'**
+  /// **'All Pokémon in one place'**
   String get ob1Title;
 
   /// No description provided for @ob1Description.
   ///
   /// In en, this message translates to:
-  /// **'Access a wide list of Pokemon from every generation created by Nintendo'**
+  /// **'Access an extensive list of Pokémon from every generation created by Nintendo'**
   String get ob1Description;
 
   /// No description provided for @ob2Title.
   ///
   /// In en, this message translates to:
-  /// **'Keep your Pokedex up to date'**
+  /// **'Keep your Pokédex up-to-date'**
   String get ob2Title;
 
   /// No description provided for @ob2Description.
   ///
   /// In en, this message translates to:
-  /// **'Sign up and save your profile, favorite Pokemon, settings, and much more in the app'**
+  /// **'Sign up and save your profile, favorite Pokémon, settings, and much more within the app'**
   String get ob2Description;
 
   /// No description provided for @btnContinue.
@@ -154,6 +154,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Profile'**
   String get bnbProfile;
+
+  /// No description provided for @searchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search for Pokemon...'**
+  String get searchHint;
+
+  /// No description provided for @favAbTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Favorites'**
+  String get favAbTitle;
+
+  /// No description provided for @noFavTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'You haven\'t marked any Pokémon as favorites'**
+  String get noFavTitle;
+
+  /// No description provided for @noFavDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Click the heart icon on your favorite Pokémon and they will appear here'**
+  String get noFavDescription;
+
+  /// No description provided for @btnRetry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get btnRetry;
+
+  /// No description provided for @errorTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong...'**
+  String get errorTitle;
+
+  /// No description provided for @errorDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'We couldn\'t load the information right now. Please check your connection or try again later.'**
+  String get errorDescription;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

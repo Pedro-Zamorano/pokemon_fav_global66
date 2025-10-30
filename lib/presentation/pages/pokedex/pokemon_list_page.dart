@@ -4,18 +4,33 @@ import 'package:teste/core/core.dart';
 
 import 'package:teste/data/datas.dart';
 import 'package:teste/domain/domains.dart';
+import 'package:teste/l10n/l10n.dart';
 import 'package:teste/presentation/providers/favourite_provider.dart';
+import 'package:teste/presentation/widgets/widgets.dart';
 
 class PokemonListPage extends ConsumerWidget {
   const PokemonListPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final btnRetry = AppLocalizations.of(context)!.btnRetry;
+    final errorTitle = AppLocalizations.of(context)!.errorTitle;
+    final errorDescription = AppLocalizations.of(context)!.errorDescription;
+
     final asyncPokemons = ref.watch(pokemonViewModelProvider);
 
     return asyncPokemons.when(
       data: (pokemons) => PokemonCards(pokemons: pokemons),
-      error: (error, stackTrace) => Center(child: Text("Error: $error")),
+      error: (error, stackTrace) => PokedexError(
+        image: magikarp,
+        title: errorTitle,
+        description: errorDescription,
+        hasButton: true,
+        btnText: btnRetry,
+        onPressed: () {
+          // todo: Llamar al API
+        },
+      ),
       loading: () => Center(child: CircularProgressIndicator()),
     );
   }
@@ -28,100 +43,71 @@ class PokemonCards extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isPokemonFav = ref.watch(favouriteProvider);
+    final searchHint = AppLocalizations.of(context)!.searchHint;
 
-    return SafeArea(
-      top: true,
-      maintainBottomViewPadding: true,
-      minimum: EdgeInsets.only(right: 8, left: 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Expanded(child: TextField(
-                decoration: searchStyle,
-              )),
-            ],
-          ),
+    ref.watch(favouriteProvider);
 
-          const SizedBox(height: 2),
-
-          Expanded(
-            child: ListView.builder(
-              itemCount: pokemons.length,
-              itemBuilder: (context, index) {
-                final pkm = pokemons[index];
-
-                // todo: Modificar para mostrar tarjetas
-                final String types = pkm.types!
-                    .map((t) => t.type!.name)
-                    .toString();
-
-                final String bgElement = elementBackground(
-                  "${pkm.types![0].type!.name}",
-                );
-
-                return Container(
-                  margin: EdgeInsets.all(8),
-                  padding: EdgeInsets.only(left: 8),
-                  decoration: BoxDecoration(
-                    // todo: Color depende del TYPE
-                    color: Theme.of(context).colorScheme.primary,
-                    borderRadius: BorderRadius.circular(8),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: searchHint,
+                  prefixIcon: Icon(Icons.search),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    borderSide: BorderSide(color: white),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // Info Section
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("N°${pkm.order}"),
-                            Text("${pkm.name?.capitalize()}"),
-                            // todo: Modificar para mostrar tarjetas
-                            Text(types),
-                          ],
-                        ),
-                      ),
-
-                      // Image Section
-                      Container(
-                        padding: EdgeInsets.all(6),
-                        decoration: BoxDecoration(
-                          // todo: Color depende del TYPE
-                          color: Theme.of(context).colorScheme.inverseSurface,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Stack(
-                          alignment: AlignmentGeometry.center,
-                          children: [
-                            // todo: Imagen depende del TYPE
-                            Image.asset(bgElement),
-                            Image.network("${pkm.sprites!.frontDefault}"),
-                            // todo: Aplicar cambio solo al objeto que se le selecciona
-                            Positioned(
-                              right: 0,
-                              top: 0,
-                              child: GestureDetector(
-                                onTap: () {
-                                  ref.read(favouriteProvider.notifier).changeFav();
-                                },
-                                child: Image.asset(isPokemonFav ? favYes : favNo),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-              },
+                ),
+              ),
             ),
+
+            const SizedBox(width: 10),
+
+            // todo: Filtrar por nombre / tipo / número
+            IconButton.outlined(onPressed: () {}, icon: Icon(Icons.search)),
+          ],
+        ),
+
+        const SizedBox(height: 2),
+
+        Expanded(
+          child: ListView.builder(
+            itemCount: pokemons.length,
+            itemBuilder: (context, index) {
+              final pkm = pokemons[index];
+              final isPokemonFav = ref
+                  .read(favouriteProvider.notifier)
+                  .isFav(pkm);
+              // final isPokemonFav = ref
+              //     .read(favouriteProvider.notifier)
+              //     .isFav(pkm.id!);
+
+              // todo: Modificar para mostrar tarjetas
+              final String types = pkm.types!
+                  .map((t) => t.type!.name)
+                  .toString();
+
+              final String bgElement = elementBackground(
+                "${pkm.types![0].type!.name}",
+              );
+
+              return PokemonCard(
+                pkm: pkm,
+                types: types,
+                bgElement: bgElement,
+                isPokemonFav: isPokemonFav,
+                onTap: () {
+                  ref.read(favouriteProvider.notifier).toggleFav(pkm);
+                },
+              );
+            },
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

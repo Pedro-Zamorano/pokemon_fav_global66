@@ -11,6 +11,16 @@
     "bnbHome": "Pokedex",
     "bnbRegion": "Región",
     "bnbFav": "Favoritos",
-    "bnbProfile": "Perfil"
+    "bnbProfile": "Perfil",
+
+    "searchHint": "Procurar Pokémon...",
+
+    "favAbTitle": "Favoritos",
+    "noFavTitle": "No has marcado ningún Pokémon como favorito",
+    "noFavDescription": "Haz clic en el ícono de corazón de tus Pokémon favoritos y aparecerán aquí",
+
+    "btnRetry": "Reintentar",
+    "errorTitle": "Algo salió mal...",
+    "errorDescription": "No pudimos cargar la información en este momento. Verifica tu conexión o intenta nuevamente más tarde."
 
 }

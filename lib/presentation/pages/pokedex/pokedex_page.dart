@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:teste/l10n/l10n.dart';
-import 'package:teste/presentation/pages/pokedex/pokemon_list_page.dart';
+import 'package:teste/presentation/presentation.dart';
 
 class PokedexPage extends StatefulWidget {
   const PokedexPage({super.key});
@@ -15,7 +16,7 @@ class _PokedexPageState extends State<PokedexPage> {
   static final List<Widget> _pages = [
     PokemonListPage(),
     Center(child: Text("Regiones")),
-    Center(child: Text("Pokemones favoritos")),
+    PokemonFavsPage(),
     Center(child: Text("Perfil")),
   ];
 
@@ -33,7 +34,12 @@ class _PokedexPageState extends State<PokedexPage> {
     final bnbProfile = AppLocalizations.of(context)!.bnbProfile;
 
     return Scaffold(
-      body: _pages[_selectedIndex],
+      body: SafeArea(
+        top: true,
+        maintainBottomViewPadding: true,
+        minimum: EdgeInsets.only(right: 8, left: 8),
+        child: _pages[_selectedIndex],
+      ),
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadiusGeometry.only(
           topLeft: Radius.circular(20),

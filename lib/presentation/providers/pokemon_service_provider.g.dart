@@ -9,7 +9,7 @@ part of 'pokemon_service_provider.dart';
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
 
-@ProviderFor(PokemonServiceProvider)
+@ProviderFor(pokemonServiceProvider)
 const pokemonServiceProviderProvider = PokemonServiceProviderProvider._();
 
 final class PokemonServiceProviderProvider
@@ -21,7 +21,7 @@ final class PokemonServiceProviderProvider
         argument: null,
         retry: null,
         name: r'pokemonServiceProviderProvider',
-        isAutoDispose: true,
+        isAutoDispose: false,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
@@ -36,7 +36,7 @@ final class PokemonServiceProviderProvider
 
   @override
   dynamic create(Ref ref) {
-    return PokemonServiceProvider(ref);
+    return pokemonServiceProvider(ref);
   }
 
   /// {@macro riverpod.override_with_value}
@@ -49,4 +49,4 @@ final class PokemonServiceProviderProvider
 }
 
 String _$pokemonServiceProviderHash() =>
-    r'04f139b795177c2216a7251f052d648a6fc157e6';
+    r'a010f02a633124fa6256277db7f531298a9b2376';

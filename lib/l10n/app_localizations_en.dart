@@ -9,16 +9,16 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get ob1Title => 'All Pokemon in one place';
+  String get ob1Title => 'All Pokémon in one place';
 
   @override
-  String get ob1Description => 'Access a wide list of Pokemon from every generation created by Nintendo';
+  String get ob1Description => 'Access an extensive list of Pokémon from every generation created by Nintendo';
 
   @override
-  String get ob2Title => 'Keep your Pokedex up to date';
+  String get ob2Title => 'Keep your Pokédex up-to-date';
 
   @override
-  String get ob2Description => 'Sign up and save your profile, favorite Pokemon, settings, and much more in the app';
+  String get ob2Description => 'Sign up and save your profile, favorite Pokémon, settings, and much more within the app';
 
   @override
   String get btnContinue => 'Continue';
@@ -37,4 +37,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get bnbProfile => 'Profile';
+
+  @override
+  String get searchHint => 'Search for Pokemon...';
+
+  @override
+  String get favAbTitle => 'Favorites';
+
+  @override
+  String get noFavTitle => 'You haven\'t marked any Pokémon as favorites';
+
+  @override
+  String get noFavDescription => 'Click the heart icon on your favorite Pokémon and they will appear here';
+
+  @override
+  String get btnRetry => 'Retry';
+
+  @override
+  String get errorTitle => 'Something went wrong...';
+
+  @override
+  String get errorDescription => 'We couldn\'t load the information right now. Please check your connection or try again later.';
 }

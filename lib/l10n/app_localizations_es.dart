@@ -37,4 +37,25 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get bnbProfile => 'Perfil';
+
+  @override
+  String get searchHint => 'Procurar Pokémon...';
+
+  @override
+  String get favAbTitle => 'Favoritos';
+
+  @override
+  String get noFavTitle => 'No has marcado ningún Pokémon como favorito';
+
+  @override
+  String get noFavDescription => 'Haz clic en el ícono de corazón de tus Pokémon favoritos y aparecerán aquí';
+
+  @override
+  String get btnRetry => 'Reintentar';
+
+  @override
+  String get errorTitle => 'Algo salió mal...';
+
+  @override
+  String get errorDescription => 'No pudimos cargar la información en este momento. Verifica tu conexión o intenta nuevamente más tarde.';
 }

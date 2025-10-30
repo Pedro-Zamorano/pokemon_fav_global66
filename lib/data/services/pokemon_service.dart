@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:teste/domain/domains.dart';
 
+// todo: Modificar API para controlar diversos errores
+
 class PokemonService {
   final _dio = Dio();
   final String pokemonPath = "https://pokeapi.co/api/v2/pokemon";

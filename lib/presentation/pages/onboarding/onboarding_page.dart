@@ -39,7 +39,7 @@ class _OnboardingPageState extends State<OnboardingPage>
 
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(26),
+        padding: const EdgeInsets.symmetric(horizontal: 26),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -53,7 +53,7 @@ class _OnboardingPageState extends State<OnboardingPage>
                     title: ob1Title,
                     description: ob1Description,
                   ),
-
+      
                   _OnBoardingInfo(
                     image: onBoardingTwo,
                     title: ob2Title,
@@ -62,7 +62,7 @@ class _OnboardingPageState extends State<OnboardingPage>
                 ],
               ),
             ),
-
+      
             PageIndicator(
               tabController: _tabController,
               currentPageIndex: _currentPageIndex,
@@ -104,8 +104,6 @@ class _OnBoardingInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textCenter = TextAlign.center;
-
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

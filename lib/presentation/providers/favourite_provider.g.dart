@@ -12,14 +12,15 @@ part of 'favourite_provider.dart';
 @ProviderFor(Favourite)
 const favouriteProvider = FavouriteProvider._();
 
-final class FavouriteProvider extends $NotifierProvider<Favourite, bool> {
+final class FavouriteProvider
+    extends $NotifierProvider<Favourite, Set<Pokemon>> {
   const FavouriteProvider._()
     : super(
         from: null,
         argument: null,
         retry: null,
         name: r'favouriteProvider',
-        isAutoDispose: true,
+        isAutoDispose: false,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
@@ -32,28 +33,28 @@ final class FavouriteProvider extends $NotifierProvider<Favourite, bool> {
   Favourite create() => Favourite();
 
   /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(bool value) {
+  Override overrideWithValue(Set<Pokemon> value) {
     return $ProviderOverride(
       origin: this,
-      providerOverride: $SyncValueProvider<bool>(value),
+      providerOverride: $SyncValueProvider<Set<Pokemon>>(value),
     );
   }
 }
 
-String _$favouriteHash() => r'b6ee75a91531fc7aeedade5e34b14041ca62a6dd';
+String _$favouriteHash() => r'edc4f586f477e2d723f8d4bb1b9b053c466284a7';
 
-abstract class _$Favourite extends $Notifier<bool> {
-  bool build();
+abstract class _$Favourite extends $Notifier<Set<Pokemon>> {
+  Set<Pokemon> build();
   @$mustCallSuper
   @override
   void runBuild() {
     final created = build();
-    final ref = this.ref as $Ref<bool, bool>;
+    final ref = this.ref as $Ref<Set<Pokemon>, Set<Pokemon>>;
     final element =
         ref.element
             as $ClassProviderElement<
-              AnyNotifier<bool, bool>,
-              bool,
+              AnyNotifier<Set<Pokemon>, Set<Pokemon>>,
+              Set<Pokemon>,
               Object?,
               Object?
             >;
