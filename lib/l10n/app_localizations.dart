@@ -196,6 +196,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'We couldn\'t load the information right now. Please check your connection or try again later.'**
   String get errorDescription;
+
+  /// No description provided for @comingSoonTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Coming Soon!'**
+  String get comingSoonTitle;
+
+  /// No description provided for @comingSoonDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'re working hard to bring you this section. Check back later to discover all the new features.'**
+  String get comingSoonDescription;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

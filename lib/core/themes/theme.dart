@@ -12,6 +12,10 @@ ThemeData appTheme() {
       onSurface: white,
     ),
 
+    appBarTheme: AppBarTheme(
+      backgroundColor: black,
+    ),
+
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: white,
       selectedItemColor: red,

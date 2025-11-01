@@ -21,8 +21,13 @@ class PokemonService {
       final responses = await Future.wait(futures);
 
       return responses.map((res) => Pokemon.fromJson(res.data)).toList();
-    } catch (e) {
-      return [];
+    } on DioException catch (dioError) {
+      if (dioError.type == DioExceptionType.connectionTimeout || dioError.type == DioExceptionType.unknown) {
+        throw "No internet connection";
+      }
+      rethrow;
+    } catch (error) {
+      rethrow;
     }
   }
 }

@@ -1,23 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:teste/core/core.dart';
 
-class PokedexError extends StatelessWidget {
-  const PokedexError({
+class PokedexConstruction extends StatelessWidget {
+  const PokedexConstruction({
     super.key,
     required this.image,
     required this.title,
     required this.description,
-    required this.hasButton,
-    this.btnText,
-    this.onPressed,
   });
 
   final String image;
   final String title;
   final String description;
-  final bool hasButton;
-  final String? btnText;
-  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -31,18 +25,6 @@ class PokedexError extends StatelessWidget {
           Text(title, style: titleStyle, textAlign: textCenter),
           const SizedBox(height: 10),
           Text(description, style: descriptionStyle, textAlign: textCenter),
-
-          const SizedBox(height: 10),
-
-          hasButton
-              ? SizedBox(
-                  width: double.infinity,
-                  child: FilledButton(
-                    onPressed: onPressed,
-                    child: Text("$btnText"),
-                  ),
-                )
-              : const SizedBox(),
         ],
       ),
     );

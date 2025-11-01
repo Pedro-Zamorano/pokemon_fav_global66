@@ -20,21 +20,3 @@ class Favourite extends _$Favourite {
 
   Set<Pokemon> pokeFav() => state;
 }
-
-// @Riverpod(keepAlive: true)
-// class Favourite extends _$Favourite {
-//   @override
-//   Set<int> build() => {};
-
-//   void toggleFav(int id) {
-//     if (state.contains(id)) {
-//       state = {...state}..remove(id);
-//     } else {
-//       state = {...state}..add(id);
-//     }
-//   }
-
-//   bool isFav(int id) => state.contains(id);
-
-//   Set<int> pokeFav() => state;
-// }

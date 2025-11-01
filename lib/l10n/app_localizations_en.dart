@@ -58,4 +58,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get errorDescription => 'We couldn\'t load the information right now. Please check your connection or try again later.';
+
+  @override
+  String get comingSoonTitle => 'Coming Soon!';
+
+  @override
+  String get comingSoonDescription => 'We\'re working hard to bring you this section. Check back later to discover all the new features.';
 }

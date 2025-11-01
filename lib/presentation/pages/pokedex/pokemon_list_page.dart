@@ -20,7 +20,8 @@ class PokemonListPage extends ConsumerWidget {
     final asyncPokemons = ref.watch(pokemonViewModelProvider);
 
     return asyncPokemons.when(
-      data: (pokemons) => PokemonCards(pokemons: pokemons),
+      loading: () => Center(child: CircularProgressIndicator()),
+      // todo: Comprobar funcionamiento con equipo fisico.
       error: (error, stackTrace) => PokedexError(
         image: magikarp,
         title: errorTitle,
@@ -31,7 +32,7 @@ class PokemonListPage extends ConsumerWidget {
           // todo: Llamar al API
         },
       ),
-      loading: () => Center(child: CircularProgressIndicator()),
+      data: (pokemons) => PokemonCards(pokemons: pokemons),
     );
   }
 }
@@ -82,9 +83,6 @@ class PokemonCards extends ConsumerWidget {
               final isPokemonFav = ref
                   .read(favouriteProvider.notifier)
                   .isFav(pkm);
-              // final isPokemonFav = ref
-              //     .read(favouriteProvider.notifier)
-              //     .isFav(pkm.id!);
 
               // todo: Modificar para mostrar tarjetas
               final String types = pkm.types!

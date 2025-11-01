@@ -1,28 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:teste/core/core.dart';
+import 'package:teste/domain/domains.dart';
 import 'package:teste/l10n/l10n.dart';
 import 'package:teste/presentation/providers/favourite_provider.dart';
 import 'package:teste/presentation/widgets/widgets.dart';
 
-class PokemonFavsPage extends ConsumerWidget {
+class PokemonFavsPage extends ConsumerStatefulWidget {
   const PokemonFavsPage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<PokemonFavsPage> createState() => PokemonFavsPageState();
+}
+
+class PokemonFavsPageState extends ConsumerState<PokemonFavsPage> {
+  bool _reaload = false;
+
+  Future<void> realoadPage() async {
+    setState(() {
+      _reaload = false;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final favAbTitle = AppLocalizations.of(context)!.favAbTitle;
     final noFavTitle = AppLocalizations.of(context)!.noFavTitle;
     final noFavDescription = AppLocalizations.of(context)!.noFavDescription;
 
-    final pokemonsFav = ref
+    List<Pokemon> pokemonsFav = ref
         .watch(favouriteProvider.notifier)
         .pokeFav()
         .toList();
 
     return Scaffold(
       appBar: AppBar(title: Text(favAbTitle), centerTitle: true),
-      // todo: Cuando se elimine el ultimo favorito, actualizar pantalla
-      body: pokemonsFav.isEmpty
+      body: _reaload
+          ? Center(child: CircularProgressIndicator())
+          : pokemonsFav.isEmpty
           ? PokedexError(
               image: magikarp,
               title: noFavTitle,
@@ -48,6 +63,16 @@ class PokemonFavsPage extends ConsumerWidget {
                   direction: DismissDirection.endToStart,
                   onDismissed: (direction) {
                     ref.read(favouriteProvider.notifier).toggleFav(pokemon);
+                    pokemonsFav = ref
+                        .watch(favouriteProvider.notifier)
+                        .pokeFav()
+                        .toList();
+                    if (pokemonsFav.isEmpty) {
+                      setState(() {
+                        _reaload = true;
+                      });
+                      realoadPage();
+                    }
                   },
                   background: Container(
                     width: double.infinity,

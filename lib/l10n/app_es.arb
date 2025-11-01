@@ -21,6 +21,9 @@
 
     "btnRetry": "Reintentar",
     "errorTitle": "Algo salió mal...",
-    "errorDescription": "No pudimos cargar la información en este momento. Verifica tu conexión o intenta nuevamente más tarde."
+    "errorDescription": "No pudimos cargar la información en este momento. Verifica tu conexión o intenta nuevamente más tarde.",
+
+    "comingSoonTitle" : "¡Muy pronto disponible!",
+    "comingSoonDescription": "Estamos trabajando para traerte esta sección. Vuelve más adelante para descubrir todas las novedades."
 
 }

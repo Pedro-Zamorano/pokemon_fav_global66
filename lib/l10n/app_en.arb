@@ -21,6 +21,9 @@
 
     "btnRetry": "Retry",
     "errorTitle": "Something went wrong...",
-    "errorDescription": "We couldn't load the information right now. Please check your connection or try again later."
+    "errorDescription": "We couldn't load the information right now. Please check your connection or try again later.",
+
+    "comingSoonTitle" : "Coming Soon!",
+    "comingSoonDescription": "We're working hard to bring you this section. Check back later to discover all the new features."
 
 }

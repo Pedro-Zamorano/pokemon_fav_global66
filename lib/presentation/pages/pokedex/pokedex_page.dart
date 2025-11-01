@@ -15,9 +15,9 @@ class _PokedexPageState extends State<PokedexPage> {
 
   static final List<Widget> _pages = [
     PokemonListPage(),
-    Center(child: Text("Regiones")),
+    RegionsPage(),
     PokemonFavsPage(),
-    Center(child: Text("Perfil")),
+    ProfilePage(),
   ];
 
   void _changePage(int index) {
