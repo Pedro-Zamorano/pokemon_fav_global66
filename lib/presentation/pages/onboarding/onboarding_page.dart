@@ -32,10 +32,11 @@ class _OnboardingPageState extends State<OnboardingPage>
 
   @override
   Widget build(BuildContext context) {
-    final ob1Title = AppLocalizations.of(context)!.ob1Title;
-    final ob1Description = AppLocalizations.of(context)!.ob1Description;
-    final ob2Title = AppLocalizations.of(context)!.ob2Title;
-    final ob2Description = AppLocalizations.of(context)!.ob2Description;
+    final l10n = AppLocalizations.of(context)!;
+    final ob1Title = l10n.ob1Title;
+    final ob1Description = l10n.ob1Description;
+    final ob2Title = l10n.ob2Title;
+    final ob2Description = l10n.ob2Description;
 
     return Scaffold(
       body: Padding(
@@ -53,7 +54,7 @@ class _OnboardingPageState extends State<OnboardingPage>
                     title: ob1Title,
                     description: ob1Description,
                   ),
-      
+
                   _OnBoardingInfo(
                     image: onBoardingTwo,
                     title: ob2Title,
@@ -62,7 +63,7 @@ class _OnboardingPageState extends State<OnboardingPage>
                 ],
               ),
             ),
-      
+
             PageIndicator(
               tabController: _tabController,
               currentPageIndex: _currentPageIndex,
@@ -132,8 +133,9 @@ class PageIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final btnContinue = AppLocalizations.of(context)!.btnContinue;
-    final btnLetsStart = AppLocalizations.of(context)!.btnLetsStart;
+    final l10n = AppLocalizations.of(context)!;
+    final btnContinue = l10n.btnContinue;
+    final btnLetsStart = l10n.btnLetsStart;
 
     return Padding(
       padding: EdgeInsets.all(8),

@@ -21,16 +21,14 @@ class PokemonListPage extends ConsumerWidget {
 
     return asyncPokemons.when(
       loading: () => Center(child: CircularProgressIndicator()),
-      // todo: Comprobar funcionamiento con equipo fisico.
       error: (error, stackTrace) => PokedexError(
         image: magikarp,
         title: errorTitle,
         description: errorDescription,
         hasButton: true,
         btnText: btnRetry,
-        onPressed: () {
-          // todo: Llamar al API
-        },
+        // todo: realiza el refresh, pero no muestra el mata-angustia
+        onPressed: () => ref.refresh(pokemonViewModelProvider),
       ),
       data: (pokemons) => PokemonCards(pokemons: pokemons),
     );
@@ -51,26 +49,29 @@ class PokemonCards extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          children: [
-            Expanded(
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: searchHint,
-                  prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: white),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+          child: Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: searchHint,
+                    prefixIcon: Icon(Icons.search),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: BorderSide(color: white),
+                    ),
                   ),
                 ),
               ),
-            ),
 
-            const SizedBox(width: 10),
+              const SizedBox(width: 10),
 
-            // todo: Filtrar por nombre / tipo / número
-            IconButton.outlined(onPressed: () {}, icon: Icon(Icons.search)),
-          ],
+              // todo: Filtrar por nombre / tipo / número
+              IconButton.outlined(onPressed: () {}, icon: Icon(Icons.search)),
+            ],
+          ),
         ),
 
         const SizedBox(height: 2),

@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import 'package:teste/l10n/l10n.dart';
@@ -14,9 +15,9 @@ class _PokedexPageState extends State<PokedexPage> {
   int _selectedIndex = 0;
 
   static final List<Widget> _pages = [
-    PokemonListPage(),
+    _NavigationWrapper(key: Key("listKey"), child: PokemonListPage()),
     RegionsPage(),
-    PokemonFavsPage(),
+    _NavigationWrapper(key: Key("favKey"), child: PokemonFavsPage()),
     ProfilePage(),
   ];
 
@@ -28,16 +29,17 @@ class _PokedexPageState extends State<PokedexPage> {
 
   @override
   Widget build(BuildContext context) {
-    final bnbHome = AppLocalizations.of(context)!.bnbHome;
-    final bnbRegion = AppLocalizations.of(context)!.bnbRegion;
-    final bnbFav = AppLocalizations.of(context)!.bnbFav;
-    final bnbProfile = AppLocalizations.of(context)!.bnbProfile;
+    final l10n = AppLocalizations.of(context)!;
+    final bnbHome = l10n.bnbHome;
+    final bnbRegion = l10n.bnbRegion;
+    final bnbFav = l10n.bnbFav;
+    final bnbProfile = l10n.bnbProfile;
 
     return Scaffold(
       body: SafeArea(
         top: true,
         maintainBottomViewPadding: true,
-        minimum: EdgeInsets.only(right: 8, left: 8),
+        // minimum: EdgeInsets.only(right: 8, left: 8),
         child: _pages[_selectedIndex],
       ),
       bottomNavigationBar: ClipRRect(
@@ -63,6 +65,25 @@ class _PokedexPageState extends State<PokedexPage> {
           onTap: _changePage,
         ),
       ),
+    );
+  }
+}
+
+class _NavigationWrapper extends StatelessWidget {
+  const _NavigationWrapper({super.key, required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Navigator(
+      key: key,
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(
+          settings: settings,
+          builder: (context) => child,
+        );
+      },
     );
   }
 }

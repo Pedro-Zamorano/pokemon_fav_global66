@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 final Color red = Color(0xFFdf0139);
 final Color black = Color(0xFF1e1e27);
 final Color white = Color(0xFFe2e2e2);
+final Color green = Color(0xFF8bc24b);
 
 ThemeData appTheme() {
   return ThemeData(

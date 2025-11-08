@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:teste/core/core.dart';
 import 'package:teste/domain/domains.dart';
+import 'package:teste/presentation/presentation.dart';
 
 class PokemonCard extends StatelessWidget {
   const PokemonCard({
@@ -22,9 +23,8 @@ class PokemonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        // todo: Mostrar pantalla con detalle del Pokémon
-      },
+      // todo: enviar y manejar si el pokemon es o será favorito
+      onTap: () => navigateToPokemonDetail(context, pkm),
       child: Container(
         margin: EdgeInsets.all(8),
         padding: EdgeInsets.only(left: 8),
@@ -48,7 +48,7 @@ class PokemonCard extends StatelessWidget {
                 ],
               ),
             ),
-      
+
             // Image Section
             Container(
               padding: EdgeInsets.all(6),
@@ -86,4 +86,12 @@ class PokemonCard extends StatelessWidget {
       ),
     );
   }
+}
+
+void navigateToPokemonDetail(BuildContext context, Pokemon pokemon) {
+  Navigator.of(context).push(
+    MaterialPageRoute(
+      builder: (context) => PokemonDetailPage(pokemon: pokemon),
+    ),
+  );
 }
